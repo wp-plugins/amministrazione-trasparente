@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://amministrazioneaperta.wordpress.com/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 0.2.2
+Version: 1.0
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 License:
@@ -95,7 +95,7 @@ function AT_RegistraTAX() {
         'show_admin_column' => true,
         'hierarchical' => true,
 	'rewrite' => array('hierarchical' => true),
-	// 'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
+	'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
         'query_var' => true
     );
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
