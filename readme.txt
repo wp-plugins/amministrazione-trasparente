@@ -30,11 +30,12 @@ Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs.
 3. 
 
 == Screenshots ==
-
+1. Menù Laterale
+2. Pagina di inserimento Documento
 
 
 == Changelog ==
-= Versione 0.1 28/06/2013 =
+= Versione 0.1 03/07/2013 =
 * Lancio del Progetto
 
 (!) = Aggiornamento Importante (Sicurezza/Stabilità)
