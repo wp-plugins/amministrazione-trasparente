@@ -154,7 +154,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="'
 
 //Opere pubbliche
 echo '<br/><b>' . 'Opere pubbliche' . '</b>';
-$nome_tipologia = "Opera pubbliche";
+$nome_tipologia = "Opere pubbliche";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 
 //Pianificazione e governo del territorio
