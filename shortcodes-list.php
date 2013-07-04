@@ -1,3 +1,4 @@
+<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione(L.69/2009-213/2012-Dlgs33/2013-L.190/2012).</p> 
 <?php
 
 //Disposizioni Generali
