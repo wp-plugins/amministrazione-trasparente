@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.1.1.1
-Stable tag: 1.1.1.1
+Version: 1.1.1.2
+Stable tag: 1.1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Soluzione gratuita e completa per la pubblicazione online dei documenti ai sensi
 
 A chi si rivolge questo software? La normativa richiede l'utilizzo del software a enti locali e pubbliche amministrazioni: comuni, province, comunità montane, istituti scolastici (scuole, università) e associazioni pubbliche.
 
-= Perchè scegliere "Amministrazione Aperta" per Wordpress =
+= Perchè scegliere "Amministrazione Trasparente" per Wordpress =
 
 Questo modulo offre la gestione di tutte le informazioni richieste in modo semplice e veloce. In particolare, permette di gestire ogni documento come singolo articolo e, oltre a consentire il caricamento di uno o più file, è possibile inserire anche testo a piacere, link o immagini. Ad esempio, se è necessario inserire solo dei recapiti telefonici, grazie a questo plugin sarà sufficiente scriverlo nell'area del testo (al contrario soluzioni concorrenti permettono il solo caricamento di documenti allegati, quali word, pdf, xls, rallentando il processo produttivo dell'ufficio competente).
 
@@ -74,15 +74,18 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 
 
 == Changelog ==
-= Versione 1.1.1.1 04/07/2013 =
+= Versione 1.1.1.2 04/07/2013 =
 * Modifica file ReadMe
 
-= Versione 1.1.1 04/07/2013 =
+= Versione 1.1.1.1 =
+* Modifica file ReadMe
+
+= Versione 1.1.1 =
 * Correzione Stable Tag repository wordpress
 * Correzione CSS background (back-end)
 * Correzione stringhe front-end (list/table)
 
-= Versione 1.1 04/07/2013 =
+= Versione 1.1 =
 * Aggiunta testo introduttivo - front-end
 * Integrazione PressTrends - I/O
 * Visualizzazione automatica file allegati
@@ -90,7 +93,7 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 = Versione 1.0 03/07/2013 =
 * Prima release
 
-= Versione 0.1-0.2 03/07/2013 =
+= Versione 0.1-0.2 =
 * Lancio del Progetto
 * Programmazione funzionalità
 
