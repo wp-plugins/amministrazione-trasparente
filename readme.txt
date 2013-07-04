@@ -16,7 +16,7 @@ Soluzione completa per la pubblicazione dei documenti ai sensi del D.lgs. n. 33 
 
 Soluzione gratuita e completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
 
-A chi si rivolge questo software? La normativa richiede l'utilizzo del software a enti locali e pubbliche amministrazioni: comuni, provincie, comunità montane, istituti scolastici (scuole, università) e associazioni pubbliche.
+A chi si rivolge questo software? La normativa richiede l'utilizzo del software a enti locali e pubbliche amministrazioni: comuni, province, comunità montane, istituti scolastici (scuole, università) e associazioni pubbliche.
 
 = Perchè scegliere "Amministrazione Aperta" per Wordpress =
 
