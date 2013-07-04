@@ -1,10 +1,10 @@
 ﻿=== Amministrazione Trasparente ===
 Contributors: Milmor
-Tags: amministrazione, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
+Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.1.1
-Stable tag: 1.1.1
+Version: 1.1.1.1
+Stable tag: 1.1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,7 @@ A chi si rivolge questo software? La normativa richiede l'utilizzo del software 
 Questo modulo offre la gestione di tutte le informazioni richieste in modo semplice e veloce. In particolare, permette di gestire ogni documento come singolo articolo e, oltre a consentire il caricamento di uno o più file, è possibile inserire anche testo a piacere, link o immagini. Ad esempio, se è necessario inserire solo dei recapiti telefonici, grazie a questo plugin sarà sufficiente scriverlo nell'area del testo (al contrario soluzioni concorrenti permettono il solo caricamento di documenti allegati, quali word, pdf, xls, rallentando il processo produttivo dell'ufficio competente).
 
 = Caratteristiche del Plugin =
-* Aggiornamenti periodici per fornire una soluzione sempre al top
+* Aggiornamenti periodici per fornire una soluzione sempre al top (ogni nuova versione è testata su diversi server per evitare spiacevoli inconvenienti)
 * Inserimento facile, veloce e intuitivo
 * Soluzione ideale per ogni tipo di informazione senza dovere per forza caricare un file
 * Gestione completa di tutte le 56 categorie richieste dalla legge
@@ -44,12 +44,16 @@ Se noti problemi o malfunzionamenti nell'uso di questo plugin, o semplicemente c
 = CONSULENZA TECNICA =
 Vuoi maggiori informazioni prima di installare questa estensione?
 Hai bisogno di assistenza per un malfunzionamento o vuoi parlare con l'autore di un problema o personalizzazioni?
+
 Per "Amministrazione Trasparente" è fornito un servizio di supporto "base" gratuito.
+
 Di seguito i contatti:
+
 MARCO MILESI - tel. 37.sette.uno.364295 - milesimarco@outlook.com - Skype: milesimarco94
 
 = DEMO =
 L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è possibile testarne il funzionamento:
+
 [www.comune.sanpellegrinoterme.bg.it/comune/trasparenza](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
 
 == Installation ==
@@ -70,6 +74,9 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 
 
 == Changelog ==
+= Versione 1.1.1.1 04/07/2013 =
+* Modifica file ReadMe
+
 = Versione 1.1.1 04/07/2013 =
 * Correzione Stable Tag repository wordpress
 * Correzione CSS background (back-end)
