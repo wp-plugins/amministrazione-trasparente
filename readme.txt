@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.1.1.2
-Stable tag: 1.1.1.2
+Version: 1.2
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,12 +44,12 @@ Se noti problemi o malfunzionamenti nell'uso di questo plugin, o semplicemente c
 = CONSULENZA TECNICA =
 Vuoi maggiori informazioni prima di installare questa estensione?
 Hai bisogno di assistenza per un malfunzionamento o vuoi parlare con l'autore di un problema o personalizzazioni?
-
 Per "Amministrazione Trasparente" è fornito un servizio di supporto "base" gratuito.
 
 Di seguito i contatti:
-
-MARCO MILESI - tel. 37.sette.uno.364295 - milesimarco@outlook.com - Skype: milesimarco94
+* tel. 37.sette.uno.364295
+* mail. milesimarco@outlook.com
+* Skype: milesimarco94
 
 = DEMO =
 L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è possibile testarne il funzionamento:
@@ -61,8 +61,8 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 1. Carica il contenuto estratto nella cartella `/wp-content/plugins/`
 2. Attiva il plugin dal menu 'Plugins' in WordPress
 3. Inserire in una pagina o in un articolo i seguenti tag:
-3.1 Visualizzazione Lista: [at-list] <?php echo do_shortcode('[at-list]') ?>
-3.2 Visualizzazione Tabella: [at-table] <?php echo do_shortcode('[at-table]') ?>
+3.1 Visualizzazione Lista: [at-list] oppure <?php echo do_shortcode('[at-list]') ?> per il template.
+3.2 Visualizzazione Tabella: [at-table] oppure <?php echo do_shortcode('[at-table]') ?> pre il template.
 
 4. Inserire le informazioni dal nuovo menù Trasparenza
 
@@ -74,6 +74,10 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 
 
 == Changelog ==
+= Versione 1.2 05/07/2013 =
+* Possibilità di filtrare i documenti (back-end)
+* Modifica pagina "Informazioni" in "Info & Aiuto", con più dettagli
+
 = Versione 1.1.1.2 04/07/2013 =
 * Modifica file ReadMe
 
