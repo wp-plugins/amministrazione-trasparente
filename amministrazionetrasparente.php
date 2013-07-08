@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://amministrazioneaperta.wordpress.com/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 1.2
+Version: 1.2.1
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 License:
@@ -25,10 +25,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 function register_cpt_documento_trasparenza() {
 
     $labels = array( 
-        'name' => _x( 'Documenti', 'documenti_trasparenza' ),
-        'singular_name' => _x( 'Documento', 'documento_trasparenza' ),
-        'add_new' => _x( 'Nuovo', 'documento_trasparenza' ),
-        'add_new_item' => _x( 'Nuovo Documento', 'documento_trasparenza' ),
+        'name' => _x( 'Documenti Trasparenza', 'documenti_trasparenza' ),
+        'singular_name' => _x( 'Documento Trasparenza', 'documento_trasparenza' ),
+        'add_new' => _x( 'Nuova Voce', 'documento_trasparenza' ),
+        'add_new_item' => _x( 'Nuova Voce', 'documento_trasparenza' ),
         'edit_item' => _x( 'Modifica Documento', 'documento_trasparenza' ),
         'new_item' => _x( 'Nuovo Documento', 'documento_trasparenza' ),
         'view_item' => _x( 'Vedi Documento Trasparenza', 'documento_trasparenza' ),

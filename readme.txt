@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.2
-Stable tag: 1.2
+Version: 1.2.1
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,7 @@ Hai bisogno di assistenza per un malfunzionamento o vuoi parlare con l'autore di
 Per "Amministrazione Trasparente" è fornito un servizio di supporto "base" gratuito.
 
 Di seguito i contatti:
+
 * tel. 37.sette.uno.364295
 * mail. milesimarco@outlook.com
 * Skype: milesimarco94
@@ -74,6 +75,9 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 
 
 == Changelog ==
+= Versione 1.2.1 08/07/2013 =
+* Miglioramento strutturale del codice (Accessibilità L.Stanca 2004 e successive)
+
 = Versione 1.2 05/07/2013 =
 * Possibilità di filtrare i documenti (back-end)
 * Modifica pagina "Informazioni" in "Info & Aiuto", con più dettagli

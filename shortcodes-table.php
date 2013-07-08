@@ -5,19 +5,22 @@
 echo '<div class="at-tableclass">';
 
 //Disposizioni Generali
-echo '<br/><b>' . 'Disposizioni Generali' . '</b>';
-$nome_tipologia = "Programma per la Trasparenza e l\' Integrità";
+echo '<h3>' . 'Disposizioni Generali' . '</h3>';
+echo '<ul>';
+$nome_tipologia = "Programma per la Trasparenza e l' Integrità";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Atti generali";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Oneri informativi per cittadini e imprese";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Organizzazione
-echo '<br/><b>' . 'Organizzazione' . '</b>';
+echo '<h3>' . 'Organizzazione' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Organi di indirizzo politico-amministrativo";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Sanzioni per mancata comunicazione dei dati";
@@ -28,20 +31,24 @@ $nome_tipologia = "Articolazione degli uffici";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Telefono e posta elettronica";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Consulenti e collaboratori
-echo '<br/><b>' . 'Consulenti e collaboratori' . '</b>';
+echo '<h3>' . 'Consulenti e collaboratori' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Consulenti e collaboratori";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Personale
-echo '<br/><b>' . 'Personale' . '</b>';
+echo '<h3>' . 'Personale' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Incarichi amministrativi di vertice";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Dirigenti";
@@ -62,20 +69,24 @@ $nome_tipologia = "Contrattazione integrativa";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "OIV";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Bandi di Concorso
-echo '<br/><b>' . 'Bandi di Concorso' . '</b>';
+echo '<h3>' . 'Bandi di Concorso' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Bandi di Concorso";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Performance
-echo '<br/><b>' . 'Performance' . '</b>';
+echo '<h3>' . 'Performance' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Piano della Performance";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Relazione sulla Performance";
@@ -86,12 +97,14 @@ $nome_tipologia = "Dati relativi ai premi";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Benessere organizzativo";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Enti controllati
-echo '<br/><b>' . 'Enti controllati' . '</b>';
+echo '<h3>' . 'Enti controllati' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Enti pubblici vigilati";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Società partecipate";
@@ -100,90 +113,108 @@ $nome_tipologia = "Enti di diritto privato controllati";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Rappresentazione grafica";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Attività e procedimenti
-echo '<br/><b>' . 'Attività e procedimenti' . '</b>';
+echo '<h3>' . 'Attività e procedimenti' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Dati aggregati attività amministrativa";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Tipologie di procedimento";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Monitoraggio tempi procedimentali";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
-$nome_tipologia = "Dichiarazioni sostitutive e acquisizione d\'ufficio dei dati";
+$nome_tipologia = "Dichiarazioni sostitutive e acquisizione d'ufficio dei dati";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Provvedimenti
-echo '<br/><b>' . 'Provvedimenti' . '</b>';
+echo '<h3>' . 'Provvedimenti' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Provvedimenti organi indirizzo-politico";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Provvedimenti dirigenti";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Controlli sulle imprese
-echo '<br/><b>' . 'Controlli sulle imprese' . '</b>';
+echo '<h3>' . 'Controlli sulle imprese' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Controlli sulle imprese";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Bandi di gara e contratti
-echo '<br/><b>' . 'Bandi di gara e contratti' . '</b>';
+echo '<h3>' . 'Bandi di gara e contratti' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Bandi di gara e contratti";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Sovvenzioni, contributi, sussidi, vantaggi economici
-echo '<br/><b>' . 'Sovvenzioni, contributi, sussidi, vantaggi economici' . '</b>';
+echo '<h3>' . 'Sovvenzioni, contributi, sussidi, vantaggi economici' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Criteri e modalità";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Atti di concessione";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Bilanci
-echo '<br/><b>' . 'Bilanci' . '</b>';
+echo '<h3>' . 'Bilanci' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Bilancio preventivo e consuntivo";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Piano degli indicatori e risultati attesi di bilancio";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Beni immobili e gestione patrimonio
-echo '<br/><b>' . 'Beni immobili e gestione patrimonio' . '</b>';
+echo '<h3>' . 'Beni immobili e gestione patrimonio' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Patrimonio immobiliare";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Canoni di locazione o affitto";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Controlli e rilievi sull'amminiztrazione
-echo '<br/><b>' . 'Controlli e rilievi sull\'amministrazione' . '</b>';
+echo '<h3>' . 'Controlli e rilievi sull\'amministrazione' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Controlli e rilievi sull'amministrazione";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Servizi erogati
-echo '<br/><b>' . 'Servizi erogati' . '</b>';
+echo '<h3>' . 'Servizi erogati' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Carta dei servizi e standard di qualità";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Costi contabilizzati";
@@ -192,64 +223,79 @@ $nome_tipologia = "Tempi medi di erogazione dei servizi";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Liste di attesa";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Pagamenti dell' amministrazione
-echo '<br/><b>' . 'Pagamenti dell\' amministrazione' . '</b>';
+echo '<h3>' . 'Pagamenti dell\' amministrazione' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Indicatore di tempestività dei pagamenti";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "IBAN e pagamenti informatici";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Opere pubbliche
-echo '<br/><b>' . 'Opere pubbliche' . '</b>';
+echo '<h3>' . 'Opere pubbliche' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Opere pubbliche";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Pianificazione e governo del territorio
-echo '<br/><b>' . 'Pianificazione e governo del territorio' . '</b>';
+echo '<h3>' . 'Pianificazione e governo del territorio' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Pianificazione e governo del territorio";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Informazioni ambientali
-echo '<br/><b>' . 'Informazioni ambientali' . '</b>';
+echo '<h3>' . 'Informazioni ambientali' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Informazioni ambientali";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Strutture sanitarie private accreditate
-echo '<br/><b>' . 'Strutture sanitarie private accreditate' . '</b>';
+echo '<h3>' . 'Strutture sanitarie private accreditate' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Strutture sanitarie private accreditate";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Interventi straordinari e di emergenza
-echo '<br/><b>' . 'Interventi straordinari e di emergenza' . '</b>';
+echo '<h3>' . 'Interventi straordinari e di emergenza' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Interventi straordinari e di emergenza";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 echo '<div class="at-tableclass">';
 
 //Altri contenuti
-echo '<br/><b>' . 'Altri contenuti' . '</b>';
+echo '<h3>' . 'Altri contenuti' . '</h3>';
+echo '<ul>';
 $nome_tipologia = "Altri contenuti";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '</ul>';
 
 echo '</div>';
 
