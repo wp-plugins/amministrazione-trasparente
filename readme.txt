@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.2.1
-Stable tag: 1.2.1
+Version: 1.2.2
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,9 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 
 
 == Changelog ==
+= Versione 1.2.2 17/07/2013 =
+* Modifica creazione nuova classe di articoli
+
 = Versione 1.2.1 08/07/2013 =
 * Miglioramento strutturale del codice (Accessibilità L.Stanca 2004 e successive)
 
