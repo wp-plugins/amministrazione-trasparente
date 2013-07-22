@@ -74,6 +74,8 @@ Alcuni "Showcase":
 
 == Installation ==
 
+http://www.youtube.com/watch?v=qWj9hvzNSlg
+
 1. Carica il contenuto estratto nella cartella `/wp-content/plugins/`
 2. Attiva il plugin dal menu 'Plugins' in WordPress
 3. Inserire in una pagina o in un articolo i seguenti tag disponibili:
@@ -102,14 +104,18 @@ Ogni tag può essere inserito nel template utilizzando una funzione del tipo: <#
 
 
 == Changelog ==
+
 = Versione 2.0 22/07/2013 =
 * Nuovo tag [at-head] per mostrare un sommario delle voci
 * Nuovo tag [at-desc] per mostare la descrizione dell'iniziativa Amministrazione Trasparente
 * Nuova funzione per reindirizzare gli articoli a pagine già esistenti o esterne
 * Nuovo Widget con tutte le categorie (possibilità di categorie espandibili)
-* Sistemato spazio # stringa "Programma per la Trasparenza e l'#Integrità"
 * Aggiunta visualizzazione numero post e tipologie in "Stato Attuale" (bacheca wp-admin)
-* Template archivio speciale per PASW2013 (+riferimenti normativi +pulsante "Torna alla lista)
+* Template archivio speciale per PASW2013 (+riferimenti normativi +pulsante "Torna alla lista" - da specificare nelle impostazioni!)
+
+BugFix:
+
+* Sistemato spazio # stringa "Programma per la Trasparenza e l'#Integrità"
 
 = Versione 1.2.1 08/07/2013 =
 * Miglioramento strutturale del codice (Accessibilità L.Stanca 2004 e successive)
