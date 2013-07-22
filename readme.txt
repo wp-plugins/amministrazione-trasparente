@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 1.2.2
-Stable tag: 1.2.2
+Version: 2.0
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,15 +28,28 @@ Questo modulo offre la gestione di tutte le informazioni richieste in modo sempl
 * Soluzione ideale per ogni tipo di informazione senza dovere per forza caricare un file
 * Gestione completa di tutte le 56 categorie richieste dalla legge
 * Ogni documento è gestito come Articolo autonomo
+* Funzione di redirect delle voci a pagine già esistenti o link esterni
 * Codice leggero, commentato e facilmente modificabile
 * Funzioni facilmente implementabili
 * Doppia visualizzazione a scelta grazie a 2 shortcode: modalità lista e modalità tabella (2 colonne)
+* Funzione di redirect automatico per ogni articolo
+* Visualizzazione automatica allegati WORD / PDF / ZIP / EXCEL
+* Widget
+
+In più, se è attivo il template PASW2013:
+
+* Visualizzazione archivio speciale con riferimenti normativi e molto altro!
+
+= Installazione =
+Per conoscere in dettaglio tutti i passaggi per installare e configurare Amministrazione Trasparente consultare [questa pagina](http://wordpress.org/plugins/amministrazione-trasparente/installation/).
+
+http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 = Funzioni in corso di Sviluppo =
-* Possibilità di effettuare un redirect automatico per ogni articolo
-* Funzione di visualizzazione automatica allegati
-* Visualizzazione Speciale
+* Visualizzazione Speciale per ogni template
 * Personalizzazione e Opzioni
+
+In caso di problemi, provare prima di tutto ad aggiornare i permalink!
 
 = Miglioramento Proattivo =
 Se noti problemi o malfunzionamenti nell'uso di questo plugin, o semplicemente credi che qualche funzione debba essere migliorata o aggiunta, non esistare a mandare la Tua opinione a milesimarco@outlook.com
@@ -48,24 +61,38 @@ Per "Amministrazione Trasparente" è fornito un servizio di supporto "base" grat
 
 Di seguito i contatti:
 
-* tel. 37.sette.uno.364295
+* tel. 37.sette.uno.36.quattro.due.95
 * mail. milesimarco@outlook.com
 * Skype: milesimarco94
 
 = DEMO =
-L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è possibile testarne il funzionamento:
+E' possibile testare e provare l'estensione [QUI](http://amministrazionetrasparente.marcomilesi.ml)
 
-[www.comune.sanpellegrinoterme.bg.it/comune/trasparenza](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
+Alcuni "Showcase":
+
+* [Comune di San Pelegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
 
 == Installation ==
 
 1. Carica il contenuto estratto nella cartella `/wp-content/plugins/`
 2. Attiva il plugin dal menu 'Plugins' in WordPress
-3. Inserire in una pagina o in un articolo i seguenti tag:
-3.1 Visualizzazione Lista: [at-list] oppure <?php echo do_shortcode('[at-list]') ?> per il template.
-3.2 Visualizzazione Tabella: [at-table] oppure <?php echo do_shortcode('[at-table]') ?> pre il template.
+3. Inserire in una pagina o in un articolo i seguenti tag disponibili:
 
-4. Inserire le informazioni dal nuovo menù Trasparenza
+* [at-head] => Mostra un sommario delle voci cliccabili. Da usare nella stessa pagina di [at-list] o [at-table]
+* [at-desc] => Mostra la descrizione del Modulo Amministrazione Trasparente.
+* [at-list] => Visualizza una lista di tutte le voci/sottovoci di A.T.
+* [at-table] => Visualizza una lista a 2 colonne di A.T.
+
+Un'ideale pagina potrebbe, nell'ordine, contenere i seguenti tag:
+
+* [at-desc]
+* [at-head]
+* [at-list] oppure [at-table]
+
+Ogni tag può essere inserito nel template utilizzando una funzione del tipo: <#?php echo do_shortcode('[at-list]') ?#> (senza i caratteri #)
+
+4. A questo punto basta inserire le voci selezionando, dal menù di amministrazione, Trasparenza > Nuova Voce
+5. Questo plugin è compatibile con quasi tutti i temi di Wordpress. In caso contrario, come ad esempio PASW2013 (usato in molti siti internet di Istituti Comprensivi) il plugin utilizza una visualizzazione archivio particolare, con funzioni inedite.
 
 == Screenshots ==
 1. Menù Laterale
@@ -75,8 +102,14 @@ L'estensione è stata creata per il Comune di San Pellegrino Terme, nel quale è
 
 
 == Changelog ==
-= Versione 1.2.2 17/07/2013 =
-* Modifica creazione nuova classe di articoli
+= Versione 2.0 22/07/2013 =
+* Nuovo tag [at-head] per mostrare un sommario delle voci
+* Nuovo tag [at-desc] per mostare la descrizione dell'iniziativa Amministrazione Trasparente
+* Nuova funzione per reindirizzare gli articoli a pagine già esistenti o esterne
+* Nuovo Widget con tutte le categorie (possibilità di categorie espandibili)
+* Sistemato spazio # stringa "Programma per la Trasparenza e l'#Integrità"
+* Aggiunta visualizzazione numero post e tipologie in "Stato Attuale" (bacheca wp-admin)
+* Template archivio speciale per PASW2013 (+riferimenti normativi +pulsante "Torna alla lista)
 
 = Versione 1.2.1 08/07/2013 =
 * Miglioramento strutturale del codice (Accessibilità L.Stanca 2004 e successive)

@@ -1,11 +1,12 @@
 <?php
 /*
 Plugin Name: Amministrazione Trasparente
-Plugin URI: http://amministrazioneaperta.wordpress.com/
+Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 1.2.2
+Version: 2.0BETA
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
+Author URI: http://marcomilesi.ml
 License:
 Copyright 2013 Marco Milesi (milesimarco@outlook.com)
 
@@ -21,7 +22,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
+add_action( 'init', 'register_cpt_documento_trasparenza' );
 function register_cpt_documento_trasparenza() {
 
     $labels = array( 
@@ -55,17 +56,15 @@ function register_cpt_documento_trasparenza() {
         'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
-        'rewrite' => false,
+        'rewrite' => true,
         'capability_type' => 'post'
     );
 
 
     register_post_type( 'amm-trasparente', $args );
 }
-add_action( 'init', 'register_cpt_documento_trasparenza' );
 
 add_action( 'init', 'AT_RegistraTAX');
-
 function AT_RegistraTAX() {
 	
     $labels = array( 
@@ -94,8 +93,8 @@ function AT_RegistraTAX() {
         'show_tagcloud' => false,
         'show_admin_column' => true,
         'hierarchical' => true,
-	'rewrite' => array('hierarchical' => true),
-	'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
+		'rewrite' => array('hierarchical' => true),
+		'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
         'query_var' => true
     );
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
@@ -107,13 +106,25 @@ function at_nuovo_titolo($title)
 {
     $screen = get_current_screen();
     if ('amm-trasparente' == $screen->post_type) {
-        $title = 'Inserire il titolo della voce (documento/atto) da inserire';
+        $title = 'Inserire il titolo della voce da inserire';
     }
     return $title;
 }
 add_filter('enter_title_here', 'at_nuovo_titolo');
 
-/* =========== SHORTCODES [at-table] & [at-list] ============ */
+/* =========== SHORTCODES [at-head] & [at-table] & [at-list] ============ */
+
+function at_head_shtc($atts)
+{
+    include(plugin_dir_path(__FILE__) . 'shortcodes-head.php');
+}
+add_shortcode('at-head', 'at_head_shtc');
+
+function at_desc_shtc($atts)
+{
+	echo '<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell\'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione (L.69/2009, L.213/2012, Dlgs33/2013, L.190/2012).</p>';
+}
+add_shortcode('at-desc', 'at_desc_shtc');
 
 function at_table_shtc($atts)
 {
@@ -188,11 +199,31 @@ add_shortcode('at-list', 'at_list_shtc');
 // PressTrends WordPress Action
 add_action('admin_init', 'presstrends_AmministrazioneTrasparente_plugin');
 
+/* =========== VISUALIZZAZIONE ARCHIVIO SPECIALE ============ */
+
+// force use of templates from plugin folder
+function at_force_template( $template )
+{	
+    if( is_archive( 'tipologie' ) ) {
+		 $theme_name = get_current_theme();
+		if ($theme_name == 'PASW2013') {
+			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/paswarchive-tipologie.php';
+		}
+	}
+    return $template;
+}
+add_filter( 'template_include', 'at_force_template' );
+
 /* =========== FUNZIONI INCLUSE ============ */
 
+require_once(plugin_dir_path(__FILE__) . 'settingsmenu.php');
+
 include(plugin_dir_path(__FILE__) . 'styledbackend.php');
-include(plugin_dir_path(__FILE__) . 'settingsmenu.php');
 include(plugin_dir_path(__FILE__) . 'singlehack.php');
 include(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
+include(plugin_dir_path(__FILE__) . 'updatefunction.php');
+include(plugin_dir_path(__FILE__) . 'widget.php');
+include(plugin_dir_path(__FILE__) . 'redirector.php');
+include(plugin_dir_path(__FILE__) . 'admin-messages.php');
 
 ?>

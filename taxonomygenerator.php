@@ -1,7 +1,7 @@
 <?php
 
 //Disposizioni Generali
-wp_insert_term('Programma per la Trasparenza e l\' Integrità', 'tipologie');
+wp_insert_term('Programma per la Trasparenza e l\'Integrità', 'tipologie');
 wp_insert_term('Atti generali', 'tipologie');
 wp_insert_term('Oneri informativi per cittadini e imprese', 'tipologie');
 
@@ -101,5 +101,7 @@ wp_insert_term('Interventi straordinari e di emergenza', 'tipologie');
 
 //Altri contenuti
 wp_insert_term('Altri contenuti', 'tipologie');
+
+require_once(plugin_dir_path(__FILE__) . 'taxonomydescgenerator.php');
 
 ?>
