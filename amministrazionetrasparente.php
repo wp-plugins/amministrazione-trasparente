@@ -208,6 +208,8 @@ function at_force_template( $template )
 		 $theme_name = get_current_theme();
 		if ($theme_name == 'PASW2013') {
 			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/paswarchive-tipologie.php';
+		} else if ($theme_name == 'SampeTheme Classic') {
+			//$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/sampethemearchive-tipologie.php';
 		}
 	}
     return $template;
