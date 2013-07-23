@@ -3,7 +3,7 @@
 add_action( 'add_meta_boxes', 'add_aturls_metaboxes' );
 
 function add_aturls_metaboxes() {
-    add_meta_box('at_redirect_url', 'Reindirizza URL', 'at_redirect_url', 'amm-trasparente', 'side', 'core');
+    add_meta_box('at_redirect_url', 'Reindirizza URL', 'at_redirect_url', 'amm-trasparente', 'side', 'high');
 }
 
 function at_redirect_url() {
@@ -14,7 +14,7 @@ function at_redirect_url() {
     // Get the aturl data if its already been entered
     $aturl = get_post_meta($post->ID, '_aturl', true);
     // Echo out the field
-	echo '<p>Se vuoi che questo articolo venga reindirizzato automaticamente su un\'altra pagina, inserisci qui di seguito l\'url completo';
+	echo '<p>Se vuoi che questo articolo venga reindirizzato automaticamente su un\'altra pagina, inserisci qui di seguito l\'url completo di http://';
     echo '<input type="text" name="_aturl" value="' . $aturl  . '" class="widefat" />';
 }
 

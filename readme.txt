@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 2.0
-Stable tag: 2.0
+Version: 2.1
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,7 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 = Funzioni in corso di Sviluppo =
 * Visualizzazione Speciale per ogni template
 * Personalizzazione e Opzioni
+* Nuovi Permalink
 
 In caso di problemi, provare prima di tutto ad aggiornare i permalink!
 
@@ -104,6 +105,18 @@ Ogni tag può essere inserito nel template utilizzando una funzione del tipo: <#
 
 
 == Changelog ==
+
+= Versione 2.1 23/07/2013 =
+* I titoli dei documenti nell'archivio PASW2013 sono ora in <h3>
+* Aggiunta possibilità di usare i riassunti
+* Aggiunto possibilità di usare le revisioni
+* Aggiunta slug /trasparenza/ al post di /tipologie/
+* Aggiunta paginazione archivio /page/2
+* Metabox per il reindirizzamento più visibile (sopra il riquadro "Pubblica")
+
+BugFix:
+
+* Risolta mancata attivazione archivio PASW2013 in configurazioni "Case-Sensitive"
 
 = Versione 2.0 22/07/2013 =
 * Nuovo tag [at-head] per mostrare un sommario delle voci

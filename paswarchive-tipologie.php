@@ -20,7 +20,7 @@
 
 	<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 	
-	<h2 class="page-title">Archivio: <?php echo $term->name; ?></h2>
+	<h2 class="page-title"><?php echo $term->name; ?></h2>
 	<div class="row" style="font-size:0.8em;text-align:center;"><a href="#hideARCHIVE" class="hide" id="hideARCHIVE"">[+] Info Normativa</a><a href="#showARCHIVE"" class="show" id="showARCHIVE"">[-] Info Normativa</a> &bull; <a href="<?php echo get_option('at_option_url'); ?>" title="Torna alla lista">Torna alla lista</a>
 	<div class="list" style="text-align:left;"><p><?php echo term_description( $term->id, 'tipologie' ) ?></p><hr></div></div>
 
@@ -28,11 +28,11 @@
         <?php while (have_posts()) : the_post(); ?>
 
           <div class="post type-post hentry">
-            <h2 class="entry-title">
+            <h3 class="entry-title">
               <a href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark">
                 <?php the_title(); ?>
               </a>
-            </h2>
+            </h3>
 
             <div class="entry-summary">
               <?php the_excerpt(); ?>

@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); ?> 
 <div class="corpo">
     <?php get_sidebars('left'); ?>
 	<div class="span-19">
