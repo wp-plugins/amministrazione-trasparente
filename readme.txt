@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 2.1
-Stable tag: 2.1
+Version: 2.1.1
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,8 @@ In più, se è attivo il template PASW2013:
 
 * Visualizzazione archivio speciale con riferimenti normativi e molto altro!
 
+Per conoscere come attivare queste particolari funzioni su altri temi, contattami!
+
 = Installazione =
 Per conoscere in dettaglio tutti i passaggi per installare e configurare Amministrazione Trasparente consultare [questa pagina](http://wordpress.org/plugins/amministrazione-trasparente/installation/).
 
@@ -49,8 +51,6 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 * Visualizzazione Speciale per ogni template
 * Personalizzazione e Opzioni
 * Nuovi Permalink
-
-In caso di problemi, provare prima di tutto ad aggiornare i permalink!
 
 = Miglioramento Proattivo =
 Se noti problemi o malfunzionamenti nell'uso di questo plugin, o semplicemente credi che qualche funzione debba essere migliorata o aggiunta, non esistare a mandare la Tua opinione a milesimarco@outlook.com
@@ -71,7 +71,7 @@ E' possibile testare e provare l'estensione [QUI](http://amministrazionetraspare
 
 Alcuni "Showcase":
 
-* [Comune di San Pelegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
+* [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
 
 == Installation ==
 
@@ -102,12 +102,20 @@ Ogni tag può essere inserito nel template utilizzando una funzione del tipo: <#
 2. Pagina di inserimento Documento
 3. Esempio visualizzazione in modalità tabella
 4. Box di selezione della tipologia
+5. Comoda possibilità di Redirect
+6. Visualizzazione Archivio Personalizzata (solo per alcuni temi)
+
+http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 
 == Changelog ==
 
+= Versione 2.1.1 23/07/2013 =
+* Risolto Problema changelog
+* Aggiunti screenshot per wordpress.org
+
 = Versione 2.1 23/07/2013 =
-* I titoli dei documenti nell'archivio PASW2013 sono ora in <h3>
+* I titoli dei documenti nell'archivio PASW2013 sono ora in h3
 * Aggiunta possibilità di usare i riassunti
 * Aggiunto possibilità di usare le revisioni
 * Aggiunta slug /trasparenza/ al post di /tipologie/
