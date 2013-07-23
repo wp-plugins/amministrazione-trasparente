@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 2.1.1
+Version: 2.1.2
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -118,25 +118,35 @@ add_filter('enter_title_here', 'at_nuovo_titolo');
 
 function at_head_shtc($atts)
 {
-    include(plugin_dir_path(__FILE__) . 'shortcodes-head.php');
+ob_start();
+include(plugin_dir_path(__FILE__) . 'shortcodes-head.php');
+$atshortcode = ob_get_clean();
+return $atshortcode;
 }
 add_shortcode('at-head', 'at_head_shtc');
 
 function at_desc_shtc($atts)
 {
-	echo '<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell\'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione (L.69/2009, L.213/2012, Dlgs33/2013, L.190/2012).</p>';
+$atshortcode = '<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell\'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione (L.69/2009, L.213/2012, Dlgs33/2013, L.190/2012).</p>';
+return $atshortcode;
 }
 add_shortcode('at-desc', 'at_desc_shtc');
 
 function at_table_shtc($atts)
 {
-    include(plugin_dir_path(__FILE__) . 'shortcodes-table.php');
+ob_start();
+include(plugin_dir_path(__FILE__) . 'shortcodes-table.php');
+$atshortcode = ob_get_clean();
+return $atshortcode;
 }
 add_shortcode('at-table', 'at_table_shtc');
 
 function at_list_shtc($atts)
 {
-    include(plugin_dir_path(__FILE__) . 'shortcodes-list.php');
+ob_start();
+include(plugin_dir_path(__FILE__) . 'shortcodes-list.php');
+$atshortcode = ob_get_clean();
+return $atshortcode;
 }
 add_shortcode('at-list', 'at_list_shtc');
 

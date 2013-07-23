@@ -110,6 +110,13 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 == Changelog ==
 
+= Versione 2.1.2 23/07/2013 =
+* Correzione stringa Metabox Redirect
+
+BugFix:
+
+* Risolto problema che causava l'apparizione dello shortcode sempre in alto
+
 = Versione 2.1.1 23/07/2013 =
 * Risolto Problema changelog
 * Aggiunti screenshot per wordpress.org

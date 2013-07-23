@@ -14,7 +14,7 @@ function at_redirect_url() {
     // Get the aturl data if its already been entered
     $aturl = get_post_meta($post->ID, '_aturl', true);
     // Echo out the field
-	echo '<p>Se vuoi che questo articolo venga reindirizzato automaticamente su un\'altra pagina, inserisci qui di seguito l\'url completo di http://';
+	echo '<p>Se vuoi che questo articolo reindirizzi automaticamente su un\'altra pagina, inserisci qui di seguito l\'url completo con http://';
     echo '<input type="text" name="_aturl" value="' . $aturl  . '" class="widefat" />';
 }
 
