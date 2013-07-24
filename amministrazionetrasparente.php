@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 2.1.2
+Version: 2.1.3
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -239,5 +239,11 @@ include(plugin_dir_path(__FILE__) . 'updatefunction.php');
 include(plugin_dir_path(__FILE__) . 'widget.php');
 include(plugin_dir_path(__FILE__) . 'redirector.php');
 include(plugin_dir_path(__FILE__) . 'admin-messages.php');
+
+function at_activate() {
+	global $wp_rewrite;
+    $wp_rewrite->flush_rules(); 
+}
+register_activation_hook( __FILE__, 'at_activate' );
 
 ?>

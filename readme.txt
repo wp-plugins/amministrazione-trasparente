@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 2.1.2
-Stable tag: 2.1.2
+Version: 2.1.3
+Stable tag: 2.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -109,13 +109,13 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 
 == Changelog ==
+= Versione 2.1.3 24/07/2013 =
+* Aggiunto aggiornamento automatico dei Permalink all'attivazione
+* BugFix - Correzione stringa Copyright (se attiva in at-list)
 
 = Versione 2.1.2 23/07/2013 =
 * Correzione stringa Metabox Redirect
-
-BugFix:
-
-* Risolto problema che causava l'apparizione dello shortcode sempre in alto
+* BugFix - Risolto problema che causava l'apparizione dello shortcode sempre in alto
 
 = Versione 2.1.1 23/07/2013 =
 * Risolto Problema changelog
@@ -128,10 +128,7 @@ BugFix:
 * Aggiunta slug /trasparenza/ al post di /tipologie/
 * Aggiunta paginazione archivio /page/2
 * Metabox per il reindirizzamento più visibile (sopra il riquadro "Pubblica")
-
-BugFix:
-
-* Risolta mancata attivazione archivio PASW2013 in configurazioni "Case-Sensitive"
+* BugFix - Risolta mancata attivazione archivio PASW2013 in configurazioni "Case-Sensitive"
 
 = Versione 2.0 22/07/2013 =
 * Nuovo tag [at-head] per mostrare un sommario delle voci
@@ -140,10 +137,7 @@ BugFix:
 * Nuovo Widget con tutte le categorie (possibilità di categorie espandibili)
 * Aggiunta visualizzazione numero post e tipologie in "Stato Attuale" (bacheca wp-admin)
 * Template archivio speciale per PASW2013 (+riferimenti normativi +pulsante "Torna alla lista" - da specificare nelle impostazioni!)
-
-BugFix:
-
-* Sistemato spazio # stringa "Programma per la Trasparenza e l'#Integrità"
+* BugFix - Sistemato spazio # stringa "Programma per la Trasparenza e l'#Integrità"
 
 = Versione 1.2.1 08/07/2013 =
 * Miglioramento strutturale del codice (Accessibilità L.Stanca 2004 e successive)
