@@ -34,7 +34,6 @@ function at_job_cpt_template_filter($content)
     echo '<br/><hr><strong>Documenti Allegati:</strong><br/>';
     $args        = array(
         'post_type' => 'attachment',
-        'post_mime_type' => 'application/pdf,application/msword,application/zip,application/vnd.ms-excel',
         'numberposts' => -1,
         'post_status' => null,
         'post_parent' => get_the_ID(),

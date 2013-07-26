@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 2.1.3
-Stable tag: 2.1.3
+Version: 2.2
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ Questo modulo offre la gestione di tutte le informazioni richieste in modo sempl
 * Funzioni facilmente implementabili
 * Doppia visualizzazione a scelta grazie a 2 shortcode: modalità lista e modalità tabella (2 colonne)
 * Funzione di redirect automatico per ogni articolo
-* Visualizzazione automatica allegati WORD / PDF / ZIP / EXCEL
+* Visualizzazione automatica degli allegati caricati nella pagina
 * Widget
 
 In più, se è attivo il template PASW2013:
@@ -109,6 +109,9 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 
 == Changelog ==
+= Versione 2.2 26/07/2013 =
+* Visualizzazione automatica di tutti i formati di allegati
+
 = Versione 2.1.3 24/07/2013 =
 * Aggiunto aggiornamento automatico dei Permalink all'attivazione
 * BugFix - Correzione stringa Copyright (se attiva in at-list)
