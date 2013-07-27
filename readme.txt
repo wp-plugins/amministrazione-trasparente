@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 2.2
-Stable tag: 2.2
+Version: 2.2.1
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -109,6 +109,9 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 
 == Changelog ==
+= Versione 2.2.1 27/07/2013 =
+* BugFix - Eliminata visualizzazione template personaizzato in tutti gli archivi
+
 = Versione 2.2 26/07/2013 =
 * Visualizzazione automatica di tutti i formati di allegati
 
