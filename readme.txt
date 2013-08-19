@@ -16,8 +16,6 @@ Soluzione completa per la pubblicazione dei documenti ai sensi del D.lgs. n. 33 
 
 Soluzione **gratuita** e **completa** per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
 
-A chi si rivolge questo software? La normativa richiede l'utilizzo del software a enti locali e pubbliche amministrazioni: comuni, province, comunità montane, istituti scolastici (scuole, università) e associazioni pubbliche.
-
 = Perchè scegliere "Amministrazione Trasparente" per Wordpress? =
 
 Amministrazione Trasparente è stato sviluppato seguendo tre criteri: **Flessibilità**, **Semplicità** e **Velocità di inserimento**.
@@ -97,7 +95,6 @@ Per abilitarla, aprire il file aggiungendo '<?php if (function_exists('at_archiv
 * Aggiunta opzione per forzare l'utilizzo dei template PASW2013 (abilitare se è installata una versione precedente o se è stato cambiato il nome del tema (vedi impostazioni plugin)
 * Aggiunto avviso di mancato inserimento ID per l'impostazione "Torna alla lista" - rimozione del campo 'URL'
 * Nuova **Guida PDF** per gli uffici [scaricabile gratuitamente](http://wordpress.org/plugins/amministrazione-trasparente/)
-
 * **Migliorato filtraggio** documenti nella gestione web (codice + snello & visualizzazione più pulita)
 * Migliorata suddivisione logica dei file del plugin
 * Modificata stringa "Torna alla lista" in "Torna al sommario"
