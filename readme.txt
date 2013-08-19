@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 3.0.1
-Stable tag: 3.0.1
+Version: 3.0.2
+Stable tag: 3.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,8 +15,6 @@ Soluzione completa per la pubblicazione dei documenti ai sensi del D.lgs. n. 33 
 = Premessa =
 
 Soluzione **gratuita** e **completa** per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-
-A chi si rivolge questo software? La normativa richiede l'utilizzo del software a enti locali e pubbliche amministrazioni: comuni, province, comunità montane, istituti scolastici (scuole, università) e associazioni pubbliche.
 
 = Perchè scegliere "Amministrazione Trasparente" per Wordpress? =
 
@@ -51,6 +49,8 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 == Installation ==
 
 http://www.youtube.com/watch?v=qWj9hvzNSlg
+
+> In caso di errori 404 (pagina non trovata), aggiornare i permalink da Impostazioni -> Permalink
 
 1. Carica il contenuto estratto nella cartella `/wp-content/plugins/`
 2. Attiva il plugin dal menu 'Plugins' in WordPress
@@ -88,6 +88,9 @@ Per abilitarla, aprire il file aggiungendo '<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.0.2 19/08/2013  =
+* BugFix - Risolto problema che non mostrava il widget espandibile
 
 = Versione 3.0.1 19/08/2013  =
 * BugFix - Sistemato mancato caricamento della pagina con la visualizzazione "logic" del plugin impostata
