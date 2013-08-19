@@ -296,11 +296,11 @@ $nome_tipologia = "Altri contenuti";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 echo '</ul>';
 
+echo '</div>';
+
 $get_show_love = get_option('at_option_love');
 if ($get_show_love == '1') {
 	echo '<hr><div style="font-size:0.8em;">Questo sito utilizza il modulo Wordpress <a href="http://wordpress.org/plugins/amministrazione-trasparente/" rel="nofollow" title="Plugin Amministrazione Trasparente per Wordpress">Amministrazione Trasparente</a></div>';
 }
-
-echo '</div>';
 
 ?>

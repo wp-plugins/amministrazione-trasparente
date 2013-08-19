@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 2.2.1
-Stable tag: 2.2.1
+Version: 3
+Stable tag: 3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,64 +14,39 @@ Soluzione completa per la pubblicazione dei documenti ai sensi del D.lgs. n. 33 
 == Description ==
 = Premessa =
 
-Soluzione gratuita e completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
+Soluzione **gratuita** e **completa** per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
 
 A chi si rivolge questo software? La normativa richiede l'utilizzo del software a enti locali e pubbliche amministrazioni: comuni, province, comunità montane, istituti scolastici (scuole, università) e associazioni pubbliche.
 
-= Perchè scegliere "Amministrazione Trasparente" per Wordpress =
+= Perchè scegliere "Amministrazione Trasparente" per Wordpress? =
 
-Questo modulo offre la gestione di tutte le informazioni richieste in modo semplice e veloce. In particolare, permette di gestire ogni documento come singolo articolo e, oltre a consentire il caricamento di uno o più file, è possibile inserire anche testo a piacere, link o immagini. Ad esempio, se è necessario inserire solo dei recapiti telefonici, grazie a questo plugin sarà sufficiente scriverlo nell'area del testo (al contrario soluzioni concorrenti permettono il solo caricamento di documenti allegati, quali word, pdf, xls, rallentando il processo produttivo dell'ufficio competente).
+Amministrazione Trasparente è stato sviluppato seguendo tre criteri: **Flessibilità**, **Semplicità** e **Velocità di inserimento**.
+
+L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una comodità di aggiornamento senza pari! In particolare in ogni voce è possibile inserire file, immagini, testi, link o anche effettuare un reindirizzamento automatico a un'altra pagina. Per esempio, per inserire i recapiti telefonici non è necessario scriverli in Microsoft Word per poi caricare il file, ma basta semplicemente scriverlo!
+
+> [DEMO](http://amministrazionetrasparente.marcomilesi.ml) | [INSTALLAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](http://amministrazionetrasparente.marcomilesi.ml/guida_amministrazionetrasparente.pdf)
+
+> Esempi: [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
 
 = Caratteristiche del Plugin =
-* Aggiornamenti periodici per fornire una soluzione sempre al top (ogni nuova versione è testata su diversi server per evitare spiacevoli inconvenienti)
-* Inserimento facile, veloce e intuitivo
-* Soluzione ideale per ogni tipo di informazione senza dovere per forza caricare un file
+* Aggiornamenti periodici (**aggiornate sempre per garantirvi continui miglioramenti e nuove funzioni!**)
+* Inserimento flessibile, intuitivo e veloce
+* Soluzione ideale per ogni tipo di informazione
 * Gestione completa di tutte le 56 categorie richieste dalla legge
-* Ogni documento è gestito come Articolo autonomo
-* Funzione di redirect delle voci a pagine già esistenti o link esterni
+* Ogni documento è gestito singolarmente
+* Permessi di pubblicazione ereditati degli articoli (autore, editore,...)
+* Funzione di reindirizzamento delle voci
 * Codice leggero, commentato e facilmente modificabile
-* Funzioni facilmente implementabili
 * Doppia visualizzazione a scelta grazie a 2 shortcode: modalità lista e modalità tabella (2 colonne)
 * Funzione di redirect automatico per ogni articolo
 * Visualizzazione automatica degli allegati caricati nella pagina
-* Widget
+* Widget personalizzabile con 2 modalità di visualizzazione
+* Compatibilità completa per **Pasw2013** (visualizzazione archivio/singola modificate appositamente)
 
-In più, se è attivo il template PASW2013:
-
-* Visualizzazione archivio speciale con riferimenti normativi e molto altro!
-
-Per conoscere come attivare queste particolari funzioni su altri temi, contattami!
-
-= Installazione =
-Per conoscere in dettaglio tutti i passaggi per installare e configurare Amministrazione Trasparente consultare [questa pagina](http://wordpress.org/plugins/amministrazione-trasparente/installation/).
+= CONTATTI & SUPPORTO =
+Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, inoltra il Tuo suggerimento a [milesimarco@outlook.com](mailto:milesimarco@outlook.com) oppure via Skype: milesimarco94
 
 http://www.youtube.com/watch?v=qWj9hvzNSlg
-
-= Funzioni in corso di Sviluppo =
-* Visualizzazione Speciale per ogni template
-* Personalizzazione e Opzioni
-* Nuovi Permalink
-
-= Miglioramento Proattivo =
-Se noti problemi o malfunzionamenti nell'uso di questo plugin, o semplicemente credi che qualche funzione debba essere migliorata o aggiunta, non esistare a mandare la Tua opinione a milesimarco@outlook.com
-
-= CONSULENZA TECNICA =
-Vuoi maggiori informazioni prima di installare questa estensione?
-Hai bisogno di assistenza per un malfunzionamento o vuoi parlare con l'autore di un problema o personalizzazioni?
-Per "Amministrazione Trasparente" è fornito un servizio di supporto "base" gratuito.
-
-Di seguito i contatti:
-
-* tel. 37.sette.uno.36.quattro.due.95
-* mail. milesimarco@outlook.com
-* Skype: milesimarco94
-
-= DEMO =
-E' possibile testare e provare l'estensione [QUI](http://amministrazionetrasparente.marcomilesi.ml)
-
-Alcuni "Showcase":
-
-* [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
 
 == Installation ==
 
@@ -82,33 +57,59 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 3. Inserire in una pagina o in un articolo i seguenti tag disponibili:
 
 * [at-head] => Mostra un sommario delle voci cliccabili. Da usare nella stessa pagina di [at-list] o [at-table]
-* [at-desc] => Mostra la descrizione del Modulo Amministrazione Trasparente.
+* [at-desc] => Mostra la descrizione di Amministrazione Trasparente.
 * [at-list] => Visualizza una lista di tutte le voci/sottovoci di A.T.
 * [at-table] => Visualizza una lista a 2 colonne di A.T.
 
-Un'ideale pagina potrebbe, nell'ordine, contenere i seguenti tag:
+Una buona pagina potrebbe contenere i seguenti tag:
 
 * [at-desc]
 * [at-head]
 * [at-list] oppure [at-table]
 
-Ogni tag può essere inserito nel template utilizzando una funzione del tipo: <#?php echo do_shortcode('[at-list]') ?#> (senza i caratteri #)
+Ogni tag può essere inserito nel template utilizzando una funzione del tipo: `<?php echo do_shortcode('[at-list]') ?>`
 
 4. A questo punto basta inserire le voci selezionando, dal menù di amministrazione, Trasparenza > Nuova Voce
-5. Questo plugin è compatibile con quasi tutti i temi di Wordpress. In caso contrario, come ad esempio PASW2013 (usato in molti siti internet di Istituti Comprensivi) il plugin utilizza una visualizzazione archivio particolare, con funzioni inedite.
+5. Questo plugin funziona bene con la maggior parte dei temi Wordpress. Il plugin usa automaticamente template personalizzati per chi usa PASW2013!
+
+= Modifica Template Archivio - [+] Info Normativa • Torna al sommario =
+Chi non utilizza il tema Pasw2013 può comunque abilitare la visualizzazione della descrizione espandibile e il link 'Torna al sommario' sotto il titolo degli archivi dei documenti modificando il file archive.php (il nome può cambiare) dalla cartella contenente i file del tema attivo.
+
+Per abilitarla, aprire il file aggiungendo '<?php if (function_exists('at_archive_buttons')) { at_archive_buttons(); } ?>' subito sotto al codice che genera il titolo.
 
 == Screenshots ==
 1. Menù Laterale
 2. Pagina di inserimento Documento
 3. Esempio visualizzazione in modalità tabella
 4. Box di selezione della tipologia
-5. Comoda possibilità di Redirect
-6. Visualizzazione Archivio Personalizzata (solo per alcuni temi)
-
-http://www.youtube.com/watch?v=qWj9hvzNSlg
+5. Comoda opzione di Redirect
+6. Visualizzazione Archivio Personalizzata (automatica su PASW2013; da aggiungere nel template negli altri temi con la funzione '<?php at_archive_buttons(); ?>')
 
 
 == Changelog ==
+> Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3  =
+* Aggiunta opzione widget "Visualizza solo sulle pagine archivio e singole dei documenti"
+* Aggiunto file **single.php** con visualizzazione tipologia [SOLO PASW2013]
+* Aggiunta funzione utilizzabile in tutti i temi per mostrare la descrizione della tipologia e il pulsante "Torna al Sommario"(vedi [Installazione](http://wordpress.org/plugins/amministrazione-trasparente/installation/))
+* Abilitato **supporto per i TAG**
+* Aggiunta opzione per forzare l'utilizzo dei template PASW2013 (abilitare se è installata una versione precedente o se è stato cambiato il nome del tema (vedi impostazioni plugin)
+* Aggiunto avviso di mancato inserimento ID per l'impostazione "Torna alla lista" - rimozione del campo 'URL'
+* Nuova **Guida PDF** per gli uffici [scaricabile gratuitamente](http://wordpress.org/plugins/amministrazione-trasparente/)
+
+* **Migliorato filtraggio** documenti nella gestione web (codice + snello & visualizzazione più pulita)
+* Migliorata suddivisione logica dei file del plugin
+* Modificata stringa "Torna alla lista" in "Torna al sommario"
+* Migliorato CSS widget: testo e 'pulsanti [+]' sono più piccoli
+* Riscritto pannello informazioni del plugin
+* Riscritto file ReadMe
+
+* BugFix - Forzato aggiornamento automatico dei Permalink all'attivazione/disattivazione del plugin
+* BugFix - Migliorata la funzione di switch template per pasw2013
+* BugFix - Sostituzione funzione deprecata get_current_theme() con wp_get_theme()
+* BugFix - Sistemata posizione link "Questo sito utilizza il modulo Wordpress Amministrazione Trasparente" in [at-table]
+
 = Versione 2.2.1 27/07/2013 =
 * BugFix - Eliminata visualizzazione template personaizzato in tutti gli archivi
 

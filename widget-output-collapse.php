@@ -1,8 +1,16 @@
-<!--This is a great custom alternative to standard blog archives-->
- 
+<?php
+$get_is_logic = get_option('at_logic_widget');
+		if ($get_is_logic == '1') {
+			if ( is_tax( 'tipologie' ) ) {
+			} else if ( is_singular( 'amm-trasparente' ) ) {
+			} else {
+			return;
+			}
+		}
+?>
 <!--CSS Code-->
 <style type="text/css">
-.row {vertical-align: top; height:auto !important;}
+.row {vertical-align: top; height:auto !important; font-size: 0.9em;}
 .list {display:none;}
 .show {display:none;}
 .hide:target + .show {display:inline;}

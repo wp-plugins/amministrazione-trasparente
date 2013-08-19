@@ -12,9 +12,10 @@ if ( is_admin() ){ // admin actions
 }
 
 function at_reg_settings() {
-	register_setting( 'at_options_group', 'at_option_url');
+	register_setting( 'at_options_group', 'at_option_id', 'intval');
 	register_setting( 'at_options_group', 'at_option_love', 'intval');
 	register_setting( 'at_options_group', 'at_option_widget');
+	register_setting( 'at_options_group', 'at_pasw_developer', 'intval');
 }
 
 function at_setting_menu()
@@ -25,16 +26,22 @@ function at_setting_menu()
 function at_settings_menu()
 {
 
-	$at_option_url = get_option('at_option_url');
+	$at_option_id = get_option('at_option_id');
 	    
     if(isset($_POST['Submit'])) 	{
-		$at_option_get_url = $_POST["at_option_url_n"];
-        update_option( 'at_option_url', $at_option_get_url );
+		$at_option_get_id = $_POST["at_option_id_n"];
+        update_option( 'at_option_id', $at_option_get_id );
 
 		if(isset($_POST['at_option_love_n'])){
 			update_option( 'at_option_love', '1' );
 		} else {
 			update_option( 'at_option_love', '0' );
+		}
+		
+		if(isset($_POST['at_pasw_developer_n'])){
+			update_option( 'at_pasw_developer', '1' );
+		} else {
+			update_option( 'at_pasw_developer', '0' );
 		}
 	}
 	
@@ -48,17 +55,26 @@ function at_settings_menu()
 	echo '
 	<table class="form-table">
         <tr valign="top">
-        <th scope="row">URL Pagina Amministrazione Trasparente</th>
-        <td><input type="text" name="at_option_url_n" value="';
-	echo get_option('at_option_url');
-	echo '" />&nbsp;Inserisci qui l\'url della pagina in cui è stato inserito un tag head/list. Serve per il pulsante "Torna alla lista" (se supportato)</td></tr>';
+        <th scope="row">ID Pagina Amministrazione Trasparente</th>
+        <td><input type="text" name="at_option_id_n" value="';
+	echo get_option('at_option_id');
+	echo '" />&nbsp;Inserisci qui l\'id della pagina in cui è stato inserito un tag head/list (serve per attivare correttamente il link "Torna al Sommario" e le impostazioni widget</td></tr>
+	
+	<th scope="row">Forza template PASW</th>
+    <td><input type="checkbox" name="at_pasw_developer_n" ';
+	$get_pasw_developer = get_option('at_pasw_developer');
+	if ($get_pasw_developer == '1') {
+		echo 'checked=\'checked\'';
+	}
+	echo '/>&nbsp;Spunta casella se vuoi forzare l\'utilizzo dei template archive/single ottimizzati per PASW2013 (attenzione: abilitare <b>solo</b> se il tema attivo è una versione <b>precedente</b> al 2013 o se è stato cambiato il nome del tema!)</td></tr>';
+	
 	echo '<tr><th scope="row">Mostra "Un po\' di amore"</th>
         <td><input type="checkbox" name="at_option_love_n" ';
 	$get_show_love = get_option('at_option_love');
 	if ($get_show_love == '1') {
 		echo 'checked=\'checked\'';
 	}
-	echo '/>&nbsp;Spunta questa casella per dimostrare il lato "OPEN" del sito web mostrando un link alla pagina wordpress.org di A.T. in fondo alla visualizzazione table/list</td>';
+	echo '/>&nbsp;Spunta questa casella per mostrare un link al plugin in fondo alla pagina [at-list] e [at-table]</td>';
 	echo '</tr></table>';
 
 	
@@ -75,7 +91,7 @@ function at_menu()
 
 function at_credits_menu()
 {
-    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>2.2.1</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
+    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>3</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
 	Per l\'utilizzo dei tag nel template, usare rispettivamente <#?php echo do_shortcode(\'[at-list]\') ?#> oppure <#?php echo do_shortcode(\'[at-table]\') ?#> (senza il carattere #)<br/>
 	Per informazioni e supporto, consultare il blog ufficiale oppure la pagina dedicata su Wordpress.org.<br/><br/><h3>Segnalazione BUG - Miglioramento Proattivo</h3>Nel caso in cui si riscontrino anomalie o imperfezioni durante l\'utilizzo di questo modulo, si prega di compilare una segnalazione e di inviarla a <b>milesimarco@outlook.com</b>. In questo modo, oltre a mantenere il plugin sempre aggiornato e privo di problemi per tutti, contribuisci in modo consapevole ad ottenere un prodotto gratuito e sempre aggiornato su cui poter contare. Allo stesso modo, se pensi che questo plugin debba implementare altre funzioni, contatta l\'autore o lascia un commento nella pagina su Wordpress.org!<br/><br/>Grazie per utilizzare Amministrazione Trasparente per Wordpress!<br/>Marco';
 }

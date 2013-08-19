@@ -3,62 +3,13 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 2.2.1
+Version: 3
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
-License:
-Copyright 2013 Marco Milesi (milesimarco@outlook.com)
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License, version 2, as 
-published by the Free Software Foundation.
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+License: GPL Attribution-ShareAlike
 */
 
-/* REGISTRA TASSONOMIA (PRIMA DEL CUSTOM POST X PROBLEMI DI REWRITE) */
-add_action( 'init', 'AT_RegistraTAX');
-function AT_RegistraTAX() {
-	
-    $labels = array( 
-        'name' => _x( 'Tipologie', 'tipologie' ),
-        'singular_name' => _x( 'Tipologia', 'tipologie' ),
-        'search_items' => _x( 'Cerca tipologia', 'tipologie' ),
-        'popular_items' => _x( 'Tipologie più usate', 'tipologie' ),
-        'all_items' => _x( 'Tutte le Tipologie', 'tipologie' ),
-        'parent_item' => _x( 'Parent Tipologia', 'tipologie' ),
-        'parent_item_colon' => _x( 'Parent Tipologia:', 'tipologie' ),
-        'edit_item' => _x( 'Modifica Tipologia', 'tipologie' ),
-        'update_item' => _x( 'Aggiorna Tipologia', 'tipologie' ),
-        'add_new_item' => _x( 'Nuova Tipologia', 'tipologie' ),
-        'new_item_name' => _x( 'Nuova Tipologia', 'tipologie' ),
-        'separate_items_with_commas' => _x( 'Separate tipologie with commas', 'tipologie' ),
-        'add_or_remove_items' => _x( 'Add or remove tipologie', 'tipologie' ),
-        'choose_from_most_used' => _x( 'Choose from the most used tipologie', 'tipologie' ),
-        'menu_name' => _x( 'Tipologie', 'tipologie' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'public' => true,
-        'show_in_nav_menus' => true,
-        'show_ui' => true,
-        'show_tagcloud' => false,
-        'show_admin_column' => true,
-        'hierarchical' => true,
-		'rewrite' => array('hierarchical' => true, 'slug' => 'trasparenza' ),
-		'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
-        'query_var' => true
-    );
-    register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
-    include(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
-}
 
 /* REGISTRA CUSTOM POST TYPE */
 
@@ -84,6 +35,7 @@ function register_cpt_documento_trasparenza() {
         'labels' => $labels,
         'hierarchical' => true,
         'description' => 'trasparenza',
+		'taxonomies' => array('post_tag'),
         'supports' => array( 'title', 'editor', 'excerpt', 'revisions' ),
         'public' => true,
         'show_ui' => true,
@@ -96,11 +48,48 @@ function register_cpt_documento_trasparenza() {
         'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
-        'rewrite' => array( 'pages'=> true  ),
+		'rewrite' => array('pages'=> true, 'with_front' => true),
         'capability_type' => 'post'
     );
 
     register_post_type( 'amm-trasparente', $args );
+}
+
+add_action( 'init', 'AT_RegistraTAX');
+function AT_RegistraTAX() {
+	
+    $labels = array( 
+        'name' => _x( 'Tipologie', 'tipologie' ),
+        'singular_name' => _x( 'Tipologia', 'tipologie' ),
+        'search_items' => _x( 'Cerca tipologia', 'tipologie' ),
+        'popular_items' => _x( 'Tipologie più usate', 'tipologie' ),
+        'all_items' => _x( 'Tutte le Tipologie', 'tipologie' ),
+        'parent_item' => _x( 'Parent Tipologia', 'tipologie' ),
+        'parent_item_colon' => _x( 'Parent Tipologia:', 'tipologie' ),
+        'edit_item' => _x( 'Modifica Tipologia', 'tipologie' ),
+        'update_item' => _x( 'Aggiorna Tipologia', 'tipologie' ),
+        'add_new_item' => _x( 'Nuova Tipologia', 'tipologie' ),
+        'new_item_name' => _x( 'Nuova Tipologia', 'tipologie' ),
+        'separate_items_with_commas' => _x( 'Separate tipologie with commas', 'tipologie' ),
+        'add_or_remove_items' => _x( 'Aggiungi o elimina una tipologia', 'tipologie' ),
+        'choose_from_most_used' => _x( 'Scegli tra le tipologie più usate', 'tipologie' ),
+        'menu_name' => _x( 'Tipologie', 'tipologie' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'public' => true,
+        'show_in_nav_menus' => true,
+        'show_ui' => true,
+        'show_tagcloud' => false,
+        'show_admin_column' => true,
+        'hierarchical' => true,
+		'rewrite' => array('hierarchical' => true, 'slug' => 'trasparenza', 'with_front' => false),
+		'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
+        'query_var' => true
+    );
+    register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
+    include(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
 }
 
 /* =========== TITOLO HCK =========== */
@@ -114,12 +103,12 @@ function at_nuovo_titolo($title)
 }
 add_filter('enter_title_here', 'at_nuovo_titolo');
 
-/* =========== SHORTCODES [at-head] & [at-table] & [at-list] ============ */
+/* =========== SHORTCODES [at-head] & [at-desc] & [at-table] & [at-list] ============ */
 
 function at_head_shtc($atts)
 {
 ob_start();
-include(plugin_dir_path(__FILE__) . 'shortcodes-head.php');
+include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-head.php');
 $atshortcode = ob_get_clean();
 return $atshortcode;
 }
@@ -135,7 +124,7 @@ add_shortcode('at-desc', 'at_desc_shtc');
 function at_table_shtc($atts)
 {
 ob_start();
-include(plugin_dir_path(__FILE__) . 'shortcodes-table.php');
+include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-table.php');
 $atshortcode = ob_get_clean();
 return $atshortcode;
 }
@@ -144,11 +133,15 @@ add_shortcode('at-table', 'at_table_shtc');
 function at_list_shtc($atts)
 {
 ob_start();
-include(plugin_dir_path(__FILE__) . 'shortcodes-list.php');
+include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-list.php');
 $atshortcode = ob_get_clean();
 return $atshortcode;
 }
 add_shortcode('at-list', 'at_list_shtc');
+
+function at_archive_buttons() { //Questa funzione va chiamata con at_archive_buttons()
+include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-php-archive.php');
+}
 
 	function presstrends_AmministrazioneTrasparente_plugin() {
 
@@ -214,17 +207,24 @@ add_action('admin_init', 'presstrends_AmministrazioneTrasparente_plugin');
 /* =========== VISUALIZZAZIONE ARCHIVIO SPECIALE ============ */
 
 // force use of templates from plugin folder
-function at_force_template( $template )
-{	
+function at_force_template( $template ) {	
     if( is_tax( 'tipologie' ) ) {
-		 $theme_name = strtolower(get_current_theme());
+		$theme_name = strtolower(wp_get_theme());
 		if ($theme_name == 'pasw2013') {
-			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/paswarchive-tipologie.php';
-		} else if ($theme_name == 'SampeTheme Classic') {
-			//$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/sampethemearchive-tipologie.php';
+			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswarchive-tipologie.php';
+		} else if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
+			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswarchive-tipologie.php';
+		}
+	
+	} else if ( is_singular( 'amm-trasparente' ) ) {
+		$theme_name = strtolower(wp_get_theme());
+		if ($theme_name == 'pasw2013') {
+			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswsingle-tipologie.php';
+		} else if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
+			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswsingle-tipologie.php';
 		}
 	}
-    return $template;
+	return $template;
 }
 add_filter( 'template_include', 'at_force_template' );
 
@@ -240,10 +240,11 @@ include(plugin_dir_path(__FILE__) . 'widget.php');
 include(plugin_dir_path(__FILE__) . 'redirector.php');
 include(plugin_dir_path(__FILE__) . 'admin-messages.php');
 
-function at_activate() {
-	global $wp_rewrite;
-    $wp_rewrite->flush_rules(); 
+register_activation_hook( __FILE__, 'at_flush' );
+register_deactivation_hook( __FILE__, 'at_flush' );
+
+function at_flush() {
+	flush_rewrite_rules();
 }
-register_activation_hook( __FILE__, 'at_activate' );
 
 ?>

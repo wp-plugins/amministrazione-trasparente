@@ -1,33 +1,23 @@
 <?php
-/* =========== FILTRAGGIO LISTA BACK-END === */
-
-add_action( 'restrict_manage_posts', 'at_filter_list' );
-
-function at_filter_list() {
-    $screen = get_current_screen();
-    global $wp_query;
-    if ( $screen->post_type == 'amm-trasparente' ) {
-        wp_dropdown_categories( array(
-            'show_option_all' => 'Mostra tutte le tipologie',
-            'taxonomy' => 'tipologie',
-            'name' => 'tipologie',
-            'orderby' => 'name',
-            'selected' => ( isset( $wp_query->query['tipologie'] ) ? $wp_query->query['tipologie'] : '' ),
-            'hierarchical' => false,
-            'depth' => 3,
-            'show_count' => false,
-            'hide_empty' => false,
-        ) );
-    }
-}
-
-add_filter( 'parse_query','at_filtering' );
-
-function at_filtering( $query ) {
-    $qv = &$query->query_vars;
-    if ( ( $qv['tipologie'] ) && is_numeric( $qv['tipologie'] ) ) {
-        $term = get_term_by( 'id', $qv['tipologie'], 'tipologie' );
-        $qv['tipologie'] = $term->slug;
+//FILTRI
+add_action( 'restrict_manage_posts', 'my_restrict_manage_posts' );
+function my_restrict_manage_posts() {
+    global $typenow;
+    $taxonomy = 'tipologie'; // Change this
+    if( $typenow != "page" && $typenow != "post" ){
+        $filters = array($taxonomy);
+        foreach ($filters as $tax_slug) {
+            $tax_obj = get_taxonomy($tax_slug);
+            $tax_name = $tax_obj->labels->name;
+            $terms = get_terms($tax_slug);
+            echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
+            echo "<option value=''>Mostra tutto ...</option>";
+            foreach ($terms as $term) { 
+                $label = (isset($_GET[$tax_slug])) ? $_GET[$tax_slug] : ''; // Fix
+                echo '<option value='. $term->slug, $label == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>';
+            }
+            echo "</select>";
+        }
     }
 }
 ?>
