@@ -90,7 +90,7 @@ Per abilitarla, aprire il file aggiungendo '<?php if (function_exists('at_archiv
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
 
 = Versione 3  =
-* Aggiunta opzione widget "Visualizza solo sulle pagine archivio e singole dei documenti"
+* Aggiunta opzione **WIDGET** "Visualizza solo sulle pagine archivio e singole dei documenti"
 * Aggiunto file **single.php** con visualizzazione tipologia [SOLO PASW2013]
 * Aggiunta funzione utilizzabile in tutti i temi per mostrare la descrizione della tipologia e il pulsante "Torna al Sommario"(vedi [Installazione](http://wordpress.org/plugins/amministrazione-trasparente/installation/))
 * Abilitato **supporto per i TAG**
