@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 3
-Stable tag: 3
+Version: 3.0.1
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ Soluzione completa per la pubblicazione dei documenti ai sensi del D.lgs. n. 33 
 = Premessa =
 
 Soluzione **gratuita** e **completa** per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
+
+A chi si rivolge questo software? La normativa richiede l'utilizzo del software a enti locali e pubbliche amministrazioni: comuni, province, comunità montane, istituti scolastici (scuole, università) e associazioni pubbliche.
 
 = Perchè scegliere "Amministrazione Trasparente" per Wordpress? =
 
@@ -87,7 +89,11 @@ Per abilitarla, aprire il file aggiungendo '<?php if (function_exists('at_archiv
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
 
-= Versione 3  =
+= Versione 3.0.1 19/08/2013  =
+* BugFix - Sistemato mancato caricamento della pagina con la visualizzazione "logic" del plugin impostata
+* BugFix - Sistemato problema di alcuni link 'Torna alla Lista' che non convertivano l'id pagina inserito nelle impostazioni del plugin
+
+= Versione 3 19/08/2013   =
 * Aggiunta opzione **WIDGET** "Visualizza solo sulle pagine archivio e singole dei documenti"
 * Aggiunto file **single.php** con visualizzazione tipologia [SOLO PASW2013]
 * Aggiunta funzione utilizzabile in tutti i temi per mostrare la descrizione della tipologia e il pulsante "Torna al Sommario"(vedi [Installazione](http://wordpress.org/plugins/amministrazione-trasparente/installation/))
@@ -95,6 +101,7 @@ Per abilitarla, aprire il file aggiungendo '<?php if (function_exists('at_archiv
 * Aggiunta opzione per forzare l'utilizzo dei template PASW2013 (abilitare se è installata una versione precedente o se è stato cambiato il nome del tema (vedi impostazioni plugin)
 * Aggiunto avviso di mancato inserimento ID per l'impostazione "Torna alla lista" - rimozione del campo 'URL'
 * Nuova **Guida PDF** per gli uffici [scaricabile gratuitamente](http://wordpress.org/plugins/amministrazione-trasparente/)
+
 * **Migliorato filtraggio** documenti nella gestione web (codice + snello & visualizzazione più pulita)
 * Migliorata suddivisione logica dei file del plugin
 * Modificata stringa "Torna alla lista" in "Torna al sommario"

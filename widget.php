@@ -13,10 +13,9 @@ class atWidget extends WP_Widget {
 		if ($get_is_logic == '1') {
 			if ( is_tax( 'tipologie' ) ) {
 			} else if ( is_singular( 'amm-trasparente' ) ) {
-			} else if (get_option('at_option_url') == $current_page_URL) {
+			} else if (get_permalink(get_option('at_option_id')) == $current_page_URL) {
 			} else {
-			die();
-			echo $current_page_URL;
+			return false;
 			}
 		}
         echo $before_widget;
