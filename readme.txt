@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 3.2.1
-Stable tag: 3.2.1
+Version: 3.2.2
+Stable tag: 3.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,7 +80,7 @@ A partire dalla versione 3.2 di Amministrazione Trasparente, il plugin mostra au
 La gerarchia ideale per le briciole di pane in Amministrazione Trasparente potrebbe essere del tipo **Home > Amministrazione Trasparente** (pagina) ** > Sottosezione** (archivio) **> NomeVoce** (articolo singolo).
 Data la diversa natura delle varie parti delle briciole di pane, è necessario procedere ad un'accurata messa a punto del plugin Breadcrumb NavXT che supporta questo tipo di configurazioni.
 Per effettaure queste modifiche, accedere al back-end di Wordpress e cliccare su Impostazioni -> Breadcrumb NavXT -> Tipi di post.
-Tutte le opzioni da cambiare sono raccolte in un'immagine-guida disponibile [QUI](http://amministrazionetrasparente.marcomilesi.ml/bricioledipane_ammtrasparente_navxt.jpg)
+Tutte le opzioni da cambiare sono raccolte in un'immagine-guida disponibile [>> QUI <<](http://amministrazionetrasparente.marcomilesi.ml/bricioledipane_ammtrasparente_navxt.jpg)
 
 = Modifica Template Archivio - [+] Info Normativa • Torna al sommario =
 Chi non utilizza il tema Pasw2013 può comunque abilitare la visualizzazione della descrizione espandibile e il link 'Torna al sommario' sotto il titolo degli archivi dei documenti modificando il file archive.php (il nome può cambiare) dalla cartella contenente i file del tema attivo.
@@ -98,6 +98,10 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.2.2 21/08/2013 =
+* **Cambiati** tag 'name' deprecati in 'id' (visualizzazione list + table) (compatibile con WP Accessibility) | Grazie [@ClaudiaCantaluppi](http://profiles.wordpress.org/ClaudiaCantaluppi)
+* **Aumentata** distanza tra list/table e il link alla pagina *nofollow* del plugin (se attivata l'opzione 'Mostra un po' di amore')
 
 = Versione 3.2.1 21/08/2013  =
 * Correzione file repository wordpress
