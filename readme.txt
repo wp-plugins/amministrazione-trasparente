@@ -24,8 +24,6 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 
 > [DEMO](http://amministrazionetrasparente.marcomilesi.ml) | [INSTALLAZIONE e CONFIGURAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](http://amministrazionetrasparente.marcomilesi.ml/guida_amministrazionetrasparente.pdf)
 
-> SHOWCASE:
-
 > Comuni | [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/) - [Comune di Bordighera](http://trasparenza.bordighera.it/)
 
 > Scuole | [IC Nord 1 Brescia](http://www.icnord1brescia.gov.it/amministrazione-trasparente/)
@@ -79,7 +77,7 @@ Ogni tag può essere inserito nel template utilizzando una funzione del tipo: `<
 = Integrare il plugin Breadcrumb NavXT con Amministrazione Trasparente =
 A partire dalla versione 3.2 di Amministrazione Trasparente, il plugin mostra automaticamente le briciole di pane per Pasw2013. Chi non usa il tema Pasw2013 può comunque installare il plugin Breadcrumb NavXT configurandolo manualmente o ricorrere a soluzioni differenti (il risultato gerarchico potrebbe differire).
 
-La gerarchia ideale per le briciole di pane in Amministrazione Trasparente potrebbe essere del tipo *Home > Amministrazione Trasparente* (pagina) * > Sottosezione* (archivio) *> NomeVoce* (articolo singolo).
+La gerarchia ideale per le briciole di pane in Amministrazione Trasparente potrebbe essere del tipo **Home > Amministrazione Trasparente** (pagina) ** > Sottosezione** (archivio) **> NomeVoce** (articolo singolo).
 Data la diversa natura delle varie parti delle briciole di pane, è necessario procedere ad un'accurata messa a punto del plugin Breadcrumb NavXT che supporta questo tipo di configurazioni.
 Per effettaure queste modifiche, accedere al back-end di Wordpress e cliccare su Impostazioni -> Breadcrumb NavXT -> Tipi di post.
 Tutte le opzioni da cambiare sono raccolte in un'immagine-guida disponibile [QUI](http://amministrazionetrasparente.marcomilesi.ml/bricioledipane_ammtrasparente_navxt.jpg)
