@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 3.1
-Stable tag: 3.1
+Version: 3.2
+Stable tag: 3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,11 +22,11 @@ Amministrazione Trasparente è stato sviluppato seguendo tre criteri: **Flessibi
 
 L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una comodità di aggiornamento senza pari! In particolare in ogni voce è possibile inserire file, immagini, testi, link o anche effettuare un reindirizzamento automatico a un'altra pagina. Per esempio, per inserire i recapiti telefonici non è necessario scriverli in Microsoft Word per poi caricare il file, ma basta semplicemente scriverlo!
 
-> [DEMO](http://amministrazionetrasparente.marcomilesi.ml) | [INSTALLAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](http://amministrazionetrasparente.marcomilesi.ml/guida_amministrazionetrasparente.pdf)
+> [DEMO](http://amministrazionetrasparente.marcomilesi.ml) | [INSTALLAZIONE e CONFIGURAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](http://amministrazionetrasparente.marcomilesi.ml/guida_amministrazionetrasparente.pdf)
 
 > SHOWCASE:
 
-> Comuni | [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/)
+> Comuni | [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/) - [Comune di Bordighera](http://trasparenza.bordighera.it/)
 
 > Scuole | [IC Nord 1 Brescia](http://www.icnord1brescia.gov.it/amministrazione-trasparente/)
 
@@ -69,12 +69,20 @@ Una buona pagina potrebbe contenere i seguenti tag:
 
 * [at-desc]
 * [at-head]
-* [at-list] oppure [at-table]
+* [at-list] oppure [at-table] a seconda dei gusti o delle esigenze
 
 Ogni tag può essere inserito nel template utilizzando una funzione del tipo: `<?php echo do_shortcode('[at-list]') ?>`
 
 4. A questo punto basta inserire le voci selezionando, dal menù di amministrazione, Trasparenza > Nuova Voce
-5. Questo plugin funziona bene con la maggior parte dei temi Wordpress. Il plugin usa automaticamente template personalizzati per chi usa PASW2013!
+5. Questo plugin funziona bene con la maggior parte dei temi Wordpress. Il plugin usa automaticamente template personalizzati se è attivo il tema PASW2013!
+
+= Integrare il plugin Breadcrumb NavXT con Amministrazione Trasparente =
+A partire dalla versione 3.2 di Amministrazione Trasparente, il plugin mostra automaticamente le briciole di pane per Pasw2013. Chi non usa il tema Pasw2013 può comunque installare il plugin Breadcrumb NavXT configurandolo manualmente o ricorrere a soluzioni differenti (il risultato gerarchico potrebbe differire).
+
+La gerarchia ideale per le briciole di pane in Amministrazione Trasparente potrebbe essere del tipo *Home > Amministrazione Trasparente* (pagina) * > Sottosezione* (archivio) *> NomeVoce* (articolo singolo).
+Data la diversa natura delle varie parti delle briciole di pane, è necessario procedere ad un'accurata messa a punto del plugin Breadcrumb NavXT che supporta questo tipo di configurazioni.
+Per effettaure queste modifiche, accedere al back-end di Wordpress e cliccare su Impostazioni -> Breadcrumb NavXT -> Tipi di post.
+Tutte le opzioni da cambiare sono raccolte in un'immagine-guida disponibile [QUI](http://amministrazionetrasparente.marcomilesi.ml/bricioledipane_ammtrasparente_navxt.jpg)
 
 = Modifica Template Archivio - [+] Info Normativa • Torna al sommario =
 Chi non utilizza il tema Pasw2013 può comunque abilitare la visualizzazione della descrizione espandibile e il link 'Torna al sommario' sotto il titolo degli archivi dei documenti modificando il file archive.php (il nome può cambiare) dalla cartella contenente i file del tema attivo.
@@ -92,6 +100,16 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.2 21/08/2013  =
+* **Abilitate** briciole di pane native PASW2013 sulla visualizzazione archivio
+* **Aggiunta** opzione per mostrare le briciole di pane sulla visualizzazione singola
+* **Migliorato** il pannello delle impostazioni con opzioni suddivise e logo pasw!
+* **Aggiunto** pulsante 'Aggiorna Permalink' nel pannello delle impostazioni del plugin
+* **Disponibile** una mini-guida per la configurazione ottimale di Breadcrumb NavXT disponibile [QUI](http://amministrazionetrasparente.marcomilesi.ml/bricioledipane_ammtrasparente_navxt.jpg)
+* **Aggiornata** funzione deprecata per ottenere file nelle sotto-directory del plugin in styledbackend.php
+* **Migliorata** suddivione logica dei file nelle cartelle del plugin (aggiunta directory /includes)
+* **BugFix** - mancato nascondimento del messaggio di benvenuto in alcuni casi
 
 = Versione 3.1 20/08/2013  =
 * Abilitata visualizzazione 'Cross-Type' degli archivi per i tag

@@ -3,6 +3,18 @@
 <?php get_sidebar(); ?>
 <div id="centrecontent" class="column">
 
+<!-- Mostra le briciole di pane, se nelle opzioni è stato indicato -->
+<?php
+$get_at_breadcrumb_single = get_option('at_breadcrumb_single');
+if ($get_at_breadcrumb_single == '1') {
+	echo '<div id="path">';
+	if(function_exists('bcn_display')) {
+		bcn_display();
+	}
+	echo '</div>';
+}
+?>
+
 <div class="nascosto">
 <strong> Navigazione veloce </strong>
 <ul>

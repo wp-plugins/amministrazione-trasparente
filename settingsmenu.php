@@ -16,6 +16,7 @@ function at_reg_settings() {
 	register_setting( 'at_options_group', 'at_option_love', 'intval');
 	register_setting( 'at_options_group', 'at_option_widget');
 	register_setting( 'at_options_group', 'at_pasw_developer', 'intval');
+	register_setting( 'at_options_group', 'at_breadcrumb_single', 'intval');
 }
 
 function at_setting_menu()
@@ -26,9 +27,11 @@ function at_setting_menu()
 function at_settings_menu()
 {
 
-	$at_option_id = get_option('at_option_id');
-	    
-    if(isset($_POST['Submit'])) 	{
+	if(isset($_POST['FlushButton'])) {
+		flush_rewrite_rules();
+	}
+
+    if(isset($_POST['Submit'])) {
 		$at_option_get_id = $_POST["at_option_id_n"];
         update_option( 'at_option_id', $at_option_get_id );
 
@@ -43,6 +46,12 @@ function at_settings_menu()
 		} else {
 			update_option( 'at_pasw_developer', '0' );
 		}
+
+		if(isset($_POST['at_breadcrumb_single_n'])){
+			update_option( 'at_breadcrumb_single', '1' );
+		} else {
+			update_option( 'at_breadcrumb_single', '0' );
+		}
 	}
 	
 	echo '<div class="wrap">';
@@ -51,22 +60,17 @@ function at_settings_menu()
 	echo '<div id="welcome-panel" class="welcome-panel">';
 	echo '<form method="post" name="options" target="_self">';
 	settings_fields( 'at_option_group' );	
-	
 	echo '
 	<table class="form-table">
+	
+		<p class="submit"><input type="submit" name="FlushButton" value="Aggiorna Permalink" />
+        Se visualizzi l\'errore 404 su alcune pagine generate dal plugin (tipologie o voci singole) clicca per aggiornare i permalink</p>
+	
         <tr valign="top">
         <th scope="row">ID Pagina Amministrazione Trasparente</th>
         <td><input type="text" name="at_option_id_n" value="';
 	echo get_option('at_option_id');
-	echo '" />&nbsp;Inserisci qui l\'id della pagina in cui è stato inserito un tag head/list (serve per attivare correttamente il link "Torna al Sommario" e le impostazioni widget</td></tr>
-	
-	<th scope="row">Forza template PASW</th>
-    <td><input type="checkbox" name="at_pasw_developer_n" ';
-	$get_pasw_developer = get_option('at_pasw_developer');
-	if ($get_pasw_developer == '1') {
-		echo 'checked=\'checked\'';
-	}
-	echo '/>&nbsp;Spunta casella se vuoi forzare l\'utilizzo dei template archive/single ottimizzati per PASW2013 (attenzione: abilitare <b>solo</b> se il tema attivo è una versione <b>precedente</b> al 2013 o se è stato cambiato il nome del tema!)</td></tr>';
+	echo '" />&nbsp;Inserisci qui l\'id della pagina in cui è stato inserito un tag head/list (serve per attivare correttamente il link "Torna al Sommario" e le impostazioni widget</td></tr>';
 	
 	echo '<tr><th scope="row">Mostra "Un po\' di amore"</th>
         <td><input type="checkbox" name="at_option_love_n" ';
@@ -77,8 +81,26 @@ function at_settings_menu()
 	echo '/>&nbsp;Spunta questa casella per mostrare un link al plugin in fondo alla pagina [at-list] e [at-table]</td>';
 	echo '</tr></table>';
 
+	echo '<div style="float:right;"><img src="' . plugin_dir_url(__FILE__) . 'includes/pab.png" width="240px"/></div>';
+	echo '<br/><table class="form-table"><tr><h3>Impostazioni Pasw 2013</h3></tr><tr>Un set di opzioni aggiuntive sviluppate appositamente per i siti che utilizzano il tema della comunità di pratica Porte Aperte sul Web</tr>
+		<tr><th scope="row">Forza template PASW</th>
+    		<td><input type="checkbox" name="at_pasw_developer_n" ';
+	$get_pasw_developer = get_option('at_pasw_developer');
+	if ($get_pasw_developer == '1') {
+		echo 'checked=\'checked\'';
+	}
+	echo '/>&nbsp;Spunta casella se vuoi forzare l\'utilizzo dei template archive/single ottimizzati per PASW2013 (attenzione: abilitare <b>solo</b> se il tema attivo è una versione <b>precedente</b> al 2013 o se è stato cambiato il nome del tema!)</td></tr>';
+
+	echo '<tr><th scope="row">Visualizza Breadcrumb per voci singole?</th>
+    		<td><input type="checkbox" name="at_breadcrumb_single_n" ';
+	$get_at_breadcrumb_single = get_option('at_breadcrumb_single');
+	if ($get_at_breadcrumb_single == '1') {
+		echo 'checked=\'checked\'';
+	}
+	echo '/>&nbsp;Spunta casella per visualizzare le briciole di pane del plugin NavXT (se abilitato) sulle pagine delle voci singole di amm. trasparente.<br/>Per conoscere come configurare al meglio Breadcrumb NavXT visita la pagina <a href="http://wordpress.org/plugins/amministrazione-trasparente/installation/" target="_blank">wordpress.org/plugins/amministrazione-trasparente/installation/</a></td></tr>';
+
 	
-	echo '<p class="submit"><input type="submit" name="Submit" value="Aggiorna Impostazioni" /></p>';
+	echo '</table><p class="submit"><input type="submit" name="Submit" value="Aggiorna Impostazioni" /></p>';
 	echo '</form></div></div>';
 
 }
@@ -91,7 +113,7 @@ function at_menu()
 
 function at_credits_menu()
 {
-    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>3.1</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
+    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>3.2</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
 	Per l\'utilizzo dei tag nel template, usare rispettivamente <#?php echo do_shortcode(\'[at-list]\') ?#> oppure <#?php echo do_shortcode(\'[at-table]\') ?#> (senza il carattere #)<br/>
 	Per informazioni e supporto, consultare il blog ufficiale oppure la pagina dedicata su Wordpress.org.<br/><br/><h3>Segnalazione BUG - Miglioramento Proattivo</h3>Nel caso in cui si riscontrino anomalie o imperfezioni durante l\'utilizzo di questo modulo, si prega di compilare una segnalazione e di inviarla a <b>milesimarco@outlook.com</b>. In questo modo, oltre a mantenere il plugin sempre aggiornato e privo di problemi per tutti, contribuisci in modo consapevole ad ottenere un prodotto gratuito e sempre aggiornato su cui poter contare. Allo stesso modo, se pensi che questo plugin debba implementare altre funzioni, contatta l\'autore o lascia un commento nella pagina su Wordpress.org!<br/><br/>Grazie per utilizzare Amministrazione Trasparente per Wordpress!<br/>Marco';
 }
