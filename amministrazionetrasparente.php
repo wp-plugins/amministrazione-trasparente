@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.2.2
+Version: 3.3
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -143,13 +143,12 @@ include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-php-archive.php');
 }
 
 function at_archive_tag_custom_types( $query ) {
-  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
-    $query->set( 'post_type', array(
-     'post', 'amm-trasparente'
-		));
+  if( is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array('post', 'amm-trasparente'));
 	  return $query;
 	}
 }
+
 add_filter( 'pre_get_posts', 'at_archive_tag_custom_types' );
 
 	function presstrends_AmministrazioneTrasparente_plugin() {
@@ -240,14 +239,21 @@ add_filter( 'template_include', 'at_force_template' );
 /* =========== FUNZIONI INCLUSE ============ */
 
 require_once(plugin_dir_path(__FILE__) . 'settingsmenu.php');
-
 include(plugin_dir_path(__FILE__) . 'styledbackend.php');
-include(plugin_dir_path(__FILE__) . 'singlehack.php');
 include(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
 include(plugin_dir_path(__FILE__) . 'updatefunction.php');
 include(plugin_dir_path(__FILE__) . 'widget.php');
 include(plugin_dir_path(__FILE__) . 'redirector.php');
+
+if (!is_admin()) {
 include(plugin_dir_path(__FILE__) . 'admin-messages.php');
+}
+
+$get_at_wpatt_option_disable = get_option('at_wpatt_option_disable');
+if ($get_at_wpatt_option_disable == '0') {
+	include(plugin_dir_path(__FILE__) . 'wp-attachments.php');
+}
+
 
 register_activation_hook( __FILE__, 'at_flush' );
 register_deactivation_hook( __FILE__, 'at_flush' );

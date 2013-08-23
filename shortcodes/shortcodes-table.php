@@ -1,4 +1,4 @@
-<style>.at-tableclass {width:45%;float:left;padding:0px 0px 0px 5px;}</style>
+<style>.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;}</style>
 <?php
 
 echo '<div class="at-tableclass">';
@@ -296,11 +296,11 @@ $nome_tipologia = "Altri contenuti";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 echo '</ul>';
 
-echo '</div><div class="clear"></div><br/>';
+echo '</div><div class="clear"></div>';
 
 $get_show_love = get_option('at_option_love');
 if ($get_show_love == '1') {
-	echo '<hr><div style="font-size:0.8em;">Questo sito utilizza il modulo Wordpress <a href="http://wordpress.org/plugins/amministrazione-trasparente/" rel="nofollow" title="Plugin Amministrazione Trasparente per Wordpress">Amministrazione Trasparente</a></div>';
+	echo '<div style="text-align:center;width:100%;font-size:0.8em;float: left;">Questo sito utilizza il modulo Wordpress <a href="http://wordpress.org/plugins/amministrazione-trasparente/" rel="nofollow" title="Plugin Amministrazione Trasparente per Wordpress">Amministrazione Trasparente</a></div>';
 }
 
 ?>

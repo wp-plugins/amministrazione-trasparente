@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 3.2.2
-Stable tag: 3.2.2
+Version: 3.3
+Stable tag: 3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,14 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.3 23/08/2013 =
+* **Aggiornato** il plugin integrato [WP Attachments](http://wordpress.org/plugins/wp-attachments/) ( v2.0 -> v3.0.3)
+* **Aggiunte** nuove opzioni per la visualizzazione degli allegati grazie al plugin integrato WP Attachments
+* **Migliorato** il pannello delle impostazioni
+* **Sistemata** posizione del link 'Mostra un po' di amore' nella visualizzazione at-table
+* **Corretti** alcuni problemi di visualizzazione negli archivi delle categorie di Wordpress (es. widget o menù invisibili) | Segnalato da [@ClaudiaCantaluppi](http://profiles.wordpress.org/ClaudiaCantaluppi)
+* **Eliminata** la visualizzazione di messaggi di benvenuto e informazioni del plugin per ruoli diversi da 'Amministratore'
 
 = Versione 3.2.2 21/08/2013 =
 * **Cambiati** tag 'name' deprecati in 'id' (visualizzazione list + table) (compatibile con WP Accessibility) | Grazie [@ClaudiaCantaluppi](http://profiles.wordpress.org/ClaudiaCantaluppi)

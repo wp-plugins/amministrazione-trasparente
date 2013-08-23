@@ -17,6 +17,8 @@ function at_reg_settings() {
 	register_setting( 'at_options_group', 'at_option_widget');
 	register_setting( 'at_options_group', 'at_pasw_developer', 'intval');
 	register_setting( 'at_options_group', 'at_breadcrumb_single', 'intval');
+	register_setting( 'at_options_group', 'at_wpatt_option_showdate', 'intval');
+	register_setting( 'at_options_group', 'at_wpatt_option_disable', 'intval');
 }
 
 function at_setting_menu()
@@ -52,6 +54,19 @@ function at_settings_menu()
 		} else {
 			update_option( 'at_breadcrumb_single', '0' );
 		}
+		
+		if (isset($_POST['at_wpatt_option_showdate_n'])){
+			update_option('at_wpatt_option_showdate', '1');
+        } else {
+			update_option('at_wpatt_option_showdate', '0');
+        }
+		
+		if (isset($_POST['at_wpatt_option_disable_n'])){
+			update_option('at_wpatt_option_disable', '1');
+        } else {
+			update_option('at_wpatt_option_disable', '0');
+        }
+		
 	}
 	
 	echo '<div class="wrap">';
@@ -63,10 +78,10 @@ function at_settings_menu()
 	echo '
 	<table class="form-table">
 	
-		<p class="submit"><input type="submit" name="FlushButton" value="Aggiorna Permalink" />
+		<p class="submit"><input type="submit" class="button-primary" name="FlushButton" value="Aggiorna Permalink" />
         Se visualizzi l\'errore 404 su alcune pagine generate dal plugin (tipologie o voci singole) clicca per aggiornare i permalink</p>
 	
-        <tr valign="top">
+        <hr><tr valign="top">
         <th scope="row">ID Pagina Amministrazione Trasparente</th>
         <td><input type="text" name="at_option_id_n" value="';
 	echo get_option('at_option_id');
@@ -79,8 +94,27 @@ function at_settings_menu()
 		echo 'checked=\'checked\'';
 	}
 	echo '/>&nbsp;Spunta questa casella per mostrare un link al plugin in fondo alla pagina [at-list] e [at-table]</td>';
-	echo '</tr></table>';
+	echo '</tr></table><hr>';
 
+	echo '<div style="float:right;"><img src="' . plugin_dir_url(__FILE__) . 'includes/wpa.png" width="240px"/></div>';
+	echo '<br/><table class="form-table"><tr><h3>Impostazioni WP Attachments</h3></tr><tr>Amministrazione Trasparente integra il plugin <b>WP Attachments</b> per la visualizzazione automatica degli allegati sotto ogni voce. In questa sezione puoi personalizzarne il comportamento o disabilitarlo (se utilizzi già altre soluzioni)!</tr>
+		<tr><th scope="row">Mostra data di caricamento</th>
+    		<td><input type="checkbox" name="at_wpatt_option_showdate_n" ';
+	$get_at_wpatt_option_showdate = get_option('at_wpatt_option_showdate');
+	if ($get_at_wpatt_option_showdate == '1') {
+		echo 'checked=\'checked\'';
+	}
+	echo '/>&nbsp;Spunta casella se vuoi visualizzare la data di caricamento dei file visualizzati</td></tr>';
+
+	echo '<tr><th scope="row">Disabilita</th>
+    		<td><input type="checkbox" name="at_wpatt_option_disable_n" ';
+	$get_at_wpatt_option_disable = get_option('at_wpatt_option_disable');
+	if ($get_at_wpatt_option_disable == '1') {
+		echo 'checked=\'checked\'';
+	}
+	echo '/>&nbsp;Spunta questa casella se vuoi disabilitare automaticamente la visualizzazione automatica degli allegati (se usi un altro plugin per gli allegati e non disabiliti questa funzione, potresti visualizzare due differenti liste di allegati sotto i contenuti.</td></tr>';
+	echo '</table><hr>';
+	
 	echo '<div style="float:right;"><img src="' . plugin_dir_url(__FILE__) . 'includes/pab.png" width="240px"/></div>';
 	echo '<br/><table class="form-table"><tr><h3>Impostazioni Pasw 2013</h3></tr><tr>Un set di opzioni aggiuntive sviluppate appositamente per i siti che utilizzano il tema della comunità di pratica Porte Aperte sul Web</tr>
 		<tr><th scope="row">Forza template PASW</th>
@@ -100,7 +134,7 @@ function at_settings_menu()
 	echo '/>&nbsp;Spunta casella per visualizzare le briciole di pane del plugin NavXT (se abilitato) sulle pagine delle voci singole di amm. trasparente.<br/>Per conoscere come configurare al meglio Breadcrumb NavXT visita la pagina <a href="http://wordpress.org/plugins/amministrazione-trasparente/installation/" target="_blank">wordpress.org/plugins/amministrazione-trasparente/installation/</a></td></tr>';
 
 	
-	echo '</table><p class="submit"><input type="submit" name="Submit" value="Aggiorna Impostazioni" /></p>';
+	echo '</table><p class="submit"><input type="submit"  class="button-primary" name="Submit" value="Aggiorna Impostazioni" /></p>';
 	echo '</form></div></div>';
 
 }
@@ -113,7 +147,7 @@ function at_menu()
 
 function at_credits_menu()
 {
-    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>3.2.2</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
+    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>3.3</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
 	Per l\'utilizzo dei tag nel template, usare rispettivamente <#?php echo do_shortcode(\'[at-list]\') ?#> oppure <#?php echo do_shortcode(\'[at-table]\') ?#> (senza il carattere #)<br/>
 	Per informazioni e supporto, consultare il blog ufficiale oppure la pagina dedicata su Wordpress.org.<br/><br/><h3>Segnalazione BUG - Miglioramento Proattivo</h3>Nel caso in cui si riscontrino anomalie o imperfezioni durante l\'utilizzo di questo modulo, si prega di compilare una segnalazione e di inviarla a <b>milesimarco@outlook.com</b>. In questo modo, oltre a mantenere il plugin sempre aggiornato e privo di problemi per tutti, contribuisci in modo consapevole ad ottenere un prodotto gratuito e sempre aggiornato su cui poter contare. Allo stesso modo, se pensi che questo plugin debba implementare altre funzioni, contatta l\'autore o lascia un commento nella pagina su Wordpress.org!<br/><br/>Grazie per utilizzare Amministrazione Trasparente per Wordpress!<br/>Marco';
 }
