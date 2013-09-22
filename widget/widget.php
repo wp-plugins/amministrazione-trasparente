@@ -1,5 +1,5 @@
 <?php
-
+
 //Il codice seguente genera un Widget utilizzabile nelle proprie sidebar
 class atWidget extends WP_Widget {
 

@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.6.1
-Version: 3.4
-Stable tag: 3.4
+Version: 3.4.1
+Stable tag: 3.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.4.1 22/09/2013 =
+* **Corretto** bug che causava il mancato caricamento di alcuni moduli integrati (es. widget)
 
 = Versione 3.4 22/09/2013 =
 * **Aggiunta** la possibilità di associare le voci alle categorie degli articoli per visualizzarle, per esempio, in homepage (notizie, avvisi,...) - Funzione sperimentale attivabile dalle impostazioni
