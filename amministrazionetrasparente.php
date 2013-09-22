@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.3
+Version: 3.4
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -66,12 +66,19 @@ function register_cpt_documento_trasparenza() {
         'parent_item_colon' => _x( 'Parent Documento AT:', 'documento_trasparenza' ),
         'menu_name' => _x( 'Trasparenza', 'documento_trasparenza' ),
     );
+	
+	$get_at_categorization_enable = get_option('at_categorization_enable');
+	if ( $get_at_categorization_enable == '1') {
+		$taxonomysupport = array('post_tag', 'category');
+	} else {
+		$taxonomysupport = array('post_tag');
+	}
 
     $args = array( 
         'labels' => $labels,
         'hierarchical' => true,
         'description' => 'trasparenza',
-		'taxonomies' => array('post_tag'),
+		'taxonomies' => $taxonomysupport,
         'supports' => array( 'title', 'editor', 'excerpt', 'revisions' ),
         'public' => true,
         'show_ui' => true,
@@ -115,7 +122,7 @@ add_shortcode('at-head', 'at_head_shtc');
 
 function at_desc_shtc($atts)
 {
-$atshortcode = '<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell\'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione (L.69/2009, L.213/2012, Dlgs33/2013, L.190/2012).</p>';
+$atshortcode = '<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell\'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione (L.69/2009, L.213/2012, <a href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33" alt="Riferimenti normativi">Dlgs33/2013</a>, L.190/2012).</p>';
 return $atshortcode;
 }
 add_shortcode('at-desc', 'at_desc_shtc');
@@ -143,10 +150,15 @@ include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-php-archive.php');
 }
 
 function at_archive_tag_custom_types( $query ) {
-  if( is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
-    $query->set( 'post_type', array('post', 'amm-trasparente'));
-	  return $query;
-	}
+	  if(is_category() || is_tag()) {
+    $post_type = get_query_var('post_type');
+	if($post_type)
+	    $post_type = $post_type;
+	else
+	    $post_type = array('post','amm-trasparente');
+    $query->set('post_type',$post_type);
+	return $query;
+    }
 }
 
 add_filter( 'pre_get_posts', 'at_archive_tag_custom_types' );
@@ -238,28 +250,25 @@ add_filter( 'template_include', 'at_force_template' );
 
 /* =========== FUNZIONI INCLUSE ============ */
 
+add_action( 'init', 'AT_FUNCTIONSLOAD');
+
+function AT_FUNCTIONSLOAD () {
+$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
+if ($get_at_wpatt_option_enable == '1') {
+	include(plugin_dir_path(__FILE__) . 'wp-attachments/wp-attachments.php');
+}
+
 require_once(plugin_dir_path(__FILE__) . 'settingsmenu.php');
-include(plugin_dir_path(__FILE__) . 'styledbackend.php');
-include(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
-include(plugin_dir_path(__FILE__) . 'updatefunction.php');
-include(plugin_dir_path(__FILE__) . 'widget.php');
+require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
+require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
+include(plugin_dir_path(__FILE__) . 'widget/widget.php');
 include(plugin_dir_path(__FILE__) . 'redirector.php');
 
-if (!is_admin()) {
-include(plugin_dir_path(__FILE__) . 'admin-messages.php');
+
+if (current_user_can( 'manage_options' )) {
+require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
+include(plugin_dir_path(__FILE__) . 'updatefunction.php');
 }
-
-$get_at_wpatt_option_disable = get_option('at_wpatt_option_disable');
-if ($get_at_wpatt_option_disable == '0') {
-	include(plugin_dir_path(__FILE__) . 'wp-attachments.php');
-}
-
-
-register_activation_hook( __FILE__, 'at_flush' );
-register_deactivation_hook( __FILE__, 'at_flush' );
-
-function at_flush() {
-	flush_rewrite_rules();
 }
 
 ?>

@@ -11,7 +11,7 @@ function my_restrict_manage_posts() {
             $tax_name = $tax_obj->labels->name;
             $terms = get_terms($tax_slug);
             echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
-            echo "<option value=''>Mostra tutto ...</option>";
+            echo "<option value=''>Tutte le tipologie</option>";
             foreach ($terms as $term) { 
                 $label = (isset($_GET[$tax_slug])) ? $_GET[$tax_slug] : ''; // Fix
                 echo '<option value='. $term->slug, $label == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>';

@@ -2,9 +2,9 @@
 Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
-Tested up to: 3.6
-Version: 3.3
-Stable tag: 3.3
+Tested up to: 3.6.1
+Version: 3.4
+Stable tag: 3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,22 +31,23 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 = Caratteristiche del Plugin =
 * Aggiornamenti periodici (**aggiornate sempre per garantirvi continui miglioramenti e nuove funzioni!**)
 * Inserimento flessibile, intuitivo e veloce
-* Soluzione ideale per ogni tipo di informazione
+* Supporto per la catalogazione front-end avanzata delle voci (tipologie AT, tag e **categorie**) e filtraggio back-end
+* Soluzione ideale per ogni tipo di informazione (documenti, testo, link,...)
 * Gestione completa di tutte le 56 categorie richieste dalla legge
-* Ogni documento è gestito singolarmente
-* Permessi di pubblicazione ereditati degli articoli (autore, editore,...)
-* Funzione di reindirizzamento delle voci
+* Ogni documento è gestito singolarmente (come gli articoli, dai quali eredita ruoli/permessi)
+* Funzione di reindirizzamento delle voci a link esterni
 * Codice leggero, commentato e facilmente modificabile
 * Doppia visualizzazione a scelta grazie a 2 shortcode: modalità lista e modalità tabella (2 colonne)
-* Funzione di redirect automatico per ogni articolo
-* Visualizzazione automatica degli allegati caricati nella pagina
+* Visualizzazione automatica degli allegati caricati nella pagina grazie al plugin integrato WP Attachments
 * Widget personalizzabile con 2 modalità di visualizzazione
-* Compatibilità completa per **Pasw2013** (visualizzazione archivio/singola modificate appositamente)
+* **Compatibilità completa per Pasw2013** (visualizzazione archivio/singola modificate appositamente per il tema della comunità di pratica Porte Aperte sul Web)
 
 = CONTATTI & SUPPORTO =
 Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, inoltra il Tuo suggerimento a [milesimarco@outlook.com](mailto:milesimarco@outlook.com) oppure via Skype: milesimarco94
 
 http://www.youtube.com/watch?v=qWj9hvzNSlg
+
+> **EN** | This plugin is developed for **schools, universities, municipalities and local authorities** of **ITALY** and respect their legal parameters. The installation of this plugin on amateur websites and/or portals not subject to 'Amministrazione Trasparente' legislation is a waste of time since the purpose of this software is the posting of informations in a legal and validated way.
 
 == Installation ==
 
@@ -94,10 +95,26 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 4. Box di selezione della tipologia
 5. Comoda opzione di Redirect
 6. Visualizzazione Archivio Personalizzata (automatica su PASW2013; da aggiungere nel template negli altri temi con la funzione `<?php at_archive_buttons(); ?>`)
+7. Visualizzazione automatica degli allegati in tutto il sito (opzionale)
+8. Completo supporto back-end per tag, categorie e tipologie (con filtraggio)
 
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.4 22/09/2013 =
+* **Aggiunta** la possibilità di associare le voci alle categorie degli articoli per visualizzarle, per esempio, in homepage (notizie, avvisi,...) - Funzione sperimentale attivabile dalle impostazioni
+* **Migliorata** funzione di visualizzazione congiunta articoli/documenti-trasparenza negli archivi di Wordpress
+* **Modificato** tag [at-desc] per la visualizzazione di un link con riferimenti normativi
+* **Corretto** piccolo problema html del widget lista completa (per alcuni browser)
+* **Eliminato** flush_rewrite all'attivazione/disattivazione
+* **Migliorata** funzione di aggiornamento database richiamata solo con utenti amministratori
+* **Aggiunto** messaggio di notifica WP Attachments
+* **Migliorata** performance e possibili errori durante l'inizializzazione di alcune funzioni (sl. alcune configurazioni server)
+
+* **Cambiato** metodo di integrazione di WP Attachments! Controllare le impostazioni!
+* **Aggiornato** il plugin integrato [WP Attachments](http://wordpress.org/plugins/wp-attachments/) ( v3.0.3 -> v3.1)
+* WP-Attachments | **Aggiunta** la possibilità di escludere i file immagine dalla lista degli allegati
 
 = Versione 3.3 23/08/2013 =
 * **Aggiornato** il plugin integrato [WP Attachments](http://wordpress.org/plugins/wp-attachments/) ( v2.0 -> v3.0.3)

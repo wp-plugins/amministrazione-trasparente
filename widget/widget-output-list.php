@@ -33,7 +33,7 @@ echo '</ul>';
 </ul>
 
 <!--Consulenti e collaboratori-->
-<ul><li><b>Consulenti e collaboratori</b></li></li>
+<ul><li><b>Consulenti e collaboratori</b></li>
 
 <?php
 echo '<ul>';

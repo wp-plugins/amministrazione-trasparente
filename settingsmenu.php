@@ -17,8 +17,8 @@ function at_reg_settings() {
 	register_setting( 'at_options_group', 'at_option_widget');
 	register_setting( 'at_options_group', 'at_pasw_developer', 'intval');
 	register_setting( 'at_options_group', 'at_breadcrumb_single', 'intval');
-	register_setting( 'at_options_group', 'at_wpatt_option_showdate', 'intval');
-	register_setting( 'at_options_group', 'at_wpatt_option_disable', 'intval');
+	register_setting( 'at_options_group', 'at_categorization_disable', 'intval');
+	register_setting( 'at_options_group', 'at_wpatt_option_enable', 'intval');
 }
 
 function at_setting_menu()
@@ -43,6 +43,12 @@ function at_settings_menu()
 			update_option( 'at_option_love', '0' );
 		}
 		
+		if(isset($_POST['at_categorization_enable_n'])){
+			update_option( 'at_categorization_enable', '1' );
+		} else {
+			update_option( 'at_categorization_enable', '0' );
+		}
+		
 		if(isset($_POST['at_pasw_developer_n'])){
 			update_option( 'at_pasw_developer', '1' );
 		} else {
@@ -55,16 +61,11 @@ function at_settings_menu()
 			update_option( 'at_breadcrumb_single', '0' );
 		}
 		
-		if (isset($_POST['at_wpatt_option_showdate_n'])){
-			update_option('at_wpatt_option_showdate', '1');
+		if (isset($_POST['at_wpatt_option_enable_n'])){
+			update_option('at_wpatt_option_enable', '1');
+			header( "refresh:5; url=http://www.comune.sanpellegrinoterme.bg.it" );
         } else {
-			update_option('at_wpatt_option_showdate', '0');
-        }
-		
-		if (isset($_POST['at_wpatt_option_disable_n'])){
-			update_option('at_wpatt_option_disable', '1');
-        } else {
-			update_option('at_wpatt_option_disable', '0');
+			update_option('at_wpatt_option_enable', '0');
         }
 		
 	}
@@ -87,6 +88,14 @@ function at_settings_menu()
 	echo get_option('at_option_id');
 	echo '" />&nbsp;Inserisci qui l\'id della pagina in cui è stato inserito un tag head/list (serve per attivare correttamente il link "Torna al Sommario" e le impostazioni widget</td></tr>';
 	
+	echo '<tr><th scope="row">Abilita Categorie</th>
+        <td><input type="checkbox" name="at_categorization_enable_n" ';
+	$get_at_categorization_enable = get_option('at_categorization_enable');
+	if ($get_at_categorization_enable == '1') {
+		echo 'checked=\'checked\'';
+	}
+	echo '/>&nbsp;Spunta questa casella per abilitare la possibilità di associare le categorie degli articoli alle voci di Amministrazione Trasparente (può causare problemi alle query) (default=ON)<br/>Dopo l\'abilitazione, aggiorna la pagina e comparirà un nuovo menù: <b>Trasparenza -> Categorie</td></tr>';
+	
 	echo '<tr><th scope="row">Mostra "Un po\' di amore"</th>
         <td><input type="checkbox" name="at_option_love_n" ';
 	$get_show_love = get_option('at_option_love');
@@ -97,22 +106,16 @@ function at_settings_menu()
 	echo '</tr></table><hr>';
 
 	echo '<div style="float:right;"><img src="' . plugin_dir_url(__FILE__) . 'includes/wpa.png" width="240px"/></div>';
-	echo '<br/><table class="form-table"><tr><h3>Impostazioni WP Attachments</h3></tr><tr>Amministrazione Trasparente integra il plugin <b>WP Attachments</b> per la visualizzazione automatica degli allegati sotto ogni voce. In questa sezione puoi personalizzarne il comportamento o disabilitarlo (se utilizzi già altre soluzioni)!</tr>
-		<tr><th scope="row">Mostra data di caricamento</th>
-    		<td><input type="checkbox" name="at_wpatt_option_showdate_n" ';
-	$get_at_wpatt_option_showdate = get_option('at_wpatt_option_showdate');
-	if ($get_at_wpatt_option_showdate == '1') {
-		echo 'checked=\'checked\'';
-	}
-	echo '/>&nbsp;Spunta casella se vuoi visualizzare la data di caricamento dei file visualizzati</td></tr>';
+	echo '<br/><table class="form-table"><tr><h3>Impostazioni WP Attachments</h3></tr>';
 
-	echo '<tr><th scope="row">Disabilita</th>
-    		<td><input type="checkbox" name="at_wpatt_option_disable_n" ';
-	$get_at_wpatt_option_disable = get_option('at_wpatt_option_disable');
-	if ($get_at_wpatt_option_disable == '1') {
+	echo '<tr><th scope="row">Abilita<br/><img width="210px" height="100px" class="screenshot" src="http://s-plugins.wordpress.org/wp-attachments/assets/screenshot-1.jpg?rev=761494"></th>
+    		<td><input type="checkbox" name="at_wpatt_option_enable_n" ';
+	$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
+	if ($get_at_wpatt_option_enable == '1') {
 		echo 'checked=\'checked\'';
 	}
-	echo '/>&nbsp;Spunta questa casella se vuoi disabilitare automaticamente la visualizzazione automatica degli allegati (se usi un altro plugin per gli allegati e non disabiliti questa funzione, potresti visualizzare due differenti liste di allegati sotto i contenuti.</td></tr>';
+	echo '/>&nbsp;Spunta questa casella se vuoi abilitare il plugin WP Attachments integrato in Amministrazione Trasparente per la <b>visualizzazione automatica degli allegati</b> (se usi un altro plugin per la gestione degli allegati e abiliti questa funzione potresti visualizzare due differenti liste degli stessi allegati sotto i contenuti.<br/>Dopo l\'abilitazione, aggiorna la pagina e comparirà un nuovo menù: <b>Trasparenza -> WP Attachments</b>
+	</td></tr>';
 	echo '</table><hr>';
 	
 	echo '<div style="float:right;"><img src="' . plugin_dir_url(__FILE__) . 'includes/pab.png" width="240px"/></div>';
@@ -147,7 +150,7 @@ function at_menu()
 
 function at_credits_menu()
 {
-    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>3.3</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
+    echo '<div class="wrap"><h2>Amministrazione Trasparente per Wordpress</h2>Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.<br/><br/>Versione <b>3.4</b><br/>Autore: <b>Marco Milesi</b><br/>Supporto & Feedback: <b><a href="http://wordpress.org/extend/plugins/amministrazione-trasparente/" title="Wordpress Support" target="_blank">www.wordpress.org/extend/plugins/amministrazione-trasparente</a><br/><br/><h3>Installazione</h3>Dopo avere attivato il plugin, per visualizzare la sezione contenente i link delle varie sezioni è sufficiente creare una nuova pagina (es. "Amministrazione Trasparente"), inserendo al suo interno il tag "<b>[at-list]</b>" oppure "<b>[at-table]</b>" per ottenere, rispettivamente, una lista dei link a pagina intera oppure una lista divisa su 2 colonne.
 	Per l\'utilizzo dei tag nel template, usare rispettivamente <#?php echo do_shortcode(\'[at-list]\') ?#> oppure <#?php echo do_shortcode(\'[at-table]\') ?#> (senza il carattere #)<br/>
 	Per informazioni e supporto, consultare il blog ufficiale oppure la pagina dedicata su Wordpress.org.<br/><br/><h3>Segnalazione BUG - Miglioramento Proattivo</h3>Nel caso in cui si riscontrino anomalie o imperfezioni durante l\'utilizzo di questo modulo, si prega di compilare una segnalazione e di inviarla a <b>milesimarco@outlook.com</b>. In questo modo, oltre a mantenere il plugin sempre aggiornato e privo di problemi per tutti, contribuisci in modo consapevole ad ottenere un prodotto gratuito e sempre aggiornato su cui poter contare. Allo stesso modo, se pensi che questo plugin debba implementare altre funzioni, contatta l\'autore o lascia un commento nella pagina su Wordpress.org!<br/><br/>Grazie per utilizzare Amministrazione Trasparente per Wordpress!<br/>Marco';
 }
