@@ -2,9 +2,9 @@
 Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
-Tested up to: 3.6.1
-Version: 3.4.1
-Stable tag: 3.4.1
+Tested up to: 3.7
+Version: 3.5
+Stable tag: 3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,8 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 
 > Scuole | [IC Nord 1 Brescia](http://www.icnord1brescia.gov.it/amministrazione-trasparente/)
 
+> Società | [CBLSPA Servizio Idrico Integrato](http://www.cblspa.it/)
+
 = Caratteristiche del Plugin =
 * Aggiornamenti periodici (**aggiornate sempre per garantirvi continui miglioramenti e nuove funzioni!**)
 * Inserimento flessibile, intuitivo e veloce
@@ -35,19 +37,23 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 * Soluzione ideale per ogni tipo di informazione (documenti, testo, link,...)
 * Gestione completa di tutte le 56 categorie richieste dalla legge
 * Ogni documento è gestito singolarmente (come gli articoli, dai quali eredita ruoli/permessi)
+* Possibilità di modifica di ruoli e permessi grazie al plugin integrato Map Cap
 * Funzione di reindirizzamento delle voci a link esterni
 * Codice leggero, commentato e facilmente modificabile
 * Doppia visualizzazione a scelta grazie a 2 shortcode: modalità lista e modalità tabella (2 colonne)
 * Visualizzazione automatica degli allegati caricati nella pagina grazie al plugin integrato WP Attachments
 * Widget personalizzabile con 2 modalità di visualizzazione
 * **Compatibilità completa per Pasw2013** (visualizzazione archivio/singola modificate appositamente per il tema della comunità di pratica Porte Aperte sul Web)
+* **NUOVO** | Possibilità di associare anche le categorie alle voci create
 
 = CONTATTI & SUPPORTO =
 Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, inoltra il Tuo suggerimento a [milesimarco@outlook.com](mailto:milesimarco@outlook.com) oppure via Skype: milesimarco94
 
+> **ATTENZIONE** | **"For each author’s protection [***] we want to make certain that everyone understands that there is no warranty for this free software.** In accordo con la licenza GPL v.2 con cui questo software viene fornito, **declino** ogni responsabilità per eventuali inadempimenti legislativi e/o altri problemi legali e/o tecnici derivanti, implicitamente o esplicitamente, dall'utilizzo di questo plugin Wordpress o da un'affrettata configurazione dello stesso (ivi compresi eventuali aggiornamenti). E' compito del gestore del sito assicurarsi che il modulo funzioni correttamente e adempia agli obblighi di legge e, al contempo, è obbligo degli operatori/impiegati/dipendenti/funzionari preposti alla gestione dell'Amministrazione Trasparente la pubblicazione degli opportuni dati.
+
 http://www.youtube.com/watch?v=qWj9hvzNSlg
 
-> **EN** | This plugin is developed for **schools, universities, municipalities and local authorities** of **ITALY** and respect their legal parameters. The installation of this plugin on amateur websites and/or portals not subject to 'Amministrazione Trasparente' legislation is a waste of time since the purpose of this software is the posting of informations in a legal and validated way.
+> **EN** | This plugin is developed for **schools, universities, municipalities and local authorities** of **ITALY** and respects their legal parameters. The installation of this plugin on amateur websites and/or portals not subject to 'Amministrazione Trasparente' legislation is a waste of time since the purpose of this software is the posting of data in a legal and validated way.
 
 == Installation ==
 
@@ -101,6 +107,21 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.5 16/10/2013 =
+* **Aggiunta** sotto-sezione "Attestazioni OIV o struttura analoga"
+* **Aggiunta** opzione per scegliere di mostrare i riferimenti normativi senza dovere cliccare [+] e [-] nelle visualizzazioni di archivio
+* **Integrato** plugin map-cap, attivabile dalle impostazioni del plugin - Permette la gestione avanzata di ruoli/permessi di A.T. [SPERIMENTALE]
+
+* **Migliorato** aspetto widget espandibile: tutta la riga della sezione è ora cliccabile (e non solo [+] e [-])
+
+* **Migliorate** performance in admin-messages.php (visualizzazzione messaggi nell'amministrazione di Wordpress)
+* **Corretti** alcuni errori di validazione in at-list / at-table
+* **Corretto** errore di battitura in widget-output-collapse.php (file che genera il widget espanbilie) | Segnalazione di Igor Vita
+* **Corretto** bug a causa di possibili conflitti in admin-messages.php | Segnalazione di Prof. L.Pernici
+* **Aggiunto** un disclaimer promemoria di esclusione di responsabilità nel file readme.txt (in accordo con la licenza GPL v.2 con cui questo software viene fornito)
+* **Correzioni** grammaticali minori (readme e stringhe plugin)
+* Testato su Wordpress 3.7
 
 = Versione 3.4.1 22/09/2013 =
 * **Corretto** bug che causava il mancato caricamento di alcuni moduli integrati (es. widget)

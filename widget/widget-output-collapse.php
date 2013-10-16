@@ -12,7 +12,8 @@
  
 <!-- Disposizioni Generali -->
 <div class="row">
-<a href="#hide1" class="hide" id="hide1">[+]</a><a href="#show1" class="show" id="show1">[-]</a> &nbsp;<b>Disposizioni Generali</b>
+<a href="#hide1" class="hide" id="hide1">[+]&nbsp;<b>Disposizioni Generali</b></a>
+<a href="#show1" class="show" id="show1">[-]&nbsp;<b>Disposizioni Generali</b></a> 
 
 <div class="list">
 <?php
@@ -23,6 +24,8 @@ $nome_tipologia = "Atti generali";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Oneri informativi per cittadini e imprese";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+$nome_tipologia = "Attestazioni OIV o di struttura analoga";
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 echo '</ul>';
 ?>
 </div>
@@ -30,8 +33,8 @@ echo '</ul>';
 
 <!-- Organizzazione -->
 <div class="row">
-<a href="#hide2" class="hide" id="hide2">[+]</a> 
-<a href="#show2" class="show" id="show2">[-]</a> &nbsp;<b>Organizzazione</b>
+<a href="#hide2" class="hide" id="hide2">[+]&nbsp;<b>Organizzazione</b></a> 
+<a href="#show2" class="show" id="show2">[-]&nbsp;<b>Organizzazione</b></a> 
 
 <div class="list">
 <?php
@@ -53,8 +56,8 @@ echo '</ul>';
 
 <!--Consulenti e collaboratori-->
 <div class="row">
-<a href="#hide3" class="hide" id="hide3">[+]</a> 
-<a href="#show3" class="show" id="show3">[-]</a> &nbsp;<b>Consulenti e collaboratori</b>
+<a href="#hide3" class="hide" id="hide3">[+]&nbsp;<b>Consulenti e collaboratori</b></a>
+<a href="#show3" class="show" id="show3">[-]&nbsp;<b>Consulenti e collaboratori</b></a>
 
 <div class="list">
 <?php
@@ -68,8 +71,8 @@ echo '</ul>';
 
 <!-- Personale -->
 <div class="row">
-<a href="#hide4" class="hide" id="hide4">[+]</a> 
-<a href="#show4" class="show" id="show4">[-]</a> &nbsp;<b>Personale</b>
+<a href="#hide4" class="hide" id="hide4">[+]&nbsp;<b>Personale</b></a> 
+<a href="#show4" class="show" id="show4">[-]&nbsp;<b>Personale</b></a> 
 
 <div class="list">
 <?php
@@ -101,8 +104,8 @@ echo '</ul>';
 
 <!-- Bandi di Concorso -->
 <div class="row">
-<a href="#hide5" class="hide" id="hide5">[+]</a> 
-<a href="#show5" class="show" id="show5">[-]</a> &nbsp;<b>Bandi di Concorso</b>
+<a href="#hide5" class="hide" id="hide5">[+]&nbsp;<b>Bandi di Concorso</b></a> 
+<a href="#show5" class="show" id="show5">[-]&nbsp;<b>Bandi di Concorso</b></a> 
 
 <div class="list">
 <?php
@@ -116,8 +119,8 @@ echo '</ul>';
 
 <!-- Performance -->
 <div class="row">
-<a href="#hide6" class="hide" id="hide6">[+]</a> 
-<a href="#show6" class="show" id="show6">[-]</a> &nbsp;<b>Performance</b>
+<a href="#hide6" class="hide" id="hide6">[+]&nbsp;<b>Performance</b></a> 
+<a href="#show6" class="show" id="show6">[-]&nbsp;<b>Performance</b></a>
 
 <div class="list">
 <?php
@@ -139,8 +142,8 @@ echo '</ul>';
 
 <!-- Enti controllati -->
 <div class="row">
-<a href="#hide7" class="hide" id="hide7">[+]</a> 
-<a href="#show7" class="show" id="show7">[-]</a> &nbsp;<b>Enti controllati</b>
+<a href="#hide7" class="hide" id="hide7">[+]&nbsp;<b>Enti controllati</b></a> 
+<a href="#show7" class="show" id="show7">[-]&nbsp;<b>Enti controllati</b></a> 
 
 <div class="list">
 <?php
@@ -160,8 +163,8 @@ echo '</ul>';
 
 <!-- Attività e procedimenti -->
 <div class="row">
-<a href="#hide8" class="hide" id="hide8">[+]</a> 
-<a href="#show8" class="show" id="show8">[-]</a> &nbsp;<b>Attività e procedimenti</b>
+<a href="#hide8" class="hide" id="hide8">[+]&nbsp;<b>Attività e procedimenti</b></a> 
+<a href="#show8" class="show" id="show8">[-]&nbsp;<b>Attività e procedimenti</b></a> 
 
 <div class="list">
 <?php
@@ -181,8 +184,8 @@ echo '</ul>';
 
 <!-- Provvedimenti -->
 <div class="row">
-<a href="#hide9" class="hide" id="hide9">[+]</a> 
-<a href="#show9" class="show" id="show9">[-]</a> &nbsp;<b>Provvedimenti</b>
+<a href="#hide9" class="hide" id="hide9">[+]&nbsp;<b>Provvedimenti</b></a> 
+<a href="#show9" class="show" id="show9">[-]&nbsp;<b>Provvedimenti</b></a> 
 
 <div class="list">
 <?php
@@ -198,8 +201,8 @@ echo '</ul>';
 
 <!-- Controlli sulle imprese -->
 <div class="row">
-<a href="#hide10" class="hide" id="hide10">[+]</a> 
-<a href="#show10" class="show" id="show10">[-]</a> &nbsp;<b>Controlli sulle imprese</b>
+<a href="#hide10" class="hide" id="hide10">[+]&nbsp;<b>Controlli sulle imprese</b></a> 
+<a href="#show10" class="show" id="show10">[-]&nbsp;<b>Controlli sulle imprese</b></a> 
 
 <div class="list">
 <?php
@@ -213,8 +216,8 @@ echo '</ul>';
 
 <!-- Bandi di gara e contratti -->
 <div class="row">
-<a href="#hide11" class="hide" id="hide11">[+]</a> 
-<a href="#show11" class="show" id="show11">[-]</a> &nbsp;<b>Bandi di gara e contratti</b>
+<a href="#hide11" class="hide" id="hide11">[+]&nbsp;<b>Bandi di gara e contratti</b></a> 
+<a href="#show11" class="show" id="show11">[-]&nbsp;<b>Bandi di gara e contratti</b></a> 
 
 <div class="list">
 <?php
@@ -228,8 +231,8 @@ echo '</ul>';
 
 <!-- Sovvenzioni, contributi, sussidi, vantaggi economici -->
 <div class="row">
-<a href="#hide12" class="hide" id="hide12">[+]</a> 
-<a href="#show12" class="show" id="show12">[-]</a> &nbsp;<b>Sovvenzioni, contributi, sussidi, vantaggi economici</b>
+<a href="#hide12" class="hide" id="hide12">[+]&nbsp;<b>Sovvenzioni, contributi, sussidi, vantaggi economici</b></a> 
+<a href="#show12" class="show" id="show12">[-]&nbsp;<b>Sovvenzioni, contributi, sussidi, vantaggi economici</b></a> 
 
 <div class="list">
 <?php
@@ -245,8 +248,8 @@ echo '</ul>';
 
 <!-- Bilanci -->
 <div class="row">
-<a href="#hide13" class="hide" id="hide13">[+]</a> 
-<a href="#show13" class="show" id="show13">[-]</a> &nbsp;<b>Bilanci</b>
+<a href="#hide13" class="hide" id="hide13">[+]&nbsp;<b>Bilanci</b></a> 
+<a href="#show13" class="show" id="show13">[-]&nbsp;<b>Bilanci</b></a> 
 
 <div class="list">
 <?php
@@ -262,8 +265,8 @@ echo '</ul>';
 
 <!-- Beni immobili e gestione patrimonio -->
 <div class="row">
-<a href="#hide14" class="hide" id="hide14">[+]</a> 
-<a href="#show14" class="show" id="show14">[-]</a> &nbsp;<b>Beni immobili e gestione patrimonio</b>
+<a href="#hide14" class="hide" id="hide14">[+]&nbsp;<b>Beni immobili e gestione patrimonio</b></a> 
+<a href="#show14" class="show" id="show14">[-]&nbsp;<b>Beni immobili e gestione patrimonio</b></a> 
 
 <div class="list">
 <?php
@@ -277,10 +280,10 @@ echo '</ul>';
 </div>
 </div>
 
-<!-- Controlli e rilievi sull'amminiztrazione -->
+<!-- Controlli e rilievi sull'amministrazione -->
 <div class="row">
-<a href="#hide15" class="hide" id="hide15">[+]</a> 
-<a href="#show15" class="show" id="show15">[-]</a> &nbsp;<b>Controlli e rilievi sull'amminiztrazione</b>
+<a href="#hide15" class="hide" id="hide15">[+]&nbsp;<b>Controlli e rilievi sull'amministrazione</b></a> 
+<a href="#show15" class="show" id="show15">[-]&nbsp;<b>Controlli e rilievi sull'amministrazione</b></a> 
 
 <div class="list">
 <?php
@@ -294,8 +297,8 @@ echo '</ul>';
 
 <!-- Servizi erogati -->
 <div class="row">
-<a href="#hide16" class="hide" id="hide16">[+]</a> 
-<a href="#show16" class="show" id="show16">[-]</a> &nbsp;<b>Servizi erogati</b>
+<a href="#hide16" class="hide" id="hide16">[+]&nbsp;<b>Servizi erogati</b></a> 
+<a href="#show16" class="show" id="show16">[-]&nbsp;<b>Servizi erogati</b></a> 
 
 <div class="list">
 <?php
@@ -315,8 +318,8 @@ echo '</ul>';
 
 <!-- Pagamenti dell'amministrazione -->
 <div class="row">
-<a href="#hide17" class="hide" id="hide17">[+]</a> 
-<a href="#show17" class="show" id="show17">[-]</a> &nbsp;<b>Pagamenti dell'amministrazione</b>
+<a href="#hide17" class="hide" id="hide17">[+]&nbsp;<b>Pagamenti dell'amministrazione</b></a> 
+<a href="#show17" class="show" id="show17">[-]&nbsp;<b>Pagamenti dell'amministrazione</b></a> 
 
 <div class="list">
 <?php
@@ -332,8 +335,8 @@ echo '</ul>';
 
 <!-- Opere pubbliche -->
 <div class="row">
-<a href="#hide18" class="hide" id="hide18">[+]</a> 
-<a href="#show18" class="show" id="show18">[-]</a> &nbsp;<b>Opere pubbliche</b>
+<a href="#hide18" class="hide" id="hide18">[+]&nbsp;<b>Opere pubbliche</b></a> 
+<a href="#show18" class="show" id="show18">[-]&nbsp;<b>Opere pubbliche</b></a> 
 
 <div class="list">
 <?php
@@ -347,8 +350,8 @@ echo '</ul>';
 
 <!-- Pianificazione e governo del territorio -->
 <div class="row">
-<a href="#hide19" class="hide" id="hide19">[+]</a> 
-<a href="#show19" class="show" id="show19">[-]</a> &nbsp;<b>Pianificazione e governo del territorio</b>
+<a href="#hide19" class="hide" id="hide19">[+]&nbsp;<b>Pianificazione e governo del territorio</b></a> 
+<a href="#show19" class="show" id="show19">[-]&nbsp;<b>Pianificazione e governo del territorio</b></a> 
 
 <div class="list">
 <?php
@@ -362,8 +365,8 @@ echo '</ul>';
 
 <!-- Informazioni ambientali -->
 <div class="row">
-<a href="#hide20" class="hide" id="hide20">[+]</a> 
-<a href="#show20" class="show" id="show20">[-]</a> &nbsp;<b>Informazioni ambientali</b>
+<a href="#hide20" class="hide" id="hide20">[+]&nbsp;<b>Informazioni ambientali</b></a> 
+<a href="#show20" class="show" id="show20">[-]&nbsp;<b>Informazioni ambientali</b></a> 
 
 <div class="list">
 <?php
@@ -377,8 +380,8 @@ echo '</ul>';
 
 <!-- Strutture sanitarie private accreditate -->
 <div class="row">
-<a href="#hide21" class="hide" id="hide21">[+]</a> 
-<a href="#show21" class="show" id="show21">[-]</a> &nbsp;<b>Strutture sanitarie private accreditate</b>
+<a href="#hide21" class="hide" id="hide21">[+]&nbsp;<b>Strutture sanitarie private accreditate</b></a> 
+<a href="#show21" class="show" id="show21">[-]&nbsp;<b>Strutture sanitarie private accreditate</b></a> 
 
 <div class="list">
 <?php
@@ -392,8 +395,8 @@ echo '</ul>';
 
 <!-- Interventi straordinari e di emergenza -->
 <div class="row">
-<a href="#hide22" class="hide" id="hide22">[+]</a> 
-<a href="#show22" class="show" id="show22">[-]</a> &nbsp;<b>Interventi straordinari e di emergenza</b>
+<a href="#hide22" class="hide" id="hide22">[+]&nbsp;<b>Interventi straordinari e di emergenza</b></a> 
+<a href="#show22" class="show" id="show22">[-]&nbsp;<b>Interventi straordinari e di emergenza</b></a> 
 
 <div class="list">
 <?php
@@ -407,8 +410,8 @@ echo '</ul>';
 
 <!-- Altri contenuti -->
 <div class="row">
-<a href="#hide23" class="hide" id="hide23">[+]</a> 
-<a href="#show23" class="show" id="show23">[-]</a> &nbsp;<b>Altri contenuti</b>
+<a href="#hide23" class="hide" id="hide23">[+]&nbsp;<b>Altri contenuti</b></a> 
+<a href="#show23" class="show" id="show23">[-]&nbsp;<b>Altri contenuti</b></a> 
 
 <div class="list">
 <?php

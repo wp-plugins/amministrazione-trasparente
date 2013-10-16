@@ -21,6 +21,13 @@ wp_update_term($term->term_id, 'tipologie', array('description'=>'
 Note
 Per onere informativo si intende qualunque obbligo informativo o adempimento che comporti la raccolta, l’elaborazione, la trasmissione, la conservazione e la produzione di informazioni e documenti alla P.A.
 '));
+$term = get_term_by('name','Attestazioni OIV o struttura analoga','tipologie');	
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+Come previsto dalla delibera <b>CiVIT n. 71/2013</b> "Attestazioni OIV sull’assolvimento di specifici obblighi di pubblicazione per l’anno 2013 e attività di vigilanza e controllo della Commissione" sono disponibili in allegato:
+ 
+1. Il documento di attestazione del Nucleo di valutazione sull’assolvimento di specifici obblighi di pubblicazione;
+2. La griglia di attestazione.
+'));
 
 //Organizzazione
 $term = get_term_by('name','Organi di indirizzo politico-amministrativo','tipologie');	

@@ -8,7 +8,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="'
 $nome_tipologia = "Atti generali";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Oneri informativi per cittadini e imprese";
-echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';$nome_tipologia = "Attestazioni OIV o di struttura analoga";echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" alt="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 echo '</ul>';
 ?>
 </ul>

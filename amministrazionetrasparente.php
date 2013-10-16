@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.4.1
+Version: 3.5
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -30,7 +30,15 @@ function AT_RegistraTAX() {
         'choose_from_most_used' => _x( 'Scegli tra le tipologie più usate', 'tipologie' ),
         'menu_name' => _x( 'Tipologie', 'tipologie' ),
     );
-
+	
+	//Se è attivata l'opzione per sbloccare le tipologie, cambiamo alcuni parametri =)
+	//$get_at_option_sblocca_tipologie = get_option('at_option_sblocca_tipologie');
+	//if ($get_at_option_sblocca_tipologie == '1') {
+	//	$at_option_sblocca_tipologie_array = array( 'manage_terms' => 'administrator', 'edit_terms' => 'administrator','delete_terms' => 'administrator');
+	//} else {
+	//	$at_option_sblocca_tipologie_array = array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',);
+	//}
+	
     $args = array( 
         'labels' => $labels,
         'public' => true,
@@ -73,6 +81,16 @@ function register_cpt_documento_trasparenza() {
 	} else {
 		$taxonomysupport = array('post_tag');
 	}
+	
+	//Se è attivata l'opzione per personalizzare ruoli/permessi, cambiamo alcuni parametri =)
+	$get_at_mapcap_option_enable = get_option('at_mapcap_option_enable');
+	if ($get_at_mapcap_option_enable == '1') {
+		$capability_type_var = 'documenti_trasparenza';
+		$map_meta_cap_var = 'true';
+	} else {
+		$capability_type_var = 'post';
+		$map_meta_cap_var = 'false';
+	}
 
     $args = array( 
         'labels' => $labels,
@@ -91,11 +109,23 @@ function register_cpt_documento_trasparenza() {
         'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
-	'rewrite' => array('pages'=> true, 'with_front' => false),
-        'capability_type' => 'post'
+		'rewrite' => array('pages'=> true, 'with_front' => false),
+        'capability_type' => $capability_type_var,
+		'map_meta_cap' => $map_meta_cap_var
     );
 
     register_post_type( 'amm-trasparente', $args );
+
+}
+
+add_action( 'admin_menu', 'my_remove_menu_pages' );
+
+function my_remove_menu_pages() {
+	if ( ! is_admin() ) {
+		if ( !current_user_can('publish_documenti_trasparenzas') ) {
+			remove_menu_page('edit.php?post_type=amm-trasparente');
+		}
+	}
 }
 
 /* =========== TITOLO HCK =========== */
@@ -258,17 +288,23 @@ include(plugin_dir_path(__FILE__) . 'redirector.php');
 
 add_action( 'init', 'AT_FUNCTIONSLOAD');
 
-$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
-if ($get_at_wpatt_option_enable == '1') {
-	include(plugin_dir_path(__FILE__) . 'wp-attachments/wp-attachments.php');
-}
-
 function AT_FUNCTIONSLOAD () {
 
 if (current_user_can( 'manage_options' )) {
 require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
 include(plugin_dir_path(__FILE__) . 'updatefunction.php');
 }
+
+$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
+if ($get_at_wpatt_option_enable == '1') {
+	include(plugin_dir_path(__FILE__) . 'wp-attachments/wp-attachments.php');
+}
+
+$get_at_mapcap_option_enable = get_option('at_mapcap_option_enable');
+if ($get_at_mapcap_option_enable == '1') {
+	include(plugin_dir_path(__FILE__) . 'map-cap/map-cap.php');
+}
+
 }
 
 ?>

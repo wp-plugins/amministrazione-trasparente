@@ -4,6 +4,7 @@
 wp_insert_term('Programma per la Trasparenza e l\'Integrità', 'tipologie');
 wp_insert_term('Atti generali', 'tipologie');
 wp_insert_term('Oneri informativi per cittadini e imprese', 'tipologie');
+wp_insert_term('Attestazioni OIV o di struttura analoga', 'tipologie');
 
 //Organizzazione
 wp_insert_term('Organi di indirizzo politico-amministrativo', 'tipologie');
