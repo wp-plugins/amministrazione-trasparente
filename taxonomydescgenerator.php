@@ -200,84 +200,177 @@ n) i risultati delle indagini di customer satisfaction condotte sulla qualità d
 2. Le pubbliche amministrazioni non possono richiedere l\'uso di moduli e formulari che non siano stati pubblicati; in caso di omessa pubblicazione, i relativi procedimenti possono essere avviati anche in assenza dei suddetti moduli o formulari. L\'amministrazione non può respingere l\'istanza adducendo il mancato utilizzo dei moduli o formulari o la mancata produzione di tali atti o documenti, e deve invitare l\'istante a integrare la documentazione in un termine congruo.
 '));
 $term = get_term_by('name','Monitoraggio tempi procedimentali','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 24, comma 2</b> - Obblighi di pubblicazione dei dati aggregati relativi all\'attività amministrativa<br/>
+2. Le amministrazioni pubblicano e rendono consultabili i risultati del monitoraggio periodico concernente il rispetto dei tempi procedimentali effettuato ai sensi dell\'articolo 1, comma 28, della legge 6 novembre 2012, n. 190.'));
 $term = get_term_by('name','Dichiarazioni sostitutive e acquisizione d\'ufficio dei dati','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 35, comma 3</b> - Obblighi di pubblicazione relativi ai procedimenti amministrativi e ai controlli sulle dichiarazioni sostitutive e l\'acquisizione d\'ufficio dei dati<br/>
+3. Le pubbliche amministrazioni pubblicano nel sito istituzionale:<br/>
+a) i recapiti telefonici e la casella di posta elettronica istituzionale dell\'ufficio responsabile per le attività volte a gestire, garantire e verificare la trasmissione dei dati o l\'accesso diretto agli stessi da parte delle amministrazioni procedenti ai sensi degli articoli 43, 71 e 72 del decreto del Presidente della Repubblica 28 dicembre 2000, n. 445;<br/>
+b) le convenzioni-quadro volte a disciplinare le modalità di accesso ai dati di cui all\'articolo 58 del codice dell\'amministrazione digitale, di cui al decreto legislativo 7 marzo 2005, n. 82;<br/>
+c) le ulteriori modalità per la tempestiva acquisizione d\'ufficio dei dati nonché per lo svolgimento dei controlli sulle dichiarazioni sostitutive da parte delle amministrazioni procedenti.'));
 
 //Provvedimenti
 $term = get_term_by('name','Provvedimenti organi indirizzo-politico','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 23</b> - Obblighi di pubblicazione concernenti i provvedimenti amministrativi<br/>
+1. Le pubbliche amministrazioni pubblicano e aggiornano ogni sei mesi, in distinte partizioni della sezione «Amministrazione trasparente», gli elenchi dei provvedimenti adottati dagli organi di indirizzo politico e dai dirigenti, con particolare riferimento ai provvedimenti finali dei procedimenti di:
+a) autorizzazione o concessione;<br/>
+b) scelta del contraente per l\'affidamento di lavori, forniture e servizi, anche con riferimento alla modalità di selezione prescelta ai sensi del codice dei contratti pubblici, relativi a lavori, servizi e forniture, di cui al decreto legislativo 12 aprile 2006, n. 163;<br/>
+c) concorsi e prove selettive per l\'assunzione del personale e progressioni di carriera di cui all\'articolo 24 del decreto legislativo n. 150 del 2009;<br/>
+d) accordi stipulati dall\'amministrazione con soggetti privati o con altre amministrazioni pubbliche.<br/>
+2. Per ciascuno dei provvedimenti compresi negli elenchi di cui al comma 1 sono pubblicati il contenuto, l\'oggetto, la eventuale spesa prevista e gli estremi relativi ai principali documenti contenuti nel fascicolo relativo al procedimento. La pubblicazione avviene nella forma di una scheda sintetica, prodotta automaticamente in sede di formazione del documento che contiene l\'atto.'));
 $term = get_term_by('name','Provvedimenti dirigenti','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 23</b> - Obblighi di pubblicazione concernenti i provvedimenti amministrativi<br/>
+1. Le pubbliche amministrazioni pubblicano e aggiornano ogni sei mesi, in distinte partizioni della sezione «Amministrazione trasparente», gli elenchi dei provvedimenti adottati dagli organi di indirizzo politico e dai dirigenti, con particolare riferimento ai provvedimenti finali dei procedimenti di:
+a) autorizzazione o concessione;<br/>
+b) scelta del contraente per l\'affidamento di lavori, forniture e servizi, anche con riferimento alla modalità di selezione prescelta ai sensi del codice dei contratti pubblici, relativi a lavori, servizi e forniture, di cui al decreto legislativo 12 aprile 2006, n. 163;<br/>
+c) concorsi e prove selettive per l\'assunzione del personale e progressioni di carriera di cui all\'articolo 24 del decreto legislativo n. 150 del 2009;<br/>
+d) accordi stipulati dall\'amministrazione con soggetti privati o con altre amministrazioni pubbliche.<br/>
+2. Per ciascuno dei provvedimenti compresi negli elenchi di cui al comma 1 sono pubblicati il contenuto, l\'oggetto, la eventuale spesa prevista e gli estremi relativi ai principali documenti contenuti nel fascicolo relativo al procedimento. La pubblicazione avviene nella forma di una scheda sintetica, prodotta automaticamente in sede di formazione del documento che contiene l\'atto.'));
 
 //Controlli sulle imprese
 $term = get_term_by('name','Controlli sulle imprese','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 25</b> - Obblighi di pubblicazione concernenti i controlli sulle imprese<br/>
+1. Le pubbliche amministrazioni, in modo dettagliato e facilmente comprensibile, pubblicano sul proprio sito istituzionale e sul sito: <a href="www.impresainungiorno.gov.it" title="Impresa in un giorno .gov">www.impresainungiorno.gov.it</a>:<br/>
+a) l\'elenco delle tipologie di controllo a cui sono assoggettate le imprese in ragione della dimensione e del settore di attività, indicando per ciascuna di esse i criteri e le relative modalità di svolgimento;<br/>
+b) l\'elenco degli obblighi e degli adempimenti oggetto delle attività di controllo che le imprese sono tenute a rispettare per ottemperare alle disposizioni normative.'));
 
 //Bandi di gara e contratti
 $term = get_term_by('name','Bandi di gara e contratti','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 37, comma 1 e 2</b> - Obblighi di pubblicazione concernenti i contratti pubblici di lavori, servizi e forniture<br/>
+1. Fermi restando gli altri obblighi di pubblicità legale e, in particolare, quelli previsti dall\'articolo 1, comma 32, della legge 6 novembre 2012, n. 190, ciascuna amministrazione pubblica, secondo quanto previsto dal decreto legislativo 12 aprile 2006, n. 163, e, in particolare, dagli articoli 63, 65, 66, 122, 124, 206 e 223, le informazioni relative alle procedure per l\'affidamento e l\'esecuzione di opere e lavori pubblici, servizi e forniture.<br/>
+2. Le pubbliche amministrazioni sono tenute altresì a pubblicare, nell\'ipotesi di cui all\'articolo 57, comma 6, del decreto legislativo 12 aprile 2006, n. 163, la delibera a contrarre.'));
 
 //Sovvenzioni, contributi, sussidi, vantaggi economici
 $term = get_term_by('name','Criteri e modalità','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 26, comma 1</b> - Obblighi di pubblicazione degli atti di concessione di sovvenzioni, contributi, sussidi e attribuzione di vantaggi economici a persone fisiche ed enti pubblici e privati<br/>
+1. Le pubbliche amministrazioni pubblicano gli atti con i quali sono determinati, ai sensi dell\'articolo 12 della legge 7 agosto 1990, n. 241, i criteri e le modalità cui le amministrazioni stesse devono attenersi per la concessione di sovvenzioni, contributi, sussidi ed ausili finanziari e per l\'attribuzione di vantaggi economici di qualunque genere a persone ed enti pubblici e privati.'));
 $term = get_term_by('name','Atti di concessione','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 26, comma 2 -  Art. 27</b> - Obblighi di pubblicazione degli atti di concessione di sovvenzioni, contributi, sussidi e attribuzione di vantaggi economici a persone fisiche ed enti pubblici e privati
+2. Le pubbliche amministrazioni pubblicano gli atti di concessione delle sovvenzioni, contributi, sussidi ed ausili finanziari alle imprese, e comunque di vantaggi economici di qualunque genere a persone ed enti pubblici e privati ai sensi del citato articolo 12 della legge n. 241 del 1990, di importo superiore a mille euro.<br/>
+<b>Art. 27</b> - Obblighi di pubblicazione dell\'elenco dei soggetti beneficiari<br/>
+1. La pubblicazione di cui all\'articolo 26, comma 2, comprende necessariamente, ai fini del comma 3 del medesimo articolo:<br/>
+a) il nome dell\'impresa o dell\'ente e i rispettivi dati fiscali o il nome di altro soggetto beneficiario;<br/>
+b) l\'importo del vantaggio economico corrisposto;<br/>
+c) la norma o il titolo a base dell\'attribuzione;<br/>
+d) l\'ufficio e il funzionario o dirigente responsabile del relativo procedimento amministrativo;<br/>
+e) la modalità seguita per l\'individuazione del beneficiario;<br/>
+f ) il link al progetto selezionato e al curriculum del soggetto incaricato.'));
 
 //Bilanci
 $term = get_term_by('name','Bilancio preventivo e consuntivo','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 29, comma 1</b> - Obblighi di pubblicazione del bilancio, preventivo e consuntivo, e del Piano degli indicatori e risultati attesi di bilancio, nonché dei dati concernenti il monitoraggio degli obiettivi<br/>
+1. Le pubbliche amministrazioni pubblicano i dati relativi al bilancio di previsione e a quello consuntivo di ciascun anno in forma sintetica, aggregata e semplificata, anche con il ricorso a rappresentazioni grafiche, al fine di assicurare la piena accessibilità e comprensibilità.'));
 $term = get_term_by('name','Piano degli indicatori e risultati attesi di bilancio','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 29, comma 2</b> - Obblighi di pubblicazione del bilancio, preventivo e consuntivo, e del Piano degli indicatori e risultati attesi di bilancio, nonché dei dati concernenti il monitoraggio degli obiettivi<br/>
+2. Le pubbliche amministrazioni pubblicano il Piano di cui all\'articolo 19 del decreto legislativo 31 maggio 2011, n. 91, con le integrazioni e gli aggiornamenti di cui all\'articolo 22 del medesimo decreto legislativo n. 91 del 2011.'));
 
 //Beni immobili e gestione patrimonio
 $term = get_term_by('name','Patrimonio immobiliare','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 30</b> - Obblighi di pubblicazione concernenti i beni immobili e la gestione del patrimonio<br/>
+1. Le pubbliche amministrazioni pubblicano le informazioni identificative degli immobili posseduti, nonché i canoni di locazione o di affitto versati o percepiti.'));
 $term = get_term_by('name','Canoni di locazione o affitto','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 30</b> - Obblighi di pubblicazione concernenti i beni immobili e la gestione del patrimonio<br/>
+1. Le pubbliche amministrazioni pubblicano le informazioni identificative degli immobili posseduti, nonché i canoni di locazione o di affitto versati o percepiti.'));
 
 //Controlli e rilievi sull'amministrazione
 $term = get_term_by('name','Controlli e rilievi sull\'amministrazione','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 31, comma 1</b> - Obblighi di pubblicazione concernenti i dati relativi ai controlli sull\'organizzazione e sull\'attività dell\'amministrazione<br/>
+1. Le pubbliche amministrazioni pubblicano, unitamente agli atti cui si riferiscono, i rilievi non recepiti degli organi di controllo interno, degli organi di revisione amministrativa e contabile e tutti i rilievi ancorchè recepiti della Corte dei conti, riguardanti l\'organizzazione e l\'attività dell\'amministrazione o di singoli uffici.'));
 
 //Servizi erogati
 $term = get_term_by('name','Carta dei servizi e standard di qualità','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Art. 32, c. 1</b> - Obblighi di pubblicazione concernenti i servizi erogati<br/>
+1. Le pubbliche amministrazioni pubblicano la carta dei servizi o il documento contenente gli standard di qualità dei servizi pubblici'));
 $term = get_term_by('name','Costi contabilizzati','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Art. 32, c. 2, lett. a, Art. 10, c. 5</b> - Obblighi di pubblicazione concernenti i servizi erogati<br/>
+2. Le pubbliche amministrazioni, individuati i servizi erogati agli utenti, sia finali che intermedi, ai sensi dell\'articolo 10, comma 5, pubblicano:<br/>
+a) i costi contabilizzati, evidenziando quelli effettivamente sostenuti e quelli imputati al personale per ogni servizio erogato e il relativo andamento nel tempo;<br/>
+<b>Art. 10</b> - Programma triennale per la trasparenza e l\'integrità<br/>
+5. Ai fini della riduzione del costo dei servizi, dell\'utilizzo delle tecnologie dell\'informazione e della comunicazione, nonché del conseguente risparmio sul costo del lavoro, le pubbliche amministrazioni provvedono annualmente ad individuare i servizi erogati, agli utenti sia finali che intermedi, ai sensi dell\'articolo 10, comma 5, del decreto legislativo 7 agosto 1997, n. 279. Le amministrazioni provvedono altresì alla contabilizzazione dei costi e all\'evidenziazione dei costi effettivi e di quelli imputati al personale per ogni servizio erogato, nonché al monitoraggio del loro andamento nel tempo, pubblicando i relativi dati ai sensi dell\'articolo 32.'));
 $term = get_term_by('name','Tempi medi di erogazione dei servizi','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Art. 32, c. 2, lett. b</b> - Obblighi di pubblicazione concernenti i servizi erogati<br/>
+2. Le pubbliche amministrazioni, individuati i servizi erogati agli utenti, sia finali che intermedi, ai sensi dell\'articolo 10, comma 5, pubblicano:<br/>
+b) i tempi medi di erogazione dei servizi, con riferimento all\'esercizio finanziario precedente.'));
 $term = get_term_by('name','Liste di attesa','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Art. 41, c. 6</b> - Trasparenza del servizio sanitario nazionale<br/>
+6. Gli enti, le aziende e le strutture pubbliche e private che erogano prestazioni per conto del servizio sanitario sono tenuti ad indicare nel proprio sito, in una apposita sezione denominata «Liste di attesa», il tempi di attesa previsti e i tempi medi effettivi di attesa per ciascuna tipologia di prestazione erogata.'));
 
 //Pagamenti dell' amministrazione
 $term = get_term_by('name','Indicatore di tempestività dei pagamenti','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 33</b> - Obblighi di pubblicazione concernenti i tempi di pagamento dell\'amministrazione<br/>
+1. Le pubbliche amministrazioni pubblicano, con cadenza annuale, un indicatore dei propri tempi medi di pagamento relativi agli acquisti di beni, servizi e forniture, denominato: «indicatore di tempestività dei pagamenti».'));
 $term = get_term_by('name','IBAN e pagamenti informatici','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 33</b> - Pubblicazione delle informazioni necessarie per l\'effettuazione di pagamenti informatici<br/>
+1. Le pubbliche amministrazioni pubblicano e specificano nelle richieste di pagamento i dati e le informazioni di cui all\'articolo 5 del decreto legislativo 7 marzo 2005, n. 82.'));
 
 //Opere pubbliche
 $term = get_term_by('name','Opere pubbliche','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 38</b> - Pubblicità dei processi di pianificazione, realizzazione e valutazione delle opere pubbliche<br/>
+1. Le pubbliche amministrazioni pubblicano tempestivamente sui propri siti istituzionali: i documenti di programmazione anche pluriennale delle opere pubbliche di competenza dell\'amministrazione, le linee guida per la valutazione degli investimenti; le relazioni annuali; ogni altro documento predisposto nell\'ambito della valutazione, ivi inclusi i pareri dei valutatori che si discostino dalle scelte delle amminstrazioni e gli esiti delle valutazioni ex post che si discostino dalle valutazioni ex ante; le informazioni relative ai Nuclei di valutazione e verifica degli investimenti pubblici di cui all\'articolo 1 della legge 17 maggio 1999, n. 144, incluse le funzioni e i compiti specifici ad essi attribuiti, le procedure e i criteri di individuazione dei componenti e i loro nominativi.<br/>
+2. Le pubbliche amministrazioni pubblicano, fermi restando gli obblighi di pubblicazione di cui all\'articolo 128 del decreto legislativo 12 aprile 2006, n. 163, le informazioni relative ai tempi, ai costi unitari e agli indicatori di realizzazione delle opere pubbliche completate. Le informazioni sui costi sono pubblicate sulla base di uno schema tipo redatto dall\'Autorità per la vigilanza sui contratti pubblici di lavori, servizi e forniture, che ne cura altresì la raccolta e la pubblicazione nel proprio sito web istituzionale al fine di consentirne una agevole comparazione.'));
 
 //Pianificazione e governo del territorio
 $term = get_term_by('name','Pianificazione e governo del territorio','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 39</b> - Trasparenza dell\'attività di pianificazione e governo del territorio<br/>
+1. Le pubbliche amministrazioni pubblicano:<br/>
+a) gli atti di governo del territorio, quali, tra gli altri, piani territoriali, piani di coordinamento, piani paesistici, strumenti urbanistici, generali e di attuazione, nonché le loro varianti;<br/>
+b) per ciascuno degli atti di cui alla lettera a) sono pubblicati, tempestivamente, gli schemi di provvedimento prima che siano portati all\'approvazione; le delibere di adozione o approvazione; i relativi allegati tecnici.<br/>
+2. La documentazione relativa a ciascun procedimento di presentazione e approvazione delle proposte di trasformazione urbanistica d\'iniziativa privata o pubblica in variante allo strumento urbanistico generale comunque denominato vigente nonché delle proposte di trasformazione urbanistica d\'iniziativa privata o pubblica in attuazione dello strumento urbanistico generale vigente che comportino premialità edificatorie a fronte dell\'impegno dei privati alla realizzazione di opere di urbanizzazione extra oneri o della cessione di aree o volumetrie per finalità di pubblico interesse è pubblicata in una sezione apposita nel sito del comune interessato, continuamente aggiornata.<br/>
+3. La pubblicità degli atti di cui al comma 1, lettera a), è condizione per l\'acquisizione dell\'efficacia degli atti stessi.<br/>
+4. Restano ferme le discipline di dettaglio previste dalla vigente legislazione statale e regionale.'));
 
 //Informazioni ambientali
 $term = get_term_by('name','Informazioni ambientali','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 40</b> - Pubblicazione e accesso alle informazioni ambientali<br/>
+1. In materia di informazioni ambientali restano ferme le disposizioni di maggior tutela già previste dall\'articolo 3-sexies del decreto legislativo 3 aprile 2006 n. 152, dalla legge 16 marzo 2001, n. 108, nonché dal decreto legislativo 19 agosto 2005 n. 195.<br/>
+2. Le amministrazioni di cui all\'articolo 2, comma 1, lettera b), del decreto legislativo n. 195 del 2005, pubblicano, sui propri siti istituzionali e in conformità a quanto previsto dal presente decreto, le informazioni ambientali di cui all\'articolo 2, comma 1, lettera a), del decreto legislativo 19 agosto 2005, n.195, che detengono ai fini delle proprie attività istituzionali, nonché le relazioni di cui all\'articolo 10 del medesimo decreto legislativo. Di tali informazioni deve essere dato specifico rilievo all\'interno di un\'apposita sezione detta «Informazioni ambientali».<br/>
+3. Sono fatti salvi i casi di esclusione del diritto di accesso alle informazioni ambientali di cui all\'articolo 5 del decreto legislativo 19 agosto 2005, n. 195.<br/>
+4. L\'attuazione degli obblighi di cui al presente articolo non è in alcun caso subordinata alla stipulazione degli accordi di cui all\'articolo 11 del decreto legislativo 19 agosto 2005, n. 195. Sono fatti salvi gli effetti degli accordi eventualmente già stipulati, qualora assicurino livelli di informazione ambientale superiori a quelli garantiti dalle disposizioni del presente decreto. Resta fermo il potere di stipulare ulteriori accordi ai sensi del medesimo articolo 11, nel rispetto dei livelli di informazione ambientale garantiti dalle disposizioni del presente decreto.'));
 
 //Strutture sanitarie private accreditate
 $term = get_term_by('name','Strutture sanitarie private accreditate','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 41, comma 4</b> - Trasparenza del servizio sanitario nazionale<br/> - Pubblicazione e accesso alle informazioni ambientali<br/>
+1. In materia di informazioni ambientali restano ferme le disposizioni di maggior tutela già previste dall\'articolo 3-sexies del decreto legislativo 3 aprile 2006 n. 152, dalla legge 16 marzo 2001, n. 108, nonché dal decreto legislativo 19 agosto 2005 n. 195.<br/>
+2. Le amministrazioni di cui all\'articolo 2, comma 1, lettera b), del decreto legislativo n. 195 del 2005, pubblicano, sui propri siti istituzionali e in conformità a quanto previsto dal presente decreto, le informazioni ambientali di cui all\'articolo 2, comma 1, lettera a), del decreto legislativo 19 agosto 2005, n.195, che detengono ai fini delle proprie attività istituzionali, nonché le relazioni di cui all\'articolo 10 del medesimo decreto legislativo. Di tali informazioni deve essere dato specifico rilievo all\'interno di un\'apposita sezione detta «Informazioni ambientali».<br/>
+3. Sono fatti salvi i casi di esclusione del diritto di accesso alle informazioni ambientali di cui all\'articolo 5 del decreto legislativo 19 agosto 2005, n. 195.<br/>
+4. L\'attuazione degli obblighi di cui al presente articolo non è in alcun caso subordinata alla stipulazione degli accordi di cui all\'articolo 11 del decreto legislativo 19 agosto 2005, n. 195. Sono fatti salvi gli effetti degli accordi eventualmente già stipulati, qualora assicurino livelli di informazione ambientale superiori a quelli garantiti dalle disposizioni del presente decreto. Resta fermo il potere di stipulare ulteriori accordi ai sensi del medesimo articolo 11, nel rispetto dei livelli di informazione ambientale garantiti dalle disposizioni del presente decreto.<br/>
+4. È pubblicato e annualmente aggiornato l\'elenco delle strutture sanitarie private accreditate. Sono altresì pubblicati gli accordi con esse intercorsi.
+'));
 
 //Interventi straordinari e di emergenza
 $term = get_term_by('name','Interventi straordinari e di emergenza','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'
+<b>Dlgs 33/2013 - Articolo 42</b> - Obblighi di pubblicazione concernenti gli interventi straordinari e di emergenza che comportano deroghe alla legislazione vigente<br/>
+1. Le pubbliche amministrazioni che adottano provvedimenti contingibili e urgenti e in generale provvedimenti di carattere straordinario in caso di calamità naturali o di altre emergenze, ivi comprese le amministrazioni commissariali e straordinarie costituite in base alla legge 24 febbraio 1992, n. 225, o a provvedimenti legislativi di urgenza, pubblicano:<br/>
+a) i provvedimenti adottati, con la indicazione espressa delle norme di legge eventualmente derogate e dei motivi della deroga, nonché l\'indicazione di eventuali atti amministrativi o giurisdizionali intervenuti;<br/>
+b) i termini temporali eventualmente fissati per l\'esercizio dei poteri di adozione dei provvedimenti straordinari;<br/>
+c) il costo previsto degli interventi e il costo effettivo sostenuto dall\'amministrazione; d) le particolari forme di partecipazione degli interessati ai procedimenti di adozione dei provvedimenti straordinari.'));
 
 //Altri contenuti
 $term = get_term_by('name','Altri contenuti','tipologie');	
-wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+wp_update_term($term->term_id, 'tipologie', array('description'=>'Eventuali ulteriori contenuti da pubblicare ai fini di trasparenza e non riconducibili a nessuna delle altre sotto-sezioni'));
 
 ?>

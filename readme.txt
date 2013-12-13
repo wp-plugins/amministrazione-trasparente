@@ -2,9 +2,9 @@
 Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
-Tested up to: 3.7
-Version: 3.5.1
-Stable tag: 3.5.1
+Tested up to: 3.8
+Version: 3.6
+Stable tag: 3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,11 +22,11 @@ Amministrazione Trasparente è stato sviluppato seguendo tre criteri: **Flessibi
 
 L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una comodità di aggiornamento senza pari! In particolare in ogni voce è possibile inserire file, immagini, testi, link o anche effettuare un reindirizzamento automatico a un'altra pagina. Per esempio, per inserire i recapiti telefonici non è necessario scriverli in Microsoft Word per poi caricare il file, ma basta semplicemente scriverlo!
 
-> [DEMO](http://amministrazionetrasparente.marcomilesi.ml) | [INSTALLAZIONE e CONFIGURAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](http://amministrazionetrasparente.marcomilesi.ml/guida_amministrazionetrasparente.pdf)
+> [INSTALLAZIONE e CONFIGURAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](http://amministrazionetrasparente.marcomilesi.ml/guida_amministrazionetrasparente.pdf)
 
 > Comuni | [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/) - [Comune di Bordighera](http://trasparenza.bordighera.it/)
 
-> Scuole | [IC Nord 1 Brescia](http://www.icnord1brescia.gov.it/amministrazione-trasparente/)
+> Scuole | [IC Nord 1 Brescia](http://www.icnord1brescia.gov.it/amministrazione-trasparente/) - [Istituto di Istruzione Superiore "Leonardo da Vinci" (OG)](http://liceolanusei.it/amministrazione-trasparente/)
 
 > Società | [CBLSPA Servizio Idrico Integrato](http://www.cblspa.it/)
 
@@ -45,6 +45,9 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 * Widget personalizzabile con 2 modalità di visualizzazione
 * **Compatibilità completa per Pasw2013** (visualizzazione archivio/singola modificate appositamente per il tema della comunità di pratica Porte Aperte sul Web)
 * **NUOVO** | Possibilità di associare anche le categorie alle voci create
+* E molte altre funzioni uniche che rendono questo software semplice e veloce da utilizzare!
+
+> Più di *200 pubbliche amministrazioni* hanno scelto di affidarsi a questo plugin per l'adempimento normativo del d.lgs. 33/2013!
 
 = CONTATTI & SUPPORTO =
 Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, è attivo il forum di supporto su [www.marcomilesi.ml/supporto](http://marcomilesi.ml/supporto/)
@@ -107,6 +110,16 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.6 13/12/2013 "Regalo di Santa Lucia" =
+* **Modificato** css per [at-table]: Css **fluido**
+* **Aggiunti** i riferimenti normativi mancanti delle sezioni
+* **Rimosso** codice per visualizzazione report e statistiche nella bacheca (non supportato da Wordpress 3.8)
+* **Aggiunta** casella di ricerca nel metabox "Tipologie"
+* Migliorate performance: alcune funzioni vengono ora caricate con admin_init invece che _init
+* Rimosso codice che nascondeva il menù "Trasparenza" in caso di utenti senza permesso (conflitto con map-cap)
+* Compatibile con Wordpress **3.8**
+* **Aggiunto** invito all'installazione del plugin Wordpress AVCP
 
 = Versione 3.5.1 19/10/2013 =
 * **Corretto** bug della mancata visualizzazione di alcuni menù del template pasw2013 in alcune pagine di archivio

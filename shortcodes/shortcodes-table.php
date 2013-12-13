@@ -1,4 +1,4 @@
-<style>.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;}</style>
+<style>.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;position:relative;min-width: 200px;}</style>
 <?php
 
 echo '<div class="at-tableclass">';
