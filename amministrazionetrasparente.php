@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.6.3
+Version: 3.6.4
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -276,25 +276,29 @@ require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
 include(plugin_dir_path(__FILE__) . 'widget/widget.php');
 include(plugin_dir_path(__FILE__) . 'redirector.php');
 
-add_action( 'admin_init', 'AT_FUNCTIONSLOAD');
+add_action( 'init', 'AT_WPATT');
+function AT_WPATT() {
+	$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
+	if ($get_at_wpatt_option_enable == '1') {
+		include(plugin_dir_path(__FILE__) . 'wp-attachments/wp-attachments.php');
+	}
+}
 
+add_action( 'admin_init', 'AT_FUNCTIONSLOAD');
 function AT_FUNCTIONSLOAD () {
 
-require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
-require_once(plugin_dir_path(__FILE__) . 'updatefunction.php');
-require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
-require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
+	require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
+	require_once(plugin_dir_path(__FILE__) . 'updatefunction.php');
+	require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
+	require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
 
-$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
-if ($get_at_wpatt_option_enable == '1') {
-	include(plugin_dir_path(__FILE__) . 'wp-attachments/wp-attachments.php');
-}
-
-$get_at_mapcap_option_enable = get_option('at_mapcap_option_enable');
-if ($get_at_mapcap_option_enable == '1') {
-	include(plugin_dir_path(__FILE__) . 'map-cap/map-cap.php');
-}
+	$get_at_mapcap_option_enable = get_option('at_mapcap_option_enable');
+	if ($get_at_mapcap_option_enable == '1') {
+		include(plugin_dir_path(__FILE__) . 'map-cap/map-cap.php');
+	}
 
 }
+
+?>
 
 ?>

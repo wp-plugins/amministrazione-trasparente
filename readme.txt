@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.6.3
-Stable tag: 3.6.3
+Version: 3.6.4
+Stable tag: 3.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,9 +52,17 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 = CONTATTI & SUPPORTO =
 Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, è attivo il forum di supporto su [www.marcomilesi.ml/supporto](http://marcomilesi.ml/supporto/)
 
-> **ATTENZIONE** | **"For each author’s protection [***] we want to make certain that everyone understands that there is no warranty for this free software.** In accordo con la licenza GPL v.2 con cui questo software viene fornito, **declino** ogni responsabilità per eventuali inadempimenti legislativi e/o altri problemi legali e/o tecnici derivanti, implicitamente o esplicitamente, dall'utilizzo di questo plugin Wordpress o da un'affrettata configurazione dello stesso (ivi compresi eventuali aggiornamenti). E' compito del gestore del sito assicurarsi che il modulo funzioni correttamente e adempia agli obblighi di legge e, al contempo, è obbligo degli operatori/impiegati/dipendenti/funzionari preposti alla gestione dell'Amministrazione Trasparente la pubblicazione degli opportuni dati.
-
 http://www.youtube.com/watch?v=qWj9hvzNSlg
+
+= Ringraziamenti =
+
+* ROBERTA GHISALBERTI ([Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/))
+* IGOR VITA
+* Tutta la Comunità di pratica [PorteAperteSulWeb](http://www.porteapertesulweb.it/)
+* + Tutti quelli che, segnalando problemi o idee, contribuiscono al continuo mantenimento di un software stabile: Giovanna Orrù, Giorgio Galli, Andrea Smith, Claudia Cantaluppi
+
+
+> **ATTENZIONE** | **"For each author’s protection [***] we want to make certain that everyone understands that there is no warranty for this free software.** In accordo con la licenza GPL v.2 con cui questo software viene fornito, **declino** ogni responsabilità per eventuali inadempimenti legislativi e/o altri problemi legali e/o tecnici derivanti, implicitamente o esplicitamente, dall'utilizzo di questo plugin Wordpress o da un'affrettata configurazione dello stesso (ivi compresi eventuali aggiornamenti). E' compito del gestore del sito assicurarsi che il modulo funzioni correttamente e adempia agli obblighi di legge e, al contempo, è obbligo degli operatori/impiegati/dipendenti/funzionari preposti alla gestione dell'Amministrazione Trasparente la pubblicazione degli opportuni dati.
 
 > **EN** | This plugin is developed for **schools, universities, municipalities and local authorities** of **ITALY** and respects their legal parameters. The installation of this plugin on amateur websites and/or portals not subject to 'Amministrazione Trasparente' legislation is a waste of time since the purpose of this software is the posting of data in a legal and validated way.
 
@@ -110,6 +118,10 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.6.4 15/12/2013 =
+* **Ripristinato** mancato attivamento di WP-Attachments per via di un inverso caricamento cronologico dei file // Segnalazione di Giovanna Orrù
+* Aggiunta sezione ringraziamenti nella descrizione del plugin
 
 = Versione 3.6.3 15/12/2013 =
 * **Corretto** (per davvero) il bug che impediva di nascondere le notifiche del plugin
