@@ -3,8 +3,8 @@ Contributors: Milmor
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.6.4.1
-Stable tag: 3.6.4.1
+Version: 3.6.5
+Stable tag: 3.6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,10 +56,16 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 = Ringraziamenti =
 
-* ROBERTA GHISALBERTI ([Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/))
-* IGOR VITA
+* Comune di San Pellegrino Terme
+* + Roberta Ghisalberti
+* Igor Vita
 * Tutta la Comunità di pratica [PorteAperteSulWeb](http://www.porteapertesulweb.it/)
-* + Tutti quelli che, segnalando problemi o idee, contribuiscono al continuo mantenimento di un software stabile: Giovanna Orrù, Giorgio Galli, Andrea Smith, Claudia Cantaluppi
+* + Alberto Ardizzone
+* + Renata Durighello
+* + Giovanna Orrù
+* + Giorgio Galli
+* + Andrea Smith
+* + Claudia Cantaluppi
 
 
 > **ATTENZIONE** | **"For each author’s protection [***] we want to make certain that everyone understands that there is no warranty for this free software.** In accordo con la licenza GPL v.2 con cui questo software viene fornito, **declino** ogni responsabilità per eventuali inadempimenti legislativi e/o altri problemi legali e/o tecnici derivanti, implicitamente o esplicitamente, dall'utilizzo di questo plugin Wordpress o da un'affrettata configurazione dello stesso (ivi compresi eventuali aggiornamenti). E' compito del gestore del sito assicurarsi che il modulo funzioni correttamente e adempia agli obblighi di legge e, al contempo, è obbligo degli operatori/impiegati/dipendenti/funzionari preposti alla gestione dell'Amministrazione Trasparente la pubblicazione degli opportuni dati.
@@ -118,6 +124,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.6.5 30/12/2013 =
+* **Corretto** possibile conflitto della funzione di ricerca nel metabox tipologie (Nuova Voce) // AGGIORNATO IN PARALLELO AD AVCP
 
 = Versione 3.6.4.1 15/12/2013 =
 * Piccola svista :)
