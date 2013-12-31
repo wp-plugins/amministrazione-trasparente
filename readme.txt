@@ -1,10 +1,11 @@
 ﻿=== Amministrazione Trasparente ===
 Contributors: Milmor
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F2JK36SCXKTE2
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.6.5
-Stable tag: 3.6.5
+Version: 3.7
+Stable tag: 3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,15 +58,16 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 = Ringraziamenti =
 
 * Comune di San Pellegrino Terme
-* + Roberta Ghisalberti
+* * Roberta Ghisalberti
 * Igor Vita
 * Tutta la Comunità di pratica [PorteAperteSulWeb](http://www.porteapertesulweb.it/)
-* + Alberto Ardizzone
-* + Renata Durighello
-* + Giovanna Orrù
-* + Giorgio Galli
-* + Andrea Smith
-* + Claudia Cantaluppi
+* * Alberto Ardizzone
+* * Renata Durighello
+* * Riccardo Boccaccio
+* * Giovanna Orrù
+* * Giorgio Galli
+* * Andrea Smith
+* * Claudia Cantaluppi
 
 
 > **ATTENZIONE** | **"For each author’s protection [***] we want to make certain that everyone understands that there is no warranty for this free software.** In accordo con la licenza GPL v.2 con cui questo software viene fornito, **declino** ogni responsabilità per eventuali inadempimenti legislativi e/o altri problemi legali e/o tecnici derivanti, implicitamente o esplicitamente, dall'utilizzo di questo plugin Wordpress o da un'affrettata configurazione dello stesso (ivi compresi eventuali aggiornamenti). E' compito del gestore del sito assicurarsi che il modulo funzioni correttamente e adempia agli obblighi di legge e, al contempo, è obbligo degli operatori/impiegati/dipendenti/funzionari preposti alla gestione dell'Amministrazione Trasparente la pubblicazione degli opportuni dati.
@@ -124,6 +126,17 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.7 31/12/2013 "BUON ANNO" =
+* **Corretti** decine di errori di validazione // Grazie Riccardo Boccaccio - iclucca2.gov.it
+* **Aggiunta** opzione per associare i tag alle voci (opt-out) [prima era sempre attiva]
+* **Migliorato** css visualizzazione lista/tabella (nascosta sottolineatura titoli h3)
+* **Migliorato** Css Backend (più pulito e veloce)
+* **Migliorata** pagina Impostazioni
+* **Migliorata** chiarezza dei messaggi di errore, e rimozione di alcuni di essi
+* **Rimossa** pagina "Info & Aiuto" [integrata in Impostazioni]
+* Aggiunto link donazione PayPal
+
 
 = Versione 3.6.5 30/12/2013 =
 * **Corretto** possibile conflitto della funzione di ricerca nel metabox tipologie (Nuova Voce) // AGGIORNATO IN PARALLELO AD AVCP

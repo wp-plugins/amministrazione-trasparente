@@ -16,13 +16,13 @@ $get_at_option_showarchivedesc = get_option('at_option_showarchivedesc'); ?>
 <div class="row" style="font-size:0.8em;text-align:center;">
 
 <?php if ($get_at_option_showarchivedesc == '0') {?>
-<a href="#hideARCHIVE" class="hide" id="hideARCHIVE"">[+] Info Normativa</a><a href="#showARCHIVE"" class="show" id="showARCHIVE"">[-] Info Normativa</a> &bull; <?php } ?>
+<a href="#hideARCHIVE" class="hide" id="hideARCHIVE">[+] Info Normativa</a><a href="#showARCHIVE" class="show" id="showARCHIVE">[-] Info Normativa</a> &bull; <?php } ?>
 
 <a href="<?php echo get_permalink(get_option('at_option_id')); ?>" title="Torna al sommario">Torna al sommario</a>
 
 <div class="list" style="text-align:left;">
-<p><?php echo term_description( $term->id, 'tipologie' ) ?></p>
-<hr>
+<?php echo term_description( $term->id, 'tipologie' ) ?>
+<hr/>
 </div>
 
 </div>

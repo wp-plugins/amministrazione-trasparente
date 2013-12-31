@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.6.5
+Version: 3.7
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -76,10 +76,18 @@ function register_cpt_documento_trasparenza() {
     );
 	
 	$get_at_categorization_enable = get_option('at_categorization_enable');
-	if ( $get_at_categorization_enable == '1') {
-		$taxonomysupport = array('post_tag', 'category');
-	} else {
+	$get_at_option_tag = get_option('at_option_tag');
+	
+	if ( $get_at_categorization_enable == '1') { //CATEGORIA SI
+		if ( $get_at_option_tag == '0') { //TAG SI
+			$taxonomysupport = array('post_tag', 'category');
+		} else { //TAG NO, CAT SI
+			$taxonomysupport = array('category');
+		}
+	} else if ( $get_at_option_tag == '0') { //TAG SI, CAT NO
 		$taxonomysupport = array('post_tag');
+	} else {
+		$taxonomysupport = array();
 	}
 	
 	//Se è attivata l'opzione per personalizzare ruoli/permessi, cambiamo alcuni parametri =)
@@ -142,7 +150,7 @@ add_shortcode('at-head', 'at_head_shtc');
 
 function at_desc_shtc($atts)
 {
-$atshortcode = '<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell\'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione (L.69/2009, L.213/2012, <a href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33" alt="Riferimenti normativi">Dlgs33/2013</a>, L.190/2012).</p>';
+$atshortcode = '<p>In questa pagina sono raccolte le informazioni che le Amministrazioni pubbliche sono tenute a pubblicare nel proprio sito internet nell\'ottica della trasparenza, buona amministrazione e di prevenzione dei fenomeni della corruzione (L.69/2009, L.213/2012, <a href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33" title="Riferimenti normativi">Dlgs33/2013</a>, L.190/2012).</p>';
 return $atshortcode;
 }
 add_shortcode('at-desc', 'at_desc_shtc');
@@ -299,4 +307,11 @@ function AT_FUNCTIONSLOAD () {
 
 }
 
+function at_activate() {
+	$plugin_data = get_plugin_data( __FILE__ );
+	$plugin_version = $plugin_data['Version'];
+	register_setting( 'at_options_group', 'at_version_number');
+	update_option( 'at_version_number', $plugin_version );
+}
+register_activation_hook( __FILE__, 'at_activate' );
 ?>
