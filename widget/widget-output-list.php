@@ -10,7 +10,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 $nome_tipologia = "Oneri informativi per cittadini e imprese";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';$nome_tipologia = "Attestazioni OIV o di struttura analoga";echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 echo '</ul>';
-?></li>
+?></li></ul>
 
 <!-- Organizzazione -->
 <ul><li><b>Organizzazione</b>
