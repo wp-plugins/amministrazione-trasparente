@@ -8,21 +8,15 @@
 <div id="path"><?php if(function_exists('bcn_display')) { bcn_display(); } ?></div>
 <!-- fine breadcrumbs -->
 	
-<style type="text/css">
-.row {vertical-align: top; height:auto !important;}
-.list {display:none;}
-.show {display:none;}
-.hide:target + .show {display:inline;}
-.hide:target {display:none;}
-.hide:target ~ .list {display:inline;}
-@media print {.hide, .show {display:none;}}
-</style>
-
-	<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
-	
 	<h2 class="page-title"><?php echo $term->name; ?></h2>
-	<div class="row" style="font-size:0.8em;text-align:center;"><a href="#hideARCHIVE" class="hide" id="hideARCHIVE">[+] Info Normativa</a><a href="#showARCHIVE" class="show" id="showARCHIVE">[-] Info Normativa</a> &bull; <a href="<?php echo get_permalink(get_option('at_option_id')); ?>" title="Torna al sommario">Torna al sommario</a>
-	<div class="list" style="text-align:left;"><?php echo term_description( $term->id, 'tipologie' ) ?><hr/></div></div>
+	
+	<?php
+	if (is_tax( 'tipologie' )) {
+		if (function_exists('at_archive_buttons')) {
+			at_archive_buttons();
+		}
+	}
+	?>
 
 	<?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>

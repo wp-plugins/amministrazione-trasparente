@@ -11,7 +11,7 @@ if ( is_admin() ){ // admin actions
 }
 
 function at_reg_settings() {
-	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.7.1' );
+	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.7.2' );
 	register_setting( 'at_options_group', 'at_option_id', 'intval');
 	register_setting( 'at_options_group', 'at_option_love', 'intval');
 	register_setting( 'at_options_group', 'at_option_widget');
@@ -204,7 +204,7 @@ function at_settings_menu()
 	if ($get_pasw_developer == '1') {
 		echo 'checked=\'checked\'';
 	}
-	echo '/>&nbsp;Spunta casella se vuoi forzare l\'utilizzo dei template archive/single ottimizzati per PASW2013 (attenzione: abilitare <b>solo</b> se il tema attivo è una versione <b>precedente</b> al 2013 o se è stato cambiato il nome del tema!)</td></tr>';
+	echo '/>&nbsp;Spunta casella se vuoi forzare l\'utilizzo dei template archive/single ottimizzati per PASW2013 (attenzione: abilitare <b>solo</b> se il tema attivo è una versione <b>precedente</b> al 2013 o se è stato cambiato il nome del tema!)<br/>L\'impostazione è ereditata anche dal plugin <b>AVCP</b> (se installato).</td></tr>';
 
 	echo '<tr><th scope="row">Visualizza Breadcrumb per voci singole?</th>
     		<td><input type="checkbox" name="at_breadcrumb_single_n" ';
