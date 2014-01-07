@@ -7,7 +7,8 @@
 <!-- breadcrumbs -->
 <div id="path"><?php if(function_exists('bcn_display')) { bcn_display(); } ?></div>
 <!-- fine breadcrumbs -->
-	
+
+	<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 	<h2 class="page-title"><?php echo $term->name; ?></h2>
 	
 	<?php
