@@ -11,7 +11,7 @@ if ( is_admin() ){ // admin actions
 }
 
 function at_reg_settings() {
-	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.7.3' );
+	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.8' );
 	register_setting( 'at_options_group', 'at_option_id', 'intval');
 	register_setting( 'at_options_group', 'at_option_love', 'intval');
 	register_setting( 'at_options_group', 'at_option_widget');
@@ -19,7 +19,7 @@ function at_reg_settings() {
 	register_setting( 'at_options_group', 'at_breadcrumb_single', 'intval');
 	register_setting( 'at_options_group', 'at_categorization_disable', 'intval');
 	register_setting( 'at_options_group', 'at_wpatt_option_enable', 'intval');
-	register_setting( 'at_options_group', 'at_mapcap_option_enable', 'intval');
+	register_setting( 'at_options_group', 'at_ruoli_option_enable', 'intval');
 	register_setting( 'at_options_group', 'at_option_showarchivedesc', 'intval');
 	register_setting( 'at_options_group', 'at_option_tag', 'intval');
 	//register_setting( 'at_options_group', 'at_option_sblocca_tipologie', 'intval');
@@ -65,16 +65,10 @@ function at_settings_menu()
 			update_option( 'at_breadcrumb_single', '0' );
 		}
 		
-		if (isset($_POST['at_wpatt_option_enable_n'])){
-			update_option('at_wpatt_option_enable', '1');
+		if (isset($_POST['at_ruoli_option_enable_n'])){
+			update_option('at_ruoli_option_enable', '1');
         } else {
-			update_option('at_wpatt_option_enable', '0');
-        }
-		
-		if (isset($_POST['at_mapcap_option_enable_n'])){
-			update_option('at_mapcap_option_enable', '1');
-        } else {
-			update_option('at_mapcap_option_enable', '0');
+			update_option('at_ruoli_option_enable', '0');
         }
 		
 		if (isset($_POST['at_option_showarchivedesc_n'])){
@@ -165,27 +159,18 @@ function at_settings_menu()
         <div class="metabox-holder">
 	
 	<div class="postbox" id="second">
-        <h3 class="hndle"><span>Plugin Integrati</span></h3>
+        <h3 class="hndle"><span>Ruoli & Permessi</span></h3>
         <div class="inside">
-		<div style="background-color:red;color:white;padding:1px;">Questa funzione verrà rimossa da Amministrazione Trasparente. Si consiglia quanto prima di disattivare questi plugin e di installarli separatamente (le impostazioni saranno conservate)</div>
 		<table class="form-table"><tbody>';
 
-	echo '<tr><th scope="row">WP ATTACHMENTS 3.1</th>
-    		<td><input type="checkbox" name="at_wpatt_option_enable_n" ';
-	$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
-	if ($get_at_wpatt_option_enable == '1') {
+	echo '<tr><th scope="row">Mappa le meta capacità</th>
+    		<td><input type="checkbox" name="at_ruoli_option_enable_n" ';
+	$get_at_ruoli_option_enable = get_option('at_ruoli_option_enable');
+	if ($get_at_ruoli_option_enable == '1') {
 		echo 'checked=\'checked\'';
 	}
-	echo '/>&nbsp;Spunta questa casella se vuoi abilitare il plugin WP Attachments integrato in Amministrazione Trasparente per la <b>visualizzazione automatica degli allegati</b> (può entrare in conflitto se usi un altro plugin per gli allegati).<br/>Dopo l\'abilitazione, aggiorna la pagina e comparirà un nuovo menù: <b>Trasparenza -> WP Attachments</b>
+	echo '/>&nbsp;Le voci di A.T. ereditano i permessi di pubblicazione/modifica/eliminazione degli articoli. Se vuoi avere un maggior controllo abilita questa opzione e segui <a href="http://supporto.marcomilesi.ml/?p=571" target="_blank" title="Istruzioni per la configurazione di Ruoli & Permessi">questo tutorial</a></b>
 	</td></tr>';
-	
-	echo '<tr><th scope="row">MAP-CAP 2.1</th>
-        <td><input type="checkbox" name="at_mapcap_option_enable_n" ';
-	$get_at_mapcap_option_enable = get_option('at_mapcap_option_enable');
-	if ($get_at_mapcap_option_enable == '1') {
-		echo 'checked=\'checked\'';
-	}
-	echo '/>&nbsp;Spunta questa casella per abilitare la possibilità di impostare permessi di gestione delle voci avanzati. Questo plugin necessita di essere configurato attentamente insieme a Members.<br/>Dopo l\'abilitazione, aggiorna la pagina e comparirà un nuovo menù: <b>Trasparenza -> Ruoli</td></tr>';
 	
 	echo '</tbody></table></div></div>';
 	
@@ -228,6 +213,14 @@ function at_settings_menu()
 	<hr/>
 	<a href="http://wordpress.org/plugins/avcp/" target="_blank" title="Plugin Wordpress per la pubblicazione dei bandi di gara e creazione del dataset xml per l\'Autorità per la Vigilanza sui Contratti Pubblici di Lavori, Servizi e Forniture.">
 	<img src="' . plugin_dir_url(__FILE__) . 'includes/av.png"/></a>
+	
+	<hr/>
+	<center><h3>...E altre soluzioni per rendere più efficiente Wordpress!</h3>
+	
+	<hr/>
+	<a href="http://wordpress.org/plugins/wp-attachments/" target="_blank" title="Plugin Wordpress per la visualizzazione automatica degli allegati nel sito">
+	<img src="' . plugin_dir_url(__FILE__) . 'includes/wpa.png"/></a><a href="http://wordpress.org/plugins/e-mail-login/" target="_blank" title="Plugin Wordpress per il login tramite indirizzo e-mail">
+	<img src="' . plugin_dir_url(__FILE__) . 'includes/mail.png"/></a>
 	
 	<hr/>
 	Sviluppo e ideazione Wordpress a cura di <a href="http://marcomilesi.ml" target="_blank" title="www.marcomilesi.ml">Marco Milesi</a><br/><small>Per la preparazione di questo programma sono state impiegate diverse ore a titolo volontario. Se vuoi, puoi effettuare una piccola donazione utilizzando il link che trovi in alto a destra.<br/>Per qualsiasi informazione e per segnalare un problema è attivo il forum di supporto su <a href="http://marcomilesi.ml/supporto" target="_blank" title="www.marcomilesi.ml/supporto">www.marcomilesi.ml/supporto</a></small></center></div>';

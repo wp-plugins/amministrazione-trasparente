@@ -1,5 +1,19 @@
 <?php
 
+////SEZIONI IMPLEMENTATE DA: 10 GENNAIO 2014
+$termcheck = term_exists('Scadenzario obblighi amministrativi', 'tipologie');
+if ($termcheck !== 0 && $termcheck !== null) {
+  return;
+}
+wp_insert_term('Scadenzario obblighi amministrativi', 'tipologie');
+wp_insert_term('Burocrazia zero', 'tipologie');
+
+////SEZIONI IMPLEMENTATE DA: LUGLIO 2013
+$termcheck = term_exists('Programma per la Trasparenza e l\'Integrità', 'tipologie');
+if ($termcheck !== 0 && $termcheck !== null) {
+  return;
+}
+
 //Disposizioni Generali
 wp_insert_term('Programma per la Trasparenza e l\'Integrità', 'tipologie');
 wp_insert_term('Atti generali', 'tipologie');

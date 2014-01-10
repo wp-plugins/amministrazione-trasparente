@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.7.3
+Version: 3.8
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -52,7 +52,7 @@ function AT_RegistraTAX() {
         'query_var' => true
     );
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
-    include(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
+    require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
 }
 
 /* REGISTRA CUSTOM POST TYPE */
@@ -89,17 +89,27 @@ function register_cpt_documento_trasparenza() {
 	} else {
 		$taxonomysupport = array();
 	}
-	
-	//Se è attivata l'opzione per personalizzare ruoli/permessi, cambiamo alcuni parametri =)
-	$get_at_mapcap_option_enable = get_option('at_mapcap_option_enable');
-	if ($get_at_mapcap_option_enable == '1') {
-		$capability_type_var = 'documenti_trasparenza';
+
+	$get_at_ruoli_option_enable = get_option('at_ruoli_option_enable');
+	if ($get_at_ruoli_option_enable == '1') {
+		$at_capability_type = 'documenti_trasparenza';
 		$map_meta_cap_var = 'true';
+		$at_capabilities_array = array(
+				'publish_posts' => 'pubblicare_documento_trasparenza',
+				'edit_posts' => 'modificare_propri_documento_trasparenza',
+				'edit_others_posts' => 'modificare_altri_documento_trasparenza',
+				'delete_posts' => 'eliminare_propri_documento_trasparenza',
+				'delete_others_posts' => 'modificare_altri_documento_trasparenza',
+				'read_private_posts' => 'read_private_professionisti',
+				'edit_post' => 'modificare_documento_trasparenza',
+				'delete_post' => 'eliminare_documento_trasparenza',
+				'read_post' => 'leggere_documento_trasparenza',
+				);
 	} else {
-		$capability_type_var = 'post';
+		$at_capability_type = 'post';
 		$map_meta_cap_var = 'false';
 	}
-
+	
     $args = array( 
         'labels' => $labels,
         'hierarchical' => true,
@@ -118,7 +128,8 @@ function register_cpt_documento_trasparenza() {
         'query_var' => true,
         'can_export' => true,
 		'rewrite' => array('pages'=> true, 'with_front' => false),
-        'capability_type' => $capability_type_var,
+		//'capabilities' => $at_capabilities_array,
+        'capability_type' => $at_capability_type,
 		'map_meta_cap' => $map_meta_cap_var
     );
 
@@ -280,30 +291,17 @@ add_filter( 'template_include', 'at_force_template' );
 /* =========== FUNZIONI INCLUSE ============ */
 
 require_once(plugin_dir_path(__FILE__) . 'settingsmenu.php');
-require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
-include(plugin_dir_path(__FILE__) . 'widget/widget.php');
-include(plugin_dir_path(__FILE__) . 'redirector.php');
-
-add_action( 'init', 'AT_WPATT');
-function AT_WPATT() {
-	$get_at_wpatt_option_enable = get_option('at_wpatt_option_enable');
-	if ($get_at_wpatt_option_enable == '1') {
-		include(plugin_dir_path(__FILE__) . 'wp-attachments/wp-attachments.php');
-	}
-}
+require_once(plugin_dir_path(__FILE__) . 'widget/widget.php');
+require_once(plugin_dir_path(__FILE__) . 'redirector.php');
 
 add_action( 'admin_init', 'AT_FUNCTIONSLOAD');
 function AT_FUNCTIONSLOAD () {
 
 	require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
-	require_once(plugin_dir_path(__FILE__) . 'updatefunction.php');
+	//require_once(plugin_dir_path(__FILE__) . 'updatefunction.php'); rimosso il 10.01.2014 per fine compatibilità aggiornamento dalla v.1.1.2
 	require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
 	require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
-
-	$get_at_mapcap_option_enable = get_option('at_mapcap_option_enable');
-	if ($get_at_mapcap_option_enable == '1') {
-		include(plugin_dir_path(__FILE__) . 'map-cap/map-cap.php');
-	}
+	require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
 
 }
 ?>

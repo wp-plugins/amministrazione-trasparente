@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.7.3
-Stable tag: 3.7.3
+Version: 3.8
+Stable tag: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 
 > Comuni | [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/) - [Comune di Bordighera](http://trasparenza.bordighera.it/)
 
-> Scuole | [IC Nord 1 Brescia](http://www.icnord1brescia.gov.it/amministrazione-trasparente/) - [Istituto di Istruzione Superiore "Leonardo da Vinci" (OG)](http://liceolanusei.it/amministrazione-trasparente/)
+> Scuole | [IC Nord 1 Brescia](http://www.icnord1brescia.gov.it/amministrazione-trasparente/) - [IIS "Leonardo da Vinci" (OG)](http://liceolanusei.it/amministrazione-trasparente/)
 
 > Società | [CBLSPA Servizio Idrico Integrato](http://www.cblspa.it/)
 
@@ -42,7 +42,6 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 * Funzione di reindirizzamento delle voci a link esterni
 * Codice leggero, commentato e facilmente modificabile
 * Doppia visualizzazione a scelta grazie a 2 shortcode: modalità lista e modalità tabella (2 colonne)
-* Visualizzazione automatica degli allegati caricati nella pagina grazie al plugin integrato WP Attachments
 * Widget personalizzabile con 2 modalità di visualizzazione
 * **Compatibilità completa per Pasw2013** (visualizzazione archivio/singola modificate appositamente per il tema della comunità di pratica Porte Aperte sul Web)
 * **NUOVO** | Possibilità di associare anche le categorie alle voci create
@@ -57,17 +56,10 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 = Ringraziamenti =
 
-* Comune di San Pellegrino Terme
-* * Roberta Ghisalberti
+* Roberta Ghisalberti (Comune di San Pellegrino Terme)
 * Igor Vita
 * Tutta la Comunità di pratica [PorteAperteSulWeb](http://www.porteapertesulweb.it/)
-* * Alberto Ardizzone
-* * Renata Durighello
-* * Riccardo Boccaccio
-* * Giovanna Orrù
-* * Giorgio Galli
-* * Andrea Smith
-* * Claudia Cantaluppi
+* Alberto Ardizzone, Renata Durighello, Riccardo Boccaccio, Giovanna Orrù, Giorgio Galli, Andrea Smith, Claudia Cantaluppi
 
 
 > **ATTENZIONE** | **"For each author’s protection [***] we want to make certain that everyone understands that there is no warranty for this free software.** In accordo con la licenza GPL v.2 con cui questo software viene fornito, **declino** ogni responsabilità per eventuali inadempimenti legislativi e/o altri problemi legali e/o tecnici derivanti, implicitamente o esplicitamente, dall'utilizzo di questo plugin Wordpress o da un'affrettata configurazione dello stesso (ivi compresi eventuali aggiornamenti). E' compito del gestore del sito assicurarsi che il modulo funzioni correttamente e adempia agli obblighi di legge e, al contempo, è obbligo degli operatori/impiegati/dipendenti/funzionari preposti alla gestione dell'Amministrazione Trasparente la pubblicazione degli opportuni dati.
@@ -126,6 +118,15 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.8 11/01/2013 =
+* **Aggiunta sezione "Scadenzario obblighi amministrativi" in "Disposizioni Generali"**
+* **Aggiunta sezione "Burocrazia zero" in "Disposizioni Generali"**
+* **RIMOSSO** WP ATTACHMENTS. E' ora necessario installarlo a parte per continuare ad utilizzarlo! (viene notificato in bacheca se era attivato)
+* **RIMOSSO** MAP-CAP.
+* **Aggiunto** nuovo sistema per la gestione di ruoli & permessi, con tutorial (consultare Trasparenza > Impostazioni)
+* **Ridotto** impatto sulle performance del sito del **75%**: caricamento di A.T. ottimizzato (0.16/0.17s -> 0.04/0.05s)
+* Ottimizzazioni varie :)
 
 = Versione 3.7.3 07/01/2013 =
 * **Corretta** mancata visualizzazione titolo archivio pasw (tipologie a.t. // ditte avcp // annirif avcp)
