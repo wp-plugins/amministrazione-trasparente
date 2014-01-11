@@ -40,6 +40,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Consulenti e collaboratori
@@ -78,6 +79,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Bandi di Concorso
@@ -106,6 +108,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Enti controllati
@@ -138,6 +141,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Provvedimenti
@@ -160,6 +164,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Bandi di gara e contratti
@@ -182,6 +187,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Bilanci
@@ -206,6 +212,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Controlli e rilievi sull'amminiztrazione
@@ -232,6 +239,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Pagamenti dell' amministrazione
@@ -254,6 +262,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Pianificazione e governo del territorio
@@ -274,6 +283,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Strutture sanitarie private accreditate
@@ -294,6 +304,7 @@ echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title=
 echo '</ul>';
 
 echo '</div>';
+echo '<div class="clear"></div>';
 echo '<div class="at-tableclass">';
 
 //Altri contenuti
