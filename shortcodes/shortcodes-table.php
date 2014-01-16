@@ -15,8 +15,6 @@ $nome_tipologia = "Oneri informativi per cittadini e imprese";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Attestazioni OIV o di struttura analoga";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
-$nome_tipologia = "Scadenzario obblighi amministrativi";
-echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Burocrazia zero";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 echo '</ul>';
@@ -95,9 +93,13 @@ echo '<div class="at-tableclass">';
 //Performance
 echo '<h3><a id="performance">' . 'Performance' . '</a></h3>';
 echo '<ul>';
+$nome_tipologia = "Sistema di misurazione e valutazione della Performance";
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Piano della Performance";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Relazione sulla Performance";
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+$nome_tipologia = "Documento dell\'OIV di validazione della Relazione sulla Performance";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Ammontare complessivo dei premi";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
@@ -230,6 +232,8 @@ echo '<h3><a id="servizierogati">' . 'Servizi erogati' . '</a></h3>';
 echo '<ul>';
 $nome_tipologia = "Carta dei servizi e standard di qualità";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+$nome_tipologia = "Class action";
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Costi contabilizzati";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Tempi medi di erogazione dei servizi";
@@ -309,8 +313,13 @@ echo '<div class="at-tableclass">';
 
 //Altri contenuti
 echo '<h3><a id="altricontenuti">' . 'Altri contenuti' . '</a></h3>';
-echo '<ul>';
-$nome_tipologia = "Altri contenuti";
+$nome_tipologia = "Corruzione";
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+$nome_tipologia = "Accesso civico";
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+$nome_tipologia = "Accessibilità e Catalogo di dati, metadati e banche dati";
+echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
+$nome_tipologia = "Dati ulteriori";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 echo '</ul>';
 

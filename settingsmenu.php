@@ -11,7 +11,7 @@ if ( is_admin() ){ // admin actions
 }
 
 function at_reg_settings() {
-	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.8.1' );
+	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.9' );
 	register_setting( 'at_options_group', 'at_option_id', 'intval');
 	register_setting( 'at_options_group', 'at_option_love', 'intval');
 	register_setting( 'at_options_group', 'at_option_widget');
@@ -101,7 +101,7 @@ function at_settings_menu()
 </form>
 </div>';
 	$plugin_data = get_plugin_data( __FILE__ );
-	echo '<h2>Amministrazione Trasparente ' . get_option('at_version_number') . ' <a href="http://wordpress.org/plugins/amministrazione-trasparente/installation/" target="_blank" class="add-new-h2">Installazione</a><a href="http://marcomilesi.ml/supporto" target="_blank" class="add-new-h2">Forum di Supporto</a><a href="http://wordpress.org/plugins/amministrazione-trasparente/changelog/" target="_blank" class="add-new-h2">CHANGELOG</a></h2>';
+	echo '<h2>Amministrazione Trasparente ' . get_option('at_version_number') . ' <a href="http://wordpress.org/plugins/amministrazione-trasparente/installation/" target="_blank" class="add-new-h2">Installazione</a><a href="http://supporto.marcomilesi.ml/" target="_blank" class="add-new-h2">Forum di Supporto</a><a href="http://wordpress.org/plugins/amministrazione-trasparente/changelog/" target="_blank" class="add-new-h2">CHANGELOG</a></h2>';
 	echo '<form method="post" name="options" target="_self">';
 	settings_fields( 'at_option_group' );	
 	
@@ -223,7 +223,7 @@ function at_settings_menu()
 	<img src="' . plugin_dir_url(__FILE__) . 'includes/mail.png"/></a>
 	
 	<hr/>
-	Sviluppo e ideazione Wordpress a cura di <a href="http://marcomilesi.ml" target="_blank" title="www.marcomilesi.ml">Marco Milesi</a><br/><small>Per la preparazione di questo programma sono state impiegate diverse ore a titolo volontario. Se vuoi, puoi effettuare una piccola donazione utilizzando il link che trovi in alto a destra.<br/>Per qualsiasi informazione e per segnalare un problema è attivo il forum di supporto su <a href="http://marcomilesi.ml/supporto" target="_blank" title="www.marcomilesi.ml/supporto">www.marcomilesi.ml/supporto</a></small></center></div>';
+	Sviluppo e ideazione Wordpress a cura di <a href="http://marcomilesi.ml" target="_blank" title="www.marcomilesi.ml">Marco Milesi</a><br/><small>Per la preparazione di questo programma sono state impiegate diverse ore a titolo volontario. Se vuoi, puoi effettuare una piccola donazione utilizzando il link che trovi in alto a destra.<br/>Per qualsiasi informazione e per segnalare un problema è attivo il forum di supporto su <a href="http://supporto.marcomilesi.ml" target="_blank" title="www.marcomilesi.ml/supporto">www.marcomilesi.ml/supporto</a></small></center></div>';
 
 }
 ?>

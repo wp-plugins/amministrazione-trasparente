@@ -1,11 +1,28 @@
 <?php
 
+////SEZIONI IMPLEMENTATE DA: 16 GENNAIO 2014
+$termcheck = term_exists('Sistema di misurazione e valutazione della Performance', 'tipologie');
+if ($termcheck !== 0 && $termcheck !== null) {
+  return;
+}
+wp_delete_term('Scadenzario obblighi amministrativi', 'tipologie'); ////RIMOSSA IL 16 GENNAIO 2014
+wp_insert_term('Sistema di misurazione e valutazione della Performance', 'tipologie');
+wp_insert_term('Documento dell\'OIV di validazione della Relazione sulla Performance', 'tipologie');
+wp_insert_term('Class action', 'tipologie');
+wp_insert_term('Corruzione', 'tipologie');
+wp_insert_term('Accesso civico', 'tipologie');
+wp_insert_term('Accessibilità e Catalogo di dati, metadati e banche dati', 'tipologie');
+$altricontenuti_datiulteriori = get_term_by('name', 'Altri contenuti', 'tipologie');
+wp_update_term($altricontenuti_datiulteriori->term_id, 'tipologie', array(
+  'name' => 'Dati ulteriori',
+  'slug' => 'dati-ulteriori'
+)); ////CAMBIATO IL 16 GENNAIO 2014
+
 ////SEZIONI IMPLEMENTATE DA: 10 GENNAIO 2014
 $termcheck = term_exists('Scadenzario obblighi amministrativi', 'tipologie');
 if ($termcheck !== 0 && $termcheck !== null) {
   return;
 }
-wp_insert_term('Scadenzario obblighi amministrativi', 'tipologie');
 wp_insert_term('Burocrazia zero', 'tipologie');
 
 ////SEZIONI IMPLEMENTATE DA: LUGLIO 2013
@@ -115,7 +132,7 @@ wp_insert_term('Strutture sanitarie private accreditate', 'tipologie');
 wp_insert_term('Interventi straordinari e di emergenza', 'tipologie');
 
 //Altri contenuti
-wp_insert_term('Altri contenuti', 'tipologie');
+//wp_insert_term('Altri contenuti', 'tipologie');
 
 require_once(plugin_dir_path(__FILE__) . 'taxonomydescgenerator.php');
 

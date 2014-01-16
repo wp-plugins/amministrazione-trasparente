@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.8.1
-Stable tag: 3.8.1
+Version: 3.9
+Stable tag: 3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,15 +50,15 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 > Più di **250 pubbliche amministrazioni** hanno scelto di affidarsi a questo plugin per l'adempimento normativo del d.lgs. 33/2013!
 
 = CONTATTI & SUPPORTO =
-Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, è attivo il forum di supporto su [www.marcomilesi.ml/supporto](http://marcomilesi.ml/supporto/)
+Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, è attivo il forum di supporto su [supporto.marcomilesi.ml](http://supporto.marcomilesi.ml/)
 
 http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 = Ringraziamenti =
 
 * Roberta Ghisalberti (Comune di San Pellegrino Terme)
-* Igor Vita
-* Tutta la Comunità di pratica [PorteAperteSulWeb](http://www.porteapertesulweb.it/)
+* Igor Vita (Comune di Grottammare / Comune di Acquaviva Picena)
+* Tutta la Comunità di pratica [PorteAperteSulWeb](http://www.porteapertesulweb.it/), ed in particolare:
 * Alberto Ardizzone, Renata Durighello, Riccardo Boccaccio, Giovanna Orrù, Giorgio Galli, Andrea Smith, Claudia Cantaluppi
 
 
@@ -98,7 +98,7 @@ A partire dalla versione 3.2 di Amministrazione Trasparente, il plugin mostra au
 La gerarchia ideale per le briciole di pane in Amministrazione Trasparente potrebbe essere del tipo **Home > Amministrazione Trasparente** (pagina) ** > Sottosezione** (archivio) **> NomeVoce** (articolo singolo).
 Data la diversa natura delle varie parti delle briciole di pane, è necessario procedere ad un'accurata messa a punto del plugin Breadcrumb NavXT che supporta questo tipo di configurazioni.
 Per effettaure queste modifiche, accedere al back-end di Wordpress e cliccare su Impostazioni -> Breadcrumb NavXT -> Tipi di post.
-Tutte le opzioni da cambiare sono raccolte in un'immagine-guida disponibile [>> QUI <<](http://amministrazionetrasparente.marcomilesi.ml/bricioledipane_ammtrasparente_navxt.jpg)
+Tutte le opzioni da cambiare sono raccolte in [questa guida](http://supporto.marcomilesi.ml/2014/breadcrumb-navxt-e-le-briciole-di-pane/).
 
 = Modifica Template Archivio - [+] Info Normativa • Torna al sommario =
 Chi non utilizza il tema Pasw2013 può comunque abilitare la visualizzazione della descrizione espandibile e il link 'Torna al sommario' sotto il titolo degli archivi dei documenti modificando il file archive.php (il nome può cambiare) dalla cartella contenente i file del tema attivo.
@@ -118,6 +118,17 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 3.9 =
+* **RIMOSSA sezione "Scadenziario obblighi amministrativi" in "Disposizioni Generali"**
+* **SOSTITUITA sezione "Altri Contenuti" con "Dati Ulteriori" in "Altri Contenuti"**
+* **AGGIUNTA sezione "Sistema di misurazione e valutazione della Performance" in "Performance"**
+* **AGGIUNTA sezione "Documento dell'OIV di validazione della Relazione sulla Performance" in "Performance"**
+* **AGGIUNTA sezione "Class action" in "Servizi erogati"**
+* **AGGIUNTA sezione "Corruzione" in "Altri Contenuti"**
+* **AGGIUNTA sezione "Accesso civico" in "Altri Contenuti"**
+* **AGGIUNTA sezione "Accessibilità e Catalogo di dati, metadati e banche dati" in "Altri Contenuti"**
+* Ottimizzazioni varie :)
 
 = Versione 3.8.1 =
 * **Corretto** aspetto at-table con <div class="clear">
