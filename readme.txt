@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.9
-Stable tag: 3.9
+Version: 3.9.1
+Stable tag: 3.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,7 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 * **AGGIUNTA sezione "Accesso civico" in "Altri Contenuti"**
 * **AGGIUNTA sezione "Accessibilità e Catalogo di dati, metadati e banche dati" in "Altri Contenuti"**
 * Ottimizzazioni varie :)
+* 3.9.1 - Corretto tag mancante
 
 = Versione 3.8.1 =
 * **Corretto** aspetto at-table con <div class="clear">

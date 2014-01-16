@@ -313,6 +313,7 @@ echo '<div class="at-tableclass">';
 
 //Altri contenuti
 echo '<h3><a id="altricontenuti">' . 'Altri contenuti' . '</a></h3>';
+echo '<ul>';
 $nome_tipologia = "Corruzione";
 echo '<li><a href="' . get_term_link( $nome_tipologia, 'tipologie' ) . '" title="' . $nome_tipologia . '">' . $nome_tipologia . '</a></li>';
 $nome_tipologia = "Accesso civico";
