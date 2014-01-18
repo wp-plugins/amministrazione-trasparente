@@ -29,6 +29,10 @@ Come previsto dalla delibera <b>CiVIT n. 71/2013</b> "Attestazioni OIV sull’as
 2. La griglia di attestazione.
 '));
 
+//Burocrazia zero
+$term = get_term_by('name','Burocrazia zero','tipologie');	
+wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+
 //Organizzazione
 $term = get_term_by('name','Organi di indirizzo politico-amministrativo','tipologie');	
 wp_update_term($term->term_id, 'tipologie', array('description'=>'
@@ -369,8 +373,20 @@ a) i provvedimenti adottati, con la indicazione espressa delle norme di legge ev
 b) i termini temporali eventualmente fissati per l\'esercizio dei poteri di adozione dei provvedimenti straordinari;<br/>
 c) il costo previsto degli interventi e il costo effettivo sostenuto dall\'amministrazione; d) le particolari forme di partecipazione degli interessati ai procedimenti di adozione dei provvedimenti straordinari.'));
 
+//Corruzione
+$term = get_term_by('name','Corruzione','tipologie');	
+wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+
+//Accesso civico
+$term = get_term_by('name','Accesso civico','tipologie');	
+wp_update_term($term->term_id, 'tipologie', array('description'=>''));
+
+//Accessibilità e Catalogo di dati, metadati e banche dati
+$term = get_term_by('name','Accessibilità e Catalogo di dati, metadati e banche dati','tipologie');	
+wp_update_term($term->term_id, 'tipologie', array('description'=>'Catalogo dei dati, dei metadati e delle relative banche dati in possesso delle amministrazioni'));
+
 //Altri contenuti
-$term = get_term_by('name','Altri contenuti','tipologie');	
+$term = get_term_by('name','Dati ulteriori','tipologie');	
 wp_update_term($term->term_id, 'tipologie', array('description'=>'Eventuali ulteriori contenuti da pubblicare ai fini di trasparenza e non riconducibili a nessuna delle altre sotto-sezioni'));
 
 ?>
