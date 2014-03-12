@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.9.3
-Stable tag: 3.9.3
+Version: 3.9.4
+Stable tag: 3.9.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
 
+= Versione 3.9.4 12/03/2014 =
+* Corretto slash erroneamente visualizzato in "Documento dell\'OIV di validazione della Relazione sulla Performance"
+
 = Versione 3.9 =
 * **RIMOSSA sezione "Scadenziario obblighi amministrativi" in "Disposizioni Generali"**
 * **SOSTITUITA sezione "Altri Contenuti" con "Dati Ulteriori" in "Altri Contenuti"**
@@ -136,7 +139,7 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 = Versione 3.8.1 =
 * **Corretto** aspetto at-table con <div class="clear">
 
-= Versione 3.8 11/01/2013 =
+= Versione 3.8 11/01/2014 =
 * **Aggiunta sezione "Scadenzario obblighi amministrativi" in "Disposizioni Generali"**
 * **Aggiunta sezione "Burocrazia zero" in "Disposizioni Generali"**
 * **RIMOSSO** WP ATTACHMENTS. E' ora necessario installarlo a parte per continuare ad utilizzarlo! (viene notificato in bacheca se era attivato)
@@ -145,7 +148,7 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 * **Ridotto** impatto sulle performance del sito del **75%**: caricamento di A.T. ottimizzato (0.16/0.17s -> 0.04/0.05s)
 * Ottimizzazioni varie :)
 
-= Versione 3.7.3 07/01/2013 =
+= Versione 3.7.3 07/01/2014 =
 * **Corretta** mancata visualizzazione titolo archivio pasw (tipologie a.t. // ditte avcp // annirif avcp)
 
 = Versione 3.7.2 07/01/2013 =
