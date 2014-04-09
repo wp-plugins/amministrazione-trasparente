@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.9.4
+Version: 3.9.5
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -172,6 +172,7 @@ ob_start();
 include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-table.php');
 $atshortcode = ob_get_clean();
 return $atshortcode;
+
 }
 add_shortcode('at-table', 'at_table_shtc');
 
@@ -267,7 +268,12 @@ add_action('admin_init', 'presstrends_AmministrazioneTrasparente_plugin');
 /* =========== VISUALIZZAZIONE ARCHIVIO SPECIALE ============ */
 
 // force use of templates from plugin folder
-function at_force_template( $template ) {	
+function at_force_template( $template ) {
+	$current_page_URL = 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+	if (get_permalink(get_option('at_option_id')) == $current_page_URL) {
+		add_action('wp_head','at_table_css');
+	}
+	
     if( is_tax( 'tipologie' ) || is_tax( 'annirif' ) || is_tax( 'ditte' ) ) {
 		$theme_name = strtolower(wp_get_theme());
 		if ($theme_name == 'pasw2013') {
@@ -288,6 +294,11 @@ function at_force_template( $template ) {
 }
 add_filter( 'template_include', 'at_force_template' );
 
+function at_table_css()
+{
+	$at_output='<style type="text/css">.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;position:relative;min-width: 200px;} .at-tableclass h3 a {text-decoration:none;}</style>';
+	echo $at_output;
+}
 /* =========== FUNZIONI INCLUSE ============ */
 
 require_once(plugin_dir_path(__FILE__) . 'settingsmenu.php');
@@ -298,7 +309,6 @@ add_action( 'admin_init', 'AT_FUNCTIONSLOAD');
 function AT_FUNCTIONSLOAD () {
 
 	require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
-	//require_once(plugin_dir_path(__FILE__) . 'updatefunction.php'); rimosso il 10.01.2014 per fine compatibilità aggiornamento dalla v.1.1.2
 	require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
 	require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
 	require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
