@@ -209,8 +209,8 @@ echo '</ul>';
 ?>
 </li></ul>
 
-<!-- Controlli e rilievi sull'amminiztrazione -->
-<ul><li><b>Controlli e rilievi sull'amminiztrazione</b>
+<!-- Controlli e rilievi sull'amministrazione -->
+<ul><li><b>Controlli e rilievi sull'amministrazione</b>
 
 <?php
 echo '<ul>';
