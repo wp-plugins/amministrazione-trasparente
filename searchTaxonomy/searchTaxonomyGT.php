@@ -15,20 +15,13 @@
     You should have received a copy of the GNU General Public License
     along with searchTaxonomyGT.  If not, see <http://www.gnu.org/licenses/>.
 */
- 
 global $wpdb;
-global $searchTaxonomyGT_version;
-$searchTaxonomyGT_version = "1.2";
 
 define( 'PLUGIN_DIR', dirname(__FILE__).'/' );  
 
 function at_searchTaxonomyGT_enqueue_admin_scripts() {
-	wp_enqueue_script('jquery');
-	wp_enqueue_media();
-	wp_register_script( 'searchTaxonomyGT_at_js', plugins_url('searchTaxonomyGT.js', __FILE__), array('jquery') );
-	wp_enqueue_script( 'searchTaxonomyGT_at_js' );
-	
-
+	wp_register_script('searchTaxonomyGT_at_js', plugins_url('searchTaxonomyGT.js', __FILE__), array('jquery'));
+	wp_enqueue_script('searchTaxonomyGT_at_js');
 }
 add_action( 'admin_enqueue_scripts', 'at_searchTaxonomyGT_enqueue_admin_scripts' );
 ?>

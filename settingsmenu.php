@@ -11,7 +11,7 @@ if ( is_admin() ){ // admin actions
 }
 
 function at_reg_settings() {
-	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.9.6' );
+	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '3.9.7' );
 	register_setting( 'at_options_group', 'at_option_id', 'intval');
 	register_setting( 'at_options_group', 'at_option_love', 'intval');
 	register_setting( 'at_options_group', 'at_option_widget');
