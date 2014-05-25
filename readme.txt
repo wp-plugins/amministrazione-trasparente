@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 3.8
-Version: 3.9.8
-Stable tag: 3.9.8
+Version: 4
+Stable tag: 4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,19 +47,12 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 * **NUOVO** | Possibilità di associare anche le categorie alle voci create
 * E molte altre funzioni uniche che rendono questo software semplice e veloce da utilizzare!
 
-> Più di **250 pubbliche amministrazioni** hanno scelto di affidarsi a questo plugin per l'adempimento normativo del d.lgs. 33/2013!
+> Più di **500 pubbliche amministrazioni** hanno scelto di affidarsi a questo plugin per l'adempimento normativo del d.lgs. 33/2013!
 
 = CONTATTI & SUPPORTO =
 Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, è attivo il forum di supporto su [supporto.marcomilesi.ml](http://supporto.marcomilesi.ml/)
 
 http://www.youtube.com/watch?v=qWj9hvzNSlg
-
-= Ringraziamenti =
-
-* Roberta Ghisalberti (Comune di San Pellegrino Terme)
-* Igor Vita (Comune di Grottammare / Comune di Acquaviva Picena)
-* Tutta la Comunità di pratica [PorteAperteSulWeb](http://www.porteapertesulweb.it/), ed in particolare:
-* Alberto Ardizzone, Renata Durighello, Riccardo Boccaccio, Giovanna Orrù, Giorgio Galli, Andrea Smith, Claudia Cantaluppi
 
 
 > **ATTENZIONE** | **"For each author’s protection [***] we want to make certain that everyone understands that there is no warranty for this free software.** In accordo con la licenza GPL v.2 con cui questo software viene fornito, **declino** ogni responsabilità per eventuali inadempimenti legislativi e/o altri problemi legali e/o tecnici derivanti, implicitamente o esplicitamente, dall'utilizzo di questo plugin Wordpress o da un'affrettata configurazione dello stesso (ivi compresi eventuali aggiornamenti). E' compito del gestore del sito assicurarsi che il modulo funzioni correttamente e adempia agli obblighi di legge e, al contempo, è obbligo degli operatori/impiegati/dipendenti/funzionari preposti alla gestione dell'Amministrazione Trasparente la pubblicazione degli opportuni dati.
@@ -119,16 +112,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
 
-= Versione 3.9.8 30/04/2014 =
-* Altri miglioramenti per SearchTaxonomyGT
-
-= Versione 3.9.7 30/04/2014 =
-* **Migliorato** plugin integrato SearchTaxonomyGT, causa di possibili conflitti
-* **Migliorato** uso variabili e performance del plugin integrato SearchTaxonomyGT (rimossi 2 wp_enqueue)
-* **Rimossi** file "orfani" fal plugin integrato SearchTaxonomyGT
-
-= Versione 3.9.6 =
-* Corretto errore stringa nel widget
+= Versione 4 #Gasw (Giornata Apera sul Web) - 26.05.2014 =
+* Rebranding wpgov.it
+* Molte migliorie :)
 
 = Versione 3.9.5 9/04/2014 =
 * **Risolti** 2 errori di validazione xhtml per il tag **at-table** // Grazie @Marisa Alario e @Caterina Toccafondi

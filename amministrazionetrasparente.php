@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Amministrazione Trasparente
-Plugin URI: http://wordpress.org/extend/plugins/amministrazione-trasparente
+Plugin URI: http://wpgov.it/soluzioni/amministrazione-trasparente/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 3.9.8
+Version: 4
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -14,7 +14,7 @@ add_action( 'init', 'AT_RegistraTAX');
 function AT_RegistraTAX() {
 	
     $labels = array( 
-        'name' => _x( 'Tipologie', 'tipologie' ),
+        'name' => _x( 'Sezioni', 'tipologie' ),
         'singular_name' => _x( 'Tipologia', 'tipologie' ),
         'search_items' => _x( 'Cerca tipologia', 'tipologie' ),
         'popular_items' => _x( 'Tipologie più usate', 'tipologie' ),
@@ -30,15 +30,7 @@ function AT_RegistraTAX() {
         'choose_from_most_used' => _x( 'Scegli tra le tipologie più usate', 'tipologie' ),
         'menu_name' => _x( 'Tipologie', 'tipologie' ),
     );
-	
-	//Se è attivata l'opzione per sbloccare le tipologie, cambiamo alcuni parametri =)
-	//$get_at_option_sblocca_tipologie = get_option('at_option_sblocca_tipologie');
-	//if ($get_at_option_sblocca_tipologie == '1') {
-	//	$at_option_sblocca_tipologie_array = array( 'manage_terms' => 'administrator', 'edit_terms' => 'administrator','delete_terms' => 'administrator');
-	//} else {
-	//	$at_option_sblocca_tipologie_array = array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',);
-	//}
-	
+
     $args = array( 
         'labels' => $labels,
         'public' => true,
@@ -54,6 +46,45 @@ function AT_RegistraTAX() {
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
     require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
 }
+add_action( 'init', 'register_taxonomy_areesettori' );
+if(!(function_exists('register_taxonomy_areesettori'))){
+	
+
+	function register_taxonomy_areesettori() {
+
+		$labels = array( 
+			'name' => _x( 'Uffici - Settori - Centri di costo', 'areesettori' ),
+			'singular_name' => _x( 'Settore - Centro di costo', 'areesettori' ),
+			'search_items' => _x( 'Cerca in Settori - Centri di costo', 'areesettori' ),
+			'popular_items' => _x( 'Settori - Centri di costo Più usati', 'areesettori' ),
+			'all_items' => _x( 'Tutti i Centri di costo', 'areesettori' ),
+			'parent_item' => _x( 'Parent Settore - Centro di costo', 'areesettori' ),
+			'parent_item_colon' => _x( 'Parent Settore - Centro di costo:', 'areesettori' ),
+			'edit_item' => _x( 'Modifica Settore - Centro di costo', 'areesettori' ),
+			'update_item' => _x( 'Aggiorna Settore - Centro di costo', 'areesettori' ),
+			'add_new_item' => _x( 'Aggiungi Nuovo Settore - Centro di costo', 'areesettori' ),
+			'new_item_name' => _x( 'Nuovo Settore - Centro di costo', 'areesettori' ),
+			'separate_items_with_commas' => _x( 'Separate settori - centri di costo with commas', 'areesettori' ),
+			'add_or_remove_items' => _x( 'Add or remove settori - centri di costo', 'areesettori' ),
+			'choose_from_most_used' => _x( 'Choose from the most used settori - centri di costo', 'areesettori' ),
+			'menu_name' => _x( 'Uffici & Settori', 'areesettori' ),
+		);
+
+		$args = array( 
+			'labels' => $labels,
+			'public' => true,
+			'show_in_nav_menus' => false,
+			'show_ui' => true,
+			'show_tagcloud' => false,
+			'show_admin_column' => true,
+			'hierarchical' => true,
+
+			'rewrite' => true,
+			'query_var' => true
+		);
+		register_taxonomy( 'areesettori', array('incarico', 'spesa', 'avcp', 'amm-trasparente'), $args );
+	}
+}
 
 /* REGISTRA CUSTOM POST TYPE */
 
@@ -61,9 +92,9 @@ add_action( 'init', 'register_cpt_documento_trasparenza' );
 function register_cpt_documento_trasparenza() {
 
     $labels = array( 
-        'name' => _x( 'Documenti Trasparenza', 'documenti_trasparenza' ),
+        'name' => _x( 'Amministrazione Trasparente', 'documenti_trasparenza' ),
         'singular_name' => _x( 'Documento Trasparenza', 'documento_trasparenza' ),
-        'add_new' => _x( 'Nuova Voce', 'documento_trasparenza' ),
+        'add_new' => _x( 'Nuova voce', 'documento_trasparenza' ),
         'add_new_item' => _x( 'Nuova Voce', 'documento_trasparenza' ),
         'edit_item' => _x( 'Modifica Documento', 'documento_trasparenza' ),
         'new_item' => _x( 'Nuovo Documento', 'documento_trasparenza' ),
@@ -119,7 +150,7 @@ function register_cpt_documento_trasparenza() {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_position' => 5,
+        'menu_position' => 36,
         'menu_icon' => plugin_dir_url(__FILE__) . 'includes/icon.png',
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
@@ -240,17 +271,17 @@ function at_table_css()
 }
 /* =========== FUNZIONI INCLUSE ============ */
 
-require_once(plugin_dir_path(__FILE__) . 'settingsmenu.php');
 require_once(plugin_dir_path(__FILE__) . 'widget/widget.php');
 require_once(plugin_dir_path(__FILE__) . 'redirector.php');
-require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
+require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
+require_once(plugin_dir_path(__FILE__) . 'separators.php');
 
-add_action( 'admin_init', 'AT_FUNCTIONSLOAD');
-function AT_FUNCTIONSLOAD () {
-
-	require_once(plugin_dir_path(__FILE__) . 'admin-messages.php');
+add_action( 'admin_init', 'AT_ADMIN_LOAD');
+function AT_ADMIN_LOAD () {
+	require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
 	require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
 	require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
-
+	require_once(plugin_dir_path(__FILE__) . 'register_setting.php');
 }
+require_once(plugin_dir_path(__FILE__) . 'govconfig/loader_shared.php');
 ?>
