@@ -46,11 +46,11 @@ function AT_RegistraTAX() {
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
     require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
 }
-if(!(function_exists('register_taxonomy_areesettori'))){
-add_action( 'init', 'register_taxonomy_areesettori' );
+if(!(function_exists('wpgov_register_taxonomy_areesettori'))){
+add_action( 'init', 'wpgov_register_taxonomy_areesettori' );
 	
 
-	function register_taxonomy_areesettori() {
+	function wpgov_register_taxonomy_areesettori() {
 
 		$labels = array( 
 			'name' => _x( 'Uffici - Settori - Centri di costo', 'areesettori' ),
