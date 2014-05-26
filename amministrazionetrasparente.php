@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wpgov.it/soluzioni/amministrazione-trasparente/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 4
+Version: 4.0.1
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -46,8 +46,8 @@ function AT_RegistraTAX() {
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
     require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
 }
-add_action( 'init', 'register_taxonomy_areesettori' );
 if(!(function_exists('register_taxonomy_areesettori'))){
+add_action( 'init', 'register_taxonomy_areesettori' );
 	
 
 	function register_taxonomy_areesettori() {
