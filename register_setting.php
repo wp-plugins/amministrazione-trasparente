@@ -1,5 +1,5 @@
 <?php
-	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '4.0.4' );
+	register_setting( 'at_options_group', 'at_version_number'); update_option( 'at_version_number', '4.0.5' );
 	register_setting( 'at_options_group', 'at_option_id', 'intval');
 	register_setting( 'at_options_group', 'at_option_love', 'intval');
 	register_setting( 'at_options_group', 'at_option_widget');

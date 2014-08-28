@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.3
 Tested up to: 4.0
-Version: 4.0.4
-Stable tag: 4.0.4
+Version: 4.0.5
+Stable tag: 4.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,7 @@ Amministrazione Trasparente è stato sviluppato seguendo tre criteri: **Flessibi
 
 L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una comodità di aggiornamento senza pari! In particolare in ogni voce è possibile inserire file, immagini, testi, link o anche effettuare un reindirizzamento automatico a un'altra pagina. Per esempio, per inserire i recapiti telefonici non è necessario scriverli in Microsoft Word per poi caricare il file, ma basta semplicemente scriverlo!
 
-> [INSTALLAZIONE e CONFIGURAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](http://amministrazionetrasparente.marcomilesi.ml/guida_amministrazionetrasparente.pdf)
+> [INSTALLAZIONE e CONFIGURAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](https://www.dropbox.com/s/sk6lww0marza4jn/guida_amministrazionetrasparente.pdf?dl=0)
 
 > Comuni | [Comune di San Pellegrino Terme](http://www.comune.sanpellegrinoterme.bg.it/comune/trasparenza/) - [Comune di Bordighera](http://trasparenza.bordighera.it/)
 
@@ -47,7 +47,7 @@ L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una
 * **NUOVO** | Possibilità di associare anche le categorie alle voci create
 * E molte altre funzioni uniche che rendono questo software semplice e veloce da utilizzare!
 
-> Più di **500 pubbliche amministrazioni** hanno scelto di affidarsi a questo plugin per l'adempimento normativo del d.lgs. 33/2013!
+> **Centinaia** di PA hanno già scelto di affidarsi a questo plugin per l'adempimento normativo del d.lgs. 33/2013!
 
 = CONTATTI & SUPPORTO =
 Per qualsiasi informazione, per segnalare problemi o per suggerire nuove funzioni, è attivo il forum di supporto su [supporto.marcomilesi.ml](http://supporto.marcomilesi.ml/)
@@ -111,6 +111,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 4.0.5 28/08/2014 =
+* Cambiamenti minori al file readme.txt
 
 = Versione 4.0.4 20/07/2014 =
 * **Testato** su WordPress 4.0
