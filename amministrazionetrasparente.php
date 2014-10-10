@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wpgov.it/soluzioni/amministrazione-trasparente/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 4.0.5
+Version: 4.0.6
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -12,8 +12,8 @@ License: GPL Attribution-ShareAlike
 
 add_action( 'init', 'AT_RegistraTAX');
 function AT_RegistraTAX() {
-	
-    $labels = array( 
+
+    $labels = array(
         'name' => _x( 'Sezioni', 'tipologie' ),
         'singular_name' => _x( 'Tipologia', 'tipologie' ),
         'search_items' => _x( 'Cerca tipologia', 'tipologie' ),
@@ -31,7 +31,7 @@ function AT_RegistraTAX() {
         'menu_name' => _x( 'Tipologie', 'tipologie' ),
     );
 
-    $args = array( 
+    $args = array(
         'labels' => $labels,
         'public' => true,
         'show_in_nav_menus' => true,
@@ -39,51 +39,51 @@ function AT_RegistraTAX() {
         'show_tagcloud' => false,
         'show_admin_column' => true,
         'hierarchical' => true,
-		'rewrite' => array('hierarchical' => true, 'slug' => 'trasparenza', 'with_front' => false),
-		'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
+        'rewrite' => array('hierarchical' => true, 'slug' => 'trasparenza', 'with_front' => false),
+        'capabilities' => array('manage_terms' => 'utentealieno','edit_terms'   => 'utentealieno','delete_terms' => 'utentealieno',),
         'query_var' => true
     );
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
-    require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php'); 
+    require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php');
 }
 if(!(function_exists('wpgov_register_taxonomy_areesettori'))){
 add_action( 'init', 'wpgov_register_taxonomy_areesettori' );
-	
 
-	function wpgov_register_taxonomy_areesettori() {
 
-		$labels = array( 
-			'name' => _x( 'Uffici - Settori - Centri di costo', 'areesettori' ),
-			'singular_name' => _x( 'Settore - Centro di costo', 'areesettori' ),
-			'search_items' => _x( 'Cerca in Settori - Centri di costo', 'areesettori' ),
-			'popular_items' => _x( 'Settori - Centri di costo Più usati', 'areesettori' ),
-			'all_items' => _x( 'Tutti i Centri di costo', 'areesettori' ),
-			'parent_item' => _x( 'Parent Settore - Centro di costo', 'areesettori' ),
-			'parent_item_colon' => _x( 'Parent Settore - Centro di costo:', 'areesettori' ),
-			'edit_item' => _x( 'Modifica Settore - Centro di costo', 'areesettori' ),
-			'update_item' => _x( 'Aggiorna Settore - Centro di costo', 'areesettori' ),
-			'add_new_item' => _x( 'Aggiungi Nuovo Settore - Centro di costo', 'areesettori' ),
-			'new_item_name' => _x( 'Nuovo Settore - Centro di costo', 'areesettori' ),
-			'separate_items_with_commas' => _x( 'Separate settori - centri di costo with commas', 'areesettori' ),
-			'add_or_remove_items' => _x( 'Add or remove settori - centri di costo', 'areesettori' ),
-			'choose_from_most_used' => _x( 'Choose from the most used settori - centri di costo', 'areesettori' ),
-			'menu_name' => _x( 'Uffici & Settori', 'areesettori' ),
-		);
+    function wpgov_register_taxonomy_areesettori() {
 
-		$args = array( 
-			'labels' => $labels,
-			'public' => true,
-			'show_in_nav_menus' => false,
-			'show_ui' => true,
-			'show_tagcloud' => false,
-			'show_admin_column' => true,
-			'hierarchical' => true,
+        $labels = array(
+            'name' => _x( 'Uffici - Settori - Centri di costo', 'areesettori' ),
+            'singular_name' => _x( 'Settore - Centro di costo', 'areesettori' ),
+            'search_items' => _x( 'Cerca in Settori - Centri di costo', 'areesettori' ),
+            'popular_items' => _x( 'Settori - Centri di costo Più usati', 'areesettori' ),
+            'all_items' => _x( 'Tutti i Centri di costo', 'areesettori' ),
+            'parent_item' => _x( 'Parent Settore - Centro di costo', 'areesettori' ),
+            'parent_item_colon' => _x( 'Parent Settore - Centro di costo:', 'areesettori' ),
+            'edit_item' => _x( 'Modifica Settore - Centro di costo', 'areesettori' ),
+            'update_item' => _x( 'Aggiorna Settore - Centro di costo', 'areesettori' ),
+            'add_new_item' => _x( 'Aggiungi Nuovo Settore - Centro di costo', 'areesettori' ),
+            'new_item_name' => _x( 'Nuovo Settore - Centro di costo', 'areesettori' ),
+            'separate_items_with_commas' => _x( 'Separate settori - centri di costo with commas', 'areesettori' ),
+            'add_or_remove_items' => _x( 'Add or remove settori - centri di costo', 'areesettori' ),
+            'choose_from_most_used' => _x( 'Choose from the most used settori - centri di costo', 'areesettori' ),
+            'menu_name' => _x( 'Uffici & Settori', 'areesettori' ),
+        );
 
-			'rewrite' => true,
-			'query_var' => true
-		);
-		register_taxonomy( 'areesettori', array('incarico', 'spesa', 'avcp', 'amm-trasparente'), $args );
-	}
+        $args = array(
+            'labels' => $labels,
+            'public' => true,
+            'show_in_nav_menus' => false,
+            'show_ui' => true,
+            'show_tagcloud' => false,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+
+            'rewrite' => true,
+            'query_var' => true
+        );
+        register_taxonomy( 'areesettori', array('incarico', 'spesa', 'avcp', 'amm-trasparente'), $args );
+    }
 }
 
 /* REGISTRA CUSTOM POST TYPE */
@@ -91,7 +91,7 @@ add_action( 'init', 'wpgov_register_taxonomy_areesettori' );
 add_action( 'init', 'register_cpt_documento_trasparenza' );
 function register_cpt_documento_trasparenza() {
 
-    $labels = array( 
+    $labels = array(
         'name' => _x( 'Amministrazione Trasparente', 'documenti_trasparenza' ),
         'singular_name' => _x( 'Documento Trasparenza', 'documento_trasparenza' ),
         'add_new' => _x( 'Nuova voce', 'documento_trasparenza' ),
@@ -105,47 +105,47 @@ function register_cpt_documento_trasparenza() {
         'parent_item_colon' => _x( 'Parent Documento AT:', 'documento_trasparenza' ),
         'menu_name' => _x( 'Trasparenza', 'documento_trasparenza' ),
     );
-	
-	$get_at_categorization_enable = get_option('at_categorization_enable');
-	$get_at_option_tag = get_option('at_option_tag');
-	
-	if ( $get_at_categorization_enable == '1') { //CATEGORIA SI
-		if ( $get_at_option_tag == '0') { //TAG SI
-			$taxonomysupport = array('post_tag', 'category');
-		} else { //TAG NO, CAT SI
-			$taxonomysupport = array('category');
-		}
-	} else if ( $get_at_option_tag == '0') { //TAG SI, CAT NO
-		$taxonomysupport = array('post_tag');
-	} else {
-		$taxonomysupport = array();
-	}
 
-	$get_at_ruoli_option_enable = get_option('at_ruoli_option_enable');
-	if ($get_at_ruoli_option_enable == '1') {
-		$at_capability_type = 'documenti_trasparenza';
-		$map_meta_cap_var = 'true';
-		$at_capabilities_array = array(
-				'publish_posts' => 'pubblicare_documento_trasparenza',
-				'edit_posts' => 'modificare_propri_documento_trasparenza',
-				'edit_others_posts' => 'modificare_altri_documento_trasparenza',
-				'delete_posts' => 'eliminare_propri_documento_trasparenza',
-				'delete_others_posts' => 'modificare_altri_documento_trasparenza',
-				'read_private_posts' => 'read_private_professionisti',
-				'edit_post' => 'modificare_documento_trasparenza',
-				'delete_post' => 'eliminare_documento_trasparenza',
-				'read_post' => 'leggere_documento_trasparenza',
-				);
-	} else {
-		$at_capability_type = 'post';
-		$map_meta_cap_var = 'false';
-	}
-	
-    $args = array( 
+    $get_at_categorization_enable = get_option('at_categorization_enable');
+    $get_at_option_tag = get_option('at_option_tag');
+
+    if ( $get_at_categorization_enable == '1') { //CATEGORIA SI
+        if ( $get_at_option_tag == '0') { //TAG SI
+            $taxonomysupport = array('post_tag', 'category');
+        } else { //TAG NO, CAT SI
+            $taxonomysupport = array('category');
+        }
+    } else if ( $get_at_option_tag == '0') { //TAG SI, CAT NO
+        $taxonomysupport = array('post_tag');
+    } else {
+        $taxonomysupport = array();
+    }
+
+    $get_at_ruoli_option_enable = get_option('at_ruoli_option_enable');
+    if ($get_at_ruoli_option_enable == '1') {
+        $at_capability_type = 'documenti_trasparenza';
+        $map_meta_cap_var = 'true';
+        $at_capabilities_array = array(
+                'publish_posts' => 'pubblicare_documento_trasparenza',
+                'edit_posts' => 'modificare_propri_documento_trasparenza',
+                'edit_others_posts' => 'modificare_altri_documento_trasparenza',
+                'delete_posts' => 'eliminare_propri_documento_trasparenza',
+                'delete_others_posts' => 'modificare_altri_documento_trasparenza',
+                'read_private_posts' => 'read_private_professionisti',
+                'edit_post' => 'modificare_documento_trasparenza',
+                'delete_post' => 'eliminare_documento_trasparenza',
+                'read_post' => 'leggere_documento_trasparenza',
+                );
+    } else {
+        $at_capability_type = 'post';
+        $map_meta_cap_var = 'false';
+    }
+
+    $args = array(
         'labels' => $labels,
         'hierarchical' => true,
         'description' => 'trasparenza',
-		'taxonomies' => $taxonomysupport,
+        'taxonomies' => $taxonomysupport,
         'supports' => array( 'title', 'editor', 'excerpt', 'revisions' ),
         'public' => true,
         'show_ui' => true,
@@ -158,10 +158,10 @@ function register_cpt_documento_trasparenza() {
         'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
-		'rewrite' => array('pages'=> true, 'with_front' => false),
-		//'capabilities' => $at_capabilities_array,
+        'rewrite' => array('pages'=> true, 'with_front' => false),
+        //'capabilities' => $at_capabilities_array,
         'capability_type' => $at_capability_type,
-		'map_meta_cap' => $map_meta_cap_var
+        'map_meta_cap' => $map_meta_cap_var
     );
 
     register_post_type( 'amm-trasparente', $args );
@@ -222,16 +222,16 @@ include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-php-archive.php');
 
 function at_archive_tag_custom_types( $query ) {
 
-	if(is_category() || is_tag()) {
-		$post_type = get_query_var('post_type');
-		if($post_type) {
-			$post_type = $post_type;
-		} else {
-			$post_type = array('post','amm-trasparente');
-			$query->set('post_type',$post_type);
-		}
-	}
-	return $query;
+    if(is_category() || is_tag()) {
+        $post_type = get_query_var('post_type');
+        if($post_type) {
+            $post_type = $post_type;
+        } else {
+            $post_type = array('post','amm-trasparente');
+            $query->set('post_type',$post_type);
+        }
+    }
+    return $query;
 }
 add_filter( 'pre_get_posts', 'at_archive_tag_custom_types' );
 
@@ -239,35 +239,35 @@ add_filter( 'pre_get_posts', 'at_archive_tag_custom_types' );
 
 // force use of templates from plugin folder
 function at_force_template( $template ) {
-	$current_page_URL = 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
-	if (get_permalink(get_option('at_option_id')) == $current_page_URL) {
-		add_action('wp_head','at_table_css');
-	}
-	
+    $current_page_URL = 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+    if (get_permalink(get_option('at_option_id')) == $current_page_URL) {
+        add_action('wp_head','at_table_css');
+    }
+
     if( is_tax( 'tipologie' ) || is_tax( 'annirif' ) || is_tax( 'ditte' ) ) {
-		$theme_name = strtolower(wp_get_theme());
-		if ($theme_name == 'pasw2013') {
-			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswarchive-tipologie.php';
-		} else if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
-			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswarchive-tipologie.php';
-		}
-	
-	} else if ( is_singular( 'amm-trasparente' ) ) {
-		$theme_name = strtolower(wp_get_theme());
-		if ($theme_name == 'pasw2013') {
-			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswsingle-tipologie.php';
-		} else if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
-			$template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswsingle-tipologie.php';
-		}
-	}
-	return $template;
+        $theme_name = strtolower(wp_get_theme());
+        if ($theme_name == 'pasw2013') {
+            $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswarchive-tipologie.php';
+        } else if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
+            $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswarchive-tipologie.php';
+        }
+
+    } else if ( is_singular( 'amm-trasparente' ) ) {
+        $theme_name = strtolower(wp_get_theme());
+        if ($theme_name == 'pasw2013') {
+            $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswsingle-tipologie.php';
+        } else if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
+            $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswsingle-tipologie.php';
+        }
+    }
+    return $template;
 }
 add_filter( 'template_include', 'at_force_template' );
 
 function at_table_css()
 {
-	$at_output='<style type="text/css">.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;position:relative;min-width: 200px;} .at-tableclass h3 a {text-decoration:none;}</style>';
-	echo $at_output;
+    $at_output='<style type="text/css">.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;position:relative;min-width: 200px;} .at-tableclass h3 a {text-decoration:none;}</style>';
+    echo $at_output;
 }
 /* =========== FUNZIONI INCLUSE ============ */
 
@@ -278,10 +278,10 @@ require_once(plugin_dir_path(__FILE__) . 'separators.php');
 
 add_action( 'admin_init', 'AT_ADMIN_LOAD');
 function AT_ADMIN_LOAD () {
-	require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
-	require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
-	require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
-	require_once(plugin_dir_path(__FILE__) . 'register_setting.php');
+    require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
+    require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
+    require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
+    require_once(plugin_dir_path(__FILE__) . 'register_setting.php');
 }
 require_once(plugin_dir_path(__FILE__) . 'govconfig/loader_shared.php');
 ?>
