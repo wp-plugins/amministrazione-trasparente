@@ -2,10 +2,10 @@
 Contributors: Milmor
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F2JK36SCXKTE2
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
-Requires at least: 3.3
+Requires at least: 3.8
 Tested up to: 4.0
-Version: 4.0.6
-Stable tag: 4.0.6
+Version: 4.1
+Stable tag: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,14 +69,16 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 2. Attiva il plugin dal menu 'Plugins' in WordPress
 3. Inserire in una pagina o in un articolo i seguenti tag disponibili:
 
-* [at-head] => Mostra un sommario delle voci cliccabili. Da usare nella stessa pagina di [at-list] o [at-table]
 * [at-desc] => Mostra la descrizione di Amministrazione Trasparente.
+* [at-search] => Mostra un box orizzontale per la ricerca in A.T., con filtro per tipologia
+* [at-head] => Mostra un sommario delle voci cliccabili. Da usare nella stessa pagina di [at-list] o [at-table]
 * [at-list] => Visualizza una lista di tutte le voci/sottovoci di A.T.
 * [at-table] => Visualizza una lista a 2 colonne di A.T.
 
 Una buona pagina potrebbe contenere i seguenti tag:
 
 * [at-desc]
+* [at-search]
 * [at-head]
 * [at-list] oppure [at-table] a seconda dei gusti o delle esigenze
 
@@ -111,6 +113,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 4.1 21/10/2014 =
+* **Aggiunto** shortcode 'at-search'
 
 = Versione 4.0.6 10/10/2014 =
 * **Migliorato** css pagina wpgov

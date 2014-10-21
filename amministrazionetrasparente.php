@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wpgov.it/soluzioni/amministrazione-trasparente/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 4.0.6
+Version: 4.1
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -215,6 +215,15 @@ $atshortcode = ob_get_clean();
 return $atshortcode;
 }
 add_shortcode('at-list', 'at_list_shtc');
+
+function at_search_shtc($atts)
+{
+ob_start();
+include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-search.php');
+$atshortcode = ob_get_clean();
+return $atshortcode;
+}
+add_shortcode('at-search', 'at_search_shtc');
 
 function at_archive_buttons() { //Questa funzione va chiamata con at_archive_buttons()
 include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-php-archive.php');
