@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wpgov.it/soluzioni/amministrazione-trasparente/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 4.1.1
+Version: 4.1.2
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -249,7 +249,7 @@ add_filter( 'pre_get_posts', 'at_archive_tag_custom_types' );
 // force use of templates from plugin folder
 function at_force_template( $template ) {
 
-    if (get_template() != 'pasw2013' &&  strtolower(wp_get_theme()) != 'pasw2013') { return $template; }
+    if (get_template() == 'pasw2015') { return $template; }
 
     $current_page_URL = 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
     if (get_permalink(get_option('at_option_id')) == $current_page_URL) {
@@ -258,13 +258,13 @@ function at_force_template( $template ) {
 
     if( is_tax( 'tipologie' ) || is_tax( 'annirif' ) || is_tax( 'ditte' ) ) {
         $theme_name = strtolower(wp_get_theme());
-        if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
+        if (get_template() == 'pasw2013' || get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
             $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswarchive-tipologie.php';
         }
 
     } else if ( is_singular( 'amm-trasparente' ) ) {
         $theme_name = strtolower(wp_get_theme());
-        if (get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
+        if (get_template() == 'pasw2013' || get_option('at_pasw_developer') == '1') { //Se è attivata la modalità "Forza template PASW"
             $template = WP_PLUGIN_DIR .'/'. plugin_basename( dirname(__FILE__) ) .'/pasw2013/paswsingle-tipologie.php';
         }
     }
