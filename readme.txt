@@ -4,24 +4,23 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.8
 Tested up to: 4.0
-Version: 4.1.3
-Stable tag: 4.1.3
+Version: 4.1.4
+Stable tag: 4.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Soluzione completa per la pubblicazione dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013: pubblicità, trasparenza e diffusione di informazioni.
+Soluzione completa per la gestione della sezione "Amministrazione Trasparente" delle Pubbliche Amministrazioni (D.lgs. 33/2013)
 
 
 == Description ==
-= Premessa =
 
-Soluzione **gratuita** e **completa** per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
+Il Plugin WordPress "Amministrazione Trasparente" è un software gratuito e completo per la gestione dell'omonima sezione ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
 
 = Perchè scegliere "Amministrazione Trasparente" per Wordpress? =
 
-Amministrazione Trasparente è stato sviluppato seguendo tre criteri: **Flessibilità**, **Semplicità** e **Velocità di inserimento**.
+Amministrazione Trasparente è stato sviluppato per essere flessibile, semplice e intuitivo.
 
-L'intero modulo gestisce infatti ogni voce come singolo articolo permettendo una comodità di aggiornamento senza pari! In particolare in ogni voce è possibile inserire file, immagini, testi, link o anche effettuare un reindirizzamento automatico a un'altra pagina. Per esempio, per inserire i recapiti telefonici non è necessario scriverli in Microsoft Word per poi caricare il file, ma basta semplicemente scriverlo!
+L'intero modulo gestisce ogni voce come singolo articolo permettendo una comodità di aggiornamento notevole! Per ogni voce è possibile inserire file, immagini, testi, link o effettuare un reindirizzamento a un'altra pagina. E' la **soluzione ideale** per tutte le P.A.
 
 > [INSTALLAZIONE e CONFIGURAZIONE](http://wordpress.org/plugins/amministrazione-trasparente/installation/) | [GUIDA PDF PER UFFICI](https://www.dropbox.com/s/sk6lww0marza4jn/guida_amministrazionetrasparente.pdf?dl=0)
 
@@ -113,6 +112,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 4.1.4 30/10/2014 =
+* Modifiche readme.txt
 
 = Versione 4.1.3 25/10/2014 =
 * **Aggiunti** altri controlli per template pasw2013 (nomecartella+nometema+forzatemplate)
