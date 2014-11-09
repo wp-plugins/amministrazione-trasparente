@@ -1,6 +1,6 @@
 <form role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>">
   <div>
-    <input class="inlineSearch" type="text" name="s" value="Cerca..." onblur="if (this.value == '') {this.value = 'Cerca...';}" onfocus="if (this.value == 'Cerca...') {this.value = '';}" />
+    <input type="text" name="s" placeholder="Cerca..." />
 
 <?php
 function get_terms_dropdown($taxonomies, $args){
