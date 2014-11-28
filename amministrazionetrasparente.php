@@ -3,7 +3,7 @@
 Plugin Name: Amministrazione Trasparente
 Plugin URI: http://wpgov.it/soluzioni/amministrazione-trasparente/
 Description: Soluzione completa per la pubblicazione online dei documenti ai sensi del D.lgs. n. 33 del 14/03/2013, riguardante il riordino della disciplina degli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni, in attuazione dell’art. 1, comma 35, della legge n. 190/2012.
-Version: 4.1.5
+Version: 4.1.6
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -44,7 +44,6 @@ function AT_RegistraTAX() {
         'query_var' => true
     );
     register_taxonomy( 'tipologie', array('amm-trasparente'), $args );
-    require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php');
 }
 if(!(function_exists('wpgov_register_taxonomy_areesettori'))){
 add_action( 'init', 'wpgov_register_taxonomy_areesettori' );
@@ -168,17 +167,6 @@ function register_cpt_documento_trasparenza() {
 
 }
 
-/* =========== TITOLO HCK =========== */
-function at_nuovo_titolo($title)
-{
-    $screen = get_current_screen();
-    if ('amm-trasparente' == $screen->post_type) {
-        $title = 'Inserire il titolo della voce da inserire';
-    }
-    return $title;
-}
-add_filter('enter_title_here', 'at_nuovo_titolo');
-
 /* =========== SHORTCODES [at-head] & [at-desc] & [at-table] & [at-list] ============ */
 
 function at_head_shtc($atts)
@@ -201,7 +189,8 @@ function at_table_shtc($atts)
 {
 ob_start();
 include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-table.php');
-$atshortcode = ob_get_clean();
+    $atshortcode += '<style>.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;position:relative;min-width: 200px;} .at-tableclass h3 a {text-decoration:none;}</style>';
+    $atshortcode = ob_get_clean();
 return $atshortcode;
 
 }
@@ -229,32 +218,12 @@ function at_archive_buttons() { //Questa funzione va chiamata con at_archive_but
 include(plugin_dir_path(__FILE__) . 'shortcodes/shortcodes-php-archive.php');
 }
 
-function at_archive_tag_custom_types( $query ) {
-
-    if(is_category() || is_tag()) {
-        $post_type = get_query_var('post_type');
-        if($post_type) {
-            $post_type = $post_type;
-        } else {
-            $post_type = array('post','amm-trasparente');
-            $query->set('post_type',$post_type);
-        }
-    }
-    return $query;
-}
-add_filter( 'pre_get_posts', 'at_archive_tag_custom_types' );
-
 /* =========== VISUALIZZAZIONE ARCHIVIO SPECIALE ============ */
 
 // force use of templates from plugin folder
 function at_force_template( $template ) {
 
     if (get_template() == 'pasw2015') { return $template; }
-
-    $current_page_URL = 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
-    if (get_permalink(get_option('at_option_id')) == $current_page_URL) {
-        add_action('wp_head','at_table_css');
-    }
 
     if( is_tax( 'tipologie' ) || is_tax( 'annirif' ) || is_tax( 'ditte' ) ) {
         $theme_name = strtolower(wp_get_theme());
@@ -272,11 +241,23 @@ function at_force_template( $template ) {
 }
 add_filter( 'template_include', 'at_force_template' );
 
-function at_table_css()
-{
-    $at_output='<style type="text/css">.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;position:relative;min-width: 200px;} .at-tableclass h3 a {text-decoration:none;}</style>';
-    echo $at_output;
+/* Utilità */
+
+function check_new_version($return) {
+    if (!$return) { $return = false; }
+
+    $arrayatpv = get_plugin_data ( __FILE__ );
+    $nuova_versione = $arrayatpv['Version'];
+
+    if (version_compare(get_option('at_version_number'), $nuova_versione, '<') == '1') {
+        update_option( 'at_version_number', $nuova_versione );
+        require(plugin_dir_path(__FILE__) . 'taxonomygenerator.php');
+        echo '<div class="updated"><p>Grazie per aver aggiornato Amministrazione Trasparente alla versione <b>' . get_option('at_version_number') . '</b><br/><a href="https://wordpress.org/plugins/amministrazione-trasparente/changelog/" target="_blank">Changelog</a> &bull; <a href="http://www.wpgov.it" target="_blank">WPGov.it</a> </p></div>';
+    }
+    if ($return) { return $nuova_versione; }
 }
+add_action('admin_init', 'check_new_version');
+
 /* =========== FUNZIONI INCLUSE ============ */
 
 require_once(plugin_dir_path(__FILE__) . 'widget/widget.php');
@@ -289,7 +270,6 @@ function AT_ADMIN_LOAD () {
     require_once(plugin_dir_path(__FILE__) . 'searchTaxonomy/searchTaxonomyGT.php');
     require_once(plugin_dir_path(__FILE__) . 'styledbackend.php');
     require_once(plugin_dir_path(__FILE__) . 'taxfilteringbackend.php');
-    require_once(plugin_dir_path(__FILE__) . 'register_setting.php');
 }
 require_once(plugin_dir_path(__FILE__) . 'govconfig/loader_shared.php');
 ?>

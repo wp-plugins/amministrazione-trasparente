@@ -3,16 +3,16 @@
 ////BUGFIX 18 GENNAIO 2014
 $termcheck = term_exists('Dati ulteriori', 'tipologie');
 if ($termcheck == 0 || $termcheck == null) {
-	$termcheck2 = term_exists('Altri contenuti', 'tipologie');
-	if ($termcheck2 !== 0 && $termcheck2 !== null) {
-		$altricontenuti_datiulteriori = get_term_by('name', 'Altri contenuti', 'tipologie');
-		wp_update_term($altricontenuti_datiulteriori->term_id, 'tipologie', array(
-			'name' => 'Dati ulteriori',
-			'slug' => 'dati-ulteriori'
-		));
-	} else {
-	wp_insert_term('Dati ulteriori', 'tipologie');
-	}
+    $termcheck2 = term_exists('Altri contenuti', 'tipologie');
+    if ($termcheck2 !== 0 && $termcheck2 !== null) {
+        $altricontenuti_datiulteriori = get_term_by('name', 'Altri contenuti', 'tipologie');
+        wp_update_term($altricontenuti_datiulteriori->term_id, 'tipologie', array(
+            'name' => 'Dati ulteriori',
+            'slug' => 'dati-ulteriori'
+        ));
+    } else {
+    wp_insert_term('Dati ulteriori', 'tipologie');
+    }
 }
 
 ////SEZIONI IMPLEMENTATE DA: 16 GENNAIO 2014

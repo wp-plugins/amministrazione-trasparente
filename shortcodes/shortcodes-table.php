@@ -328,7 +328,7 @@ echo '</div><div class="clear"></div>';
 
 $get_show_love = get_option('at_option_love');
 if ($get_show_love == '1') {
-	echo '<div style="text-align:center;width:100%;font-size:0.8em;float: left;">Questo sito utilizza il modulo Wordpress <a href="http://wordpress.org/plugins/amministrazione-trasparente/" rel="nofollow" title="Plugin Amministrazione Trasparente per Wordpress">Amministrazione Trasparente</a></div>';
+    echo '<div style="text-align:center;width:100%;font-size:0.8em;float: left;">Questo sito utilizza il modulo Wordpress <a href="http://wordpress.org/plugins/amministrazione-trasparente/" rel="nofollow" title="Plugin Amministrazione Trasparente per Wordpress">Amministrazione Trasparente</a></div>';
 }
 
 ?>
