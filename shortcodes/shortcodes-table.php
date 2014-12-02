@@ -1,7 +1,8 @@
 <?php
 
 $get_version_number = get_option('at_version_number');
-echo '<!-- Generato con il Plugin Wordpress Amministrazione Trasparente v.' . $get_version_number . '-->';
+echo '<style type="text/css">.at-tableclass {width:49%;float:left;padding:0px 0px 0px 5px;position:relative;min-width: 200px;} .at-tableclass h3 a {text-decoration:none;}</style>
+<!-- Generato con il Plugin Wordpress Amministrazione Trasparente v.' . $get_version_number . '-->';
 echo '<div class="at-tableclass">';
 
 //Disposizioni Generali
