@@ -3,9 +3,9 @@ Contributors: Milmor
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F2JK36SCXKTE2
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.8
-Tested up to: 4.0
-Version: 4.1.9
-Stable tag: 4.1.9
+Tested up to: 4.1
+Version: 4.1.10
+Stable tag: 4.1.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -112,6 +112,9 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 4.1.10 23/12/2014 =
+* Testato per WordPress 4.1
 
 = Versione 4.1.8 02/12/2014 =
 * **Corretta** visualizzazione at-table
