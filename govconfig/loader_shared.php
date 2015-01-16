@@ -15,7 +15,7 @@ function at_wpgov_settings () {
     include_once( ABSPATH . WPINC . '/feed.php' );
     $rss = fetch_feed( 'http://www.wpgov.it/feed' );
     if ( ! is_wp_error( $rss ) ) :
-    $maxitems = $rss->get_item_quantity( 6 );
+    $maxitems = $rss->get_item_quantity( 3 );
     $rss_items = $rss->get_items( 0, $maxitems );
     endif;?>
 
