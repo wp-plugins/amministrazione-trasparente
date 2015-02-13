@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amministrazione, aperta, trasparente, documenti, atti, spese, comuni, pa, amministrazioni, locali, pubblicazione, online, imprese, enti, scuola, università, comunità, montana, valle, modulo, software, gratuito, disposizioni, obbligo, legge, comune, modulo, decreto, 14 marzo, 2013, sovvenzioni, pubblici, pubblico, marco, milesi
 Requires at least: 3.8
 Tested up to: 4.1
-Version: 4.2
-Stable tag: 4.2
+Version: 4.3
+Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,42 +62,7 @@ http://www.youtube.com/watch?v=qWj9hvzNSlg
 
 http://www.youtube.com/watch?v=qWj9hvzNSlg
 
-> In caso di errori 404 (pagina non trovata), aggiornare i permalink da Impostazioni -> Permalink
-
-1. Carica il contenuto estratto nella cartella `/wp-content/plugins/`
-2. Attiva il plugin dal menu 'Plugins' in WordPress
-3. Inserire in una pagina o in un articolo i seguenti tag disponibili:
-
-* [at-desc] => Mostra la descrizione di Amministrazione Trasparente.
-* [at-search] => Mostra un box orizzontale per la ricerca in A.T., con filtro per tipologia
-* [at-head] => Mostra un sommario delle voci cliccabili. Da usare nella stessa pagina di [at-list] o [at-table]
-* [at-list] => Visualizza una lista di tutte le voci/sottovoci di A.T.
-* [at-table] => Visualizza una lista a 2 colonne di A.T.
-
-Una buona pagina potrebbe contenere i seguenti tag:
-
-* [at-desc]
-* [at-search]
-* [at-head]
-* [at-list] oppure [at-table] a seconda dei gusti o delle esigenze
-
-Ogni tag può essere inserito nel template utilizzando una funzione del tipo: `<?php echo do_shortcode('[at-list]') ?>`
-
-4. A questo punto basta inserire le voci selezionando, dal menù di amministrazione, Trasparenza > Nuova Voce
-5. Questo plugin funziona bene con la maggior parte dei temi Wordpress. Il plugin usa automaticamente template personalizzati se è attivo il tema PASW2013!
-
-= Integrare il plugin Breadcrumb NavXT con Amministrazione Trasparente =
-A partire dalla versione 3.2 di Amministrazione Trasparente, il plugin mostra automaticamente le briciole di pane per Pasw2013. Chi non usa il tema Pasw2013 può comunque installare il plugin Breadcrumb NavXT configurandolo manualmente o ricorrere a soluzioni differenti (il risultato gerarchico potrebbe differire).
-
-La gerarchia ideale per le briciole di pane in Amministrazione Trasparente potrebbe essere del tipo **Home > Amministrazione Trasparente** (pagina) ** > Sottosezione** (archivio) **> NomeVoce** (articolo singolo).
-Data la diversa natura delle varie parti delle briciole di pane, è necessario procedere ad un'accurata messa a punto del plugin Breadcrumb NavXT che supporta questo tipo di configurazioni.
-Per effettaure queste modifiche, accedere al back-end di Wordpress e cliccare su Impostazioni -> Breadcrumb NavXT -> Tipi di post.
-Tutte le opzioni da cambiare sono raccolte in [questa guida](http://supporto.marcomilesi.ml/2014/breadcrumb-navxt-e-le-briciole-di-pane/).
-
-= Modifica Template Archivio - [+] Info Normativa • Torna al sommario =
-Chi non utilizza il tema Pasw2013 può comunque abilitare la visualizzazione della descrizione espandibile e il link 'Torna al sommario' sotto il titolo degli archivi dei documenti modificando il file archive.php (il nome può cambiare) dalla cartella contenente i file del tema attivo.
-
-Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archive_buttons')) { at_archive_buttons(); } ?>` subito sotto al codice che genera il titolo.
+Puoi trovare la documentazione su [wpgov.it](https://wpgov.it/soluzioni/amministrazione-trasparente/)
 
 == Screenshots ==
 1. Menù Laterale
@@ -112,6 +77,12 @@ Per abilitarla, aprire il file aggiungendo `<?php if (function_exists('at_archiv
 
 == Changelog ==
 > Questa è la lista completa di tutti gli aggiornamenti, test e correzioni. Ogni volta che una nuova versione viene rilasciata assicuratevi di aggiornare il prima possibile per usufruire delle ultime migliorie!
+
+= Versione 4.3 13/02/2015 =
+* Nuovi shortcode (vedasi documentazione)
+* Nuovi stili
+* Riscritta generazione e gestione sezioni
+* Miglioramento pannello WPGov
 
 = Versione 4.2 01/02/2015 =
 * Miglioramenti vari
