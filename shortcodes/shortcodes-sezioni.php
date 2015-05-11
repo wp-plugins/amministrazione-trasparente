@@ -95,7 +95,7 @@ $query = new WP_Query( $args );
 if ( get_option('wpgov_show_love') ) {
     echo '<span style="width:98%;border: 1px solid #eee;padding: 8px 10px;background: #FBFBFB;float: left;font-size: 0.7em;">
         <span style="float:right;">
-            <a href="http://www.wpgov.it" target="_blank" title="Software &copy; WPGov"><img src="' . plugin_dir_url(__FILE__) . 'wpgov.png" /></a>
+            <a href="http://www.wpgov.it" target="_blank" alt="Software WPGov" title="Software WPGov"><img src="' . plugin_dir_url(__FILE__) . 'wpgov.png" /></a>
         </span>
         Sezione gestita con il plugin WordPress
         <a href="http://wordpress.org/plugins/amministrazione-trasparente/" rel="nofollow" title="Plugin Amministrazione Trasparente per Wordpress">Amministrazione Trasparente</a>
