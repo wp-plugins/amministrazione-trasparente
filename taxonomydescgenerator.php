@@ -239,7 +239,7 @@ d) accordi stipulati dall\'amministrazione con soggetti privati o con altre ammi
 $term = get_term_by('name','Controlli sulle imprese','tipologie');	
 wp_update_term($term->term_id, 'tipologie', array('description'=>'
 <b>Dlgs 33/2013 - Articolo 25</b> - Obblighi di pubblicazione concernenti i controlli sulle imprese<br/>
-1. Le pubbliche amministrazioni, in modo dettagliato e facilmente comprensibile, pubblicano sul proprio sito istituzionale e sul sito: <a href="www.impresainungiorno.gov.it" title="Impresa in un giorno .gov">www.impresainungiorno.gov.it</a>:<br/>
+1. Le pubbliche amministrazioni, in modo dettagliato e facilmente comprensibile, pubblicano sul proprio sito istituzionale e sul sito: <a href="http://www.impresainungiorno.gov.it" title="Impresa in un giorno .gov">www.impresainungiorno.gov.it</a>:<br/>
 a) l\'elenco delle tipologie di controllo a cui sono assoggettate le imprese in ragione della dimensione e del settore di attività, indicando per ciascuna di esse i criteri e le relative modalità di svolgimento;<br/>
 b) l\'elenco degli obblighi e degli adempimenti oggetto delle attività di controllo che le imprese sono tenute a rispettare per ottemperare alle disposizioni normative.'));
 
